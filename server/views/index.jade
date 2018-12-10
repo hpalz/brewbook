@@ -10,9 +10,12 @@ block main-content
         ul.nav.navbar-nav
           li
             a(href="/") Home
+          li
+            a(href="/courses") Courses
+        div(ng-include="'/partials/account/navbar-login'")
 
   section.content
     div(ng-view)
 
   footer.container.text-center
-    p &copy; 2013 BruHausCorp International Ltd.
+    p &copy; 2013 BruHaus Corp International Ltd.
