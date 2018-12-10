@@ -25,14 +25,14 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'));
 
 if(env === 'development') {
-  mongoose.connect('mongodb://localhost/multivision');
+  mongoose.connect('mongodb://localhost/bruhaus');
 } else {
-  mongoose.connect('mongodb://jeames:multivision@ds053178.mongolab.com:53178/multivision');
+  mongoose.connect('mongodb://jeames:bruhaus@ds053178.mongolab.com:53178/bruhaus');
 }
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
 db.once('open', function callback() {
-  console.log('multivision db opened');
+  console.log('bruhaus db opened');
 });
 
 app.get('/partials/:partialPath', function(req, res) {
