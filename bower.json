@@ -2,9 +2,9 @@
   "name": "BruHaus",
   "version": "0.0.0",
   "authors": [
-    "joeeames <joeeames@gmail.com>"
+    "hpalz <hjpalz@gmail.com>"
   ],
-  "description": "\"Extreme Tech Training\"",
+  "description": "\"For Homebrewers\"",
   "license": "MIT",
   "private": true,
   "dependencies": {

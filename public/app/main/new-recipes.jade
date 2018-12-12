@@ -1,0 +1,7 @@
+.panel.panel-primary
+  .panel-heading.text-center New Recipes
+  .panel-body
+    .row(ng-repeat="recipe in recipes | orderBy:'created':true | limitTo:10")
+      .col-md-3 {{recipe.published | date:'MMM d'}}
+      .col-md-9
+        a(href="/recipes/{{recipe._id}}") {{recipe.name}}

@@ -1,0 +1,6 @@
+.panel.panel-primary
+  .panel-heading.text-center Featured Recipes
+  .panel-body
+    .row(ng-repeat="recipe in recipes | filter:{featured:true}")
+      .col-md-12
+        a(href="/recipes/{{recipe._id}}") {{recipe.name}}
