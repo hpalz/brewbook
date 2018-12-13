@@ -25,6 +25,9 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
       .when('/recipes', { templateUrl: '/partials/recipes/recipe-list',
         controller: 'mvRecipeListCtrl'
       })
+      .when('/newRecipe', { templateUrl: '/partials/recipes/newRecipe',
+        controller: 'mvCreateRecipeCtrl'
+      })
       .when('/recipes/:id', { templateUrl: '/partials/recipes/recipe-details',
         controller: 'mvRecipeDetailCtrl'
       })
