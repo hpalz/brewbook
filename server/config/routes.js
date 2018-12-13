@@ -11,6 +11,7 @@ module.exports = function(app) {
   app.put('/api/users', users.updateUser);
 
   app.get('/api/recipes', recipes.getRecipes);
+  app.get('/api/recipes', recipes.createRecipe);
   app.get('/api/recipes/:id', recipes.getRecipeById);
 
   app.get('/partials/*', function(req, res) {
