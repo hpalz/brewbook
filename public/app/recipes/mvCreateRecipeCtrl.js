@@ -1,4 +1,4 @@
-angular.module('app').controller('mvCreateRecipeCtrl', function($scope, mvRecipe, mvNotifier, $location) {
+angular.module('app').controller('mvCreateRecipeCtrl', function($scope, mvAuthRecipe, mvNotifier, $location) {
 
   $scope.create = function() {
     var newRecipe = {
@@ -7,7 +7,7 @@ angular.module('app').controller('mvCreateRecipeCtrl', function($scope, mvRecipe
       style: $scope.style
     };
 
-    mvRecipe.createRecipe(newRecipe).then(function() {
+    mvAuthRecipe.createRecipe(newRecipe).then(function() {
       mvNotifier.notify('Recipe created!');
       $location.path('/');
     }, function(reason) {

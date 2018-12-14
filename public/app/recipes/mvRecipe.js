@@ -3,10 +3,5 @@ angular.module('app').factory('mvRecipe', function($resource) {
     update: {method:'PUT', isArray:false}
   });
 
-  return {
-    RecipeResource,
-    createRecipe: function() {
-      return !!this.currentUser;
-    }
-  }
+  return RecipeResource;
 });
