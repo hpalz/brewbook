@@ -1,12 +1,20 @@
 var mongoose = require('mongoose');
 
 var recipeSchema = mongoose.Schema({
-  name: {type:String, required:'{PATH} is required!'},
-  featured: {type:Boolean, required:'{PATH} is required!'},
+  _id: mongoose.Schema.Types.ObjectId,
+  name: {
+    type:String,
+    required: true
+  },
+  featured: {type:Boolean},
   style: {
     style_guide: {type:String, default:''},
     VERSION: { type:Number, default:1},
-    name: { type:String, default:'Brown Porter'},
+    name: {
+      type:String,
+      required: true,
+      default:'Brown Porter'
+    },
     STYLE_LETTER: { type:String, default:'A'},
     CATEGORY_NUMBER: { type:Number, default:12},
     TYPE: { type:String, default:'Ale'},
@@ -68,12 +76,19 @@ var recipeSchema = mongoose.Schema({
     }
   ],
   type: {type:String, default:'Extract'},
-  brewer: {type:String, default:'Name'},
+  brewer: {
+    type:String,
+    required: true,
+    default:'Name'
+  },
   batch_size: {type:Number, default:0},
   boil_size: {type:Number, default:0},
   boil_time: {type:Number, default:60},
   efficiency: {type:Number, default:75},
-  created: {type:Date, required:'{PATH} is required!'}
+  created: {
+    type:Date,
+    required: true
+  }
 });
 var Recipe = mongoose.model('Recipe', recipeSchema);
 

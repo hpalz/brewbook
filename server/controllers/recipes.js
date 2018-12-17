@@ -1,3 +1,4 @@
+var mongoose = require('mongoose');
 var Recipe = require('mongoose').model('Recipe');
 
 exports.getRecipes = function(req, res) {
@@ -13,9 +14,16 @@ exports.getRecipeById = function(req, res) {
 };
 
 exports.createRecipe = function(req, res, next) {
-  var newRecipe = req.body;
-  newRecipe.created = new Date();
-  newRecipe.style.name = newRecipe.style;
+  var recipeBody = req.body;
+  var newRecipe = new Recipe ({
+    _id: new mongoose.Types.ObjectId(),
+    created: new Date(),
+    style: {
+      name: recipeBody.style
+    },
+    name: recipeBody.name,
+    featured: recipeBody.featured
+  });
   Recipe.create(newRecipe, function(err, recipe) {
     if(err) {
       // todo
