@@ -14,7 +14,8 @@ exports.getRecipeById = function(req, res) {
 
 exports.createRecipe = function(req, res, next) {
   var newRecipe = req.body;
-  newRecipe.created = new Date('10/5/2013');
+  newRecipe.created = new Date();
+  newRecipe.style.name = newRecipe.style;
   Recipe.create(newRecipe, function(err, recipe) {
     if(err) {
       // todo
