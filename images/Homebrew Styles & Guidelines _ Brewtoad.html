@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://www.brewtoad.com/styles -->
+<html class="js no-touch hashchange history rgba multiplebgs backgroundsize borderradius boxshadow opacity cssanimations csscolumns cssgradients csstransforms csstransforms3d csstransitions generatedcontent localstorage svg js no-touch hashchange history rgba multiplebgs backgroundsize borderradius boxshadow opacity cssanimations csscolumns cssgradients csstransforms csstransforms3d csstransitions generatedcontent localstorage svg wf-proximanova-n6-active wf-proximanova-n4-active wf-proximanova-i4-active wf-active"><!-- <![endif] --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="chrome=1" http-equiv="X-UA-Compatible">
+<script src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/nr-1099.min.js.download"></script><script async="" src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/gtm.js.download"></script><script async="" src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/analytics.js.download"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"8133495815","applicationID":"3690331","transactionName":"d15bTBMMWVVcF0pETU1dUEtOCltdXB0=","queueTime":0,"applicationTime":146,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>Homebrew Styles &amp; Guidelines | Brewtoad
+</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<meta content="Ackmann &amp; Dickenson, Inc" name="author">
+<meta content="width=device-width, initial-scale=0.9, user-scalable=no" name="viewport">
+<meta content="ZHwJubiX3Uo_Q4FzwMXowZ-E6RfaHOmbv_nQ37SS8y8" name="google-site-verification">
+<meta content="ba5c47f5ad5c883c8a813eb74b441953" name="p:domain_verify">
+<meta content="513416568" property="twitter:account_id">
+<link href="https://bt-prod-assets.s3.amazonaws.com/assets/favicon.png" rel="shortcut icon">
+<link href="https://bt-prod-assets.s3.amazonaws.com/assets/apple-touch-icon.png" rel="apple-touch-icon">
+<script src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/js" type="text/javascript"></script>
+<script src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/modernizr.custom.82648.js.download"></script>
+<link rel="stylesheet" media="all" href="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/application.css">
+<link rel="stylesheet" media="print" href="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/print.css">
+<script src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/application.js.download"></script>
+<script src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/eiq6bjr.js.download" type="text/javascript"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><style type="text/css">@font-face{font-family:proxima-nova;src:url(https://use.typekit.com/af/b4e997/00000000000000003b9ad1bb/27/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.com/af/b4e997/00000000000000003b9ad1bb/27/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.com/af/b4e997/00000000000000003b9ad1bb/27/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.com/af/aa8afb/00000000000000003b9ad1b9/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.com/af/aa8afb/00000000000000003b9ad1b9/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.com/af/aa8afb/00000000000000003b9ad1b9/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.com/af/9cba47/00000000000000003b9ad1ba/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.com/af/9cba47/00000000000000003b9ad1ba/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.com/af/9cba47/00000000000000003b9ad1ba/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}</style><script>
+  try{Typekit.load();}catch(e){}
+</script>
+<script>
+  dataLayer = [{
+    'event': 'pageLoad',
+    'loggedIn': true,
+    'userId': '46159'
+  }];
+</script>
+
+
+
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="9wNcSL8zdelRTn3Wu1yeYh9PCpGz6GSDuqyo9zBx7RAUDPl6dQ+7enLL7mqj6UTQFBrgIZNDZxHDVYU52UlFLQ==">
+<script type="text/javascript" charset="UTF-8" src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/AuthenticationService.Authenticate"></script></head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KCZDBR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KCZDBR');</script>
+<!-- End Google Tag Manager -->
+<!-- / Site header -->
+<div class="header">
+<div class="site-header">
+<!-- / Toggle menu -->
+<a class="site-header--toggle-menu" href="https://www.brewtoad.com/styles#">
+<i class="ion-navicon"></i>
+</a>
+<!-- / Logo -->
+<figure class="site-header--logo">
+<a href="https://www.brewtoad.com/">
+<img alt="Brewtoad" src="./Homebrew Styles &amp; Guidelines _ Brewtoad_files/brewtoad-2x.png">
+</a>
+</figure>
+<!-- / Pro advert -->
+<!-- - if current_user.nil? || (current_user && !current_user.pro?) -->
+<!-- %a.site-header--pro.hide-on-mobile{:href => pro_path, :title => "Learn about Brewtoad Pro"} -->
+<!-- Go Brewtoad -->
+<!-- %strong Pro! -->
+<!-- / Site search -->
+<div class="site-header--search">
+<a href="https://www.brewtoad.com/styles#">
+<i class="ion-search"></i>
+</a>
+<form action="https://www.brewtoad.com/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+<input type="text" name="search" id="search">
+<input type="submit" value="Search">
+</form>
+
+</div>
+<ul class="hide-on-mobile site-header--social">
+<li>
+<a href="https://www.facebook.com/brewtoad" target="_blank">
+<i class="icon icon-facebook"></i>
+</a>
+</li>
+<li>
+<a href="https://twitter.com/brewtoad" target="_blank">
+<i class="icon icon-twitter"></i>
+</a>
+</li>
+</ul>
+<!-- / User dropdown -->
+<ul class="site-header--dropdown">
+<li>
+<a data-toggle="dropdown" title="Dashboard">
+<i class="ion-chevron-down fr hide-on-mobile"></i>
+<i class="ion-person"></i>
+<span class="hide-on-mobile">
+Lagom Brewer
+</span>
+</a>
+<ul>
+<li>
+<a href="https://www.brewtoad.com/users/46159">
+<i class="ion-home"></i>
+Dashboard
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/users/46159/recipes">
+<i class="ion-beer"></i>
+Recipes
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/users/46159/brew_logs">
+<i class="ion-clipboard"></i>
+Brew Logs
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/users/46159/edit">
+<i class="ion-person"></i>
+Edit Profile
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/accounts/sign_out" title="Logout">
+<i class="ion-person"></i>
+Log Out
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="site-header--active-order">
+<li>
+<a href="https://www.brewtoad.com/users/46159/notifications">
+<i class="ion-alert-circled"></i>
+9
+</a>
+</li>
+</ul>
+</div>
+<nav class="site-nav">
+<a class="toggle-nav" href="https://www.brewtoad.com/styles#">
+<i class="ion-close"></i>
+</a>
+<ul>
+<li>
+<a>
+<i class="ion-beer"></i>
+Recipes
+</a>
+<ul>
+<li>
+<a href="https://www.brewtoad.com/recipes">
+<i class="ion-beer"></i>
+All Recipes
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/recipes/new">
+<i class="ion-compose"></i>
+New Recipe
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a>
+<i class="ion-chatbubbles"></i>
+Community
+</a>
+<ul>
+<li>
+<a href="https://www.brewtoad.com/users">
+<i class="ion-person"></i>
+Brewers
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/groups">
+<i class="ion-person-stalker"></i>
+Groups
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a>
+<i class="ion-stats-bars"></i>
+Styles &amp; Ingredients
+</a>
+<ul>
+<li>
+<a href="https://www.brewtoad.com/styles">
+<i class="ion-stats-bars"></i>
+Styles
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/generic-fermentables">
+<i class="ion-cube"></i>
+Fermentables
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/hops">
+<i class="ion-leaf"></i>
+Hops
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/yeasts">
+<i class="ion-bug"></i>
+Yeasts
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/extras">
+<i class="ion-beaker"></i>
+Extras
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a>
+<i class="ion-calculator"></i>
+Tools &amp; Calculators
+</a>
+<ul>
+<li>
+<a href="https://www.brewtoad.com/tools/alcohol-calculator">
+<i class="ion-calculator"></i>
+Alcohol Calculator
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/color-converter">
+<i class="ion-calculator"></i>
+Color Converter
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/hydrometer-temperature-correction">
+<i class="ion-calculator"></i>
+Hydrometer Temperature Correction
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/mash-water-calculator">
+<i class="ion-calculator"></i>
+Mash Water Calculator
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/mash-infusion-calculator">
+<i class="ion-calculator"></i>
+Mash Infusion Calculator
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/malt-potential-extract-calculator">
+<i class="ion-calculator"></i>
+Malt Potential Extract
+</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/pitch-rate-calculator">
+<i class="ion-calculator"></i>
+Pitch Rate Calculator
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div class="site-container styles styles-index">
+<div class="site-content " id="js-content">
+<header>
+<h1>Homebrew Beer Styles</h1>
+</header>
+<div class="subnav">
+<div class="subnav--sidebar">
+<div class="js-mobile-subnav-menu"><select class="js-mobile-subnav-menu"><option data-href="/styles" selected="selected">All Styles</option><option data-href="?style_category_id=24">Amber Hybrid Beer</option><option data-href="?style_category_id=7">Amber Hybrid Beer</option><option data-href="?style_category_id=10">American Ale</option><option data-href="?style_category_id=16">Belgian and French Ale</option><option data-href="?style_category_id=18">Belgian Strong Ale</option><option data-href="?style_category_id=5">Bock</option><option data-href="?style_category_id=4">Dark Lager</option><option data-href="?style_category_id=11">English Brown Ale</option><option data-href="?style_category_id=8">English Pale Ale</option><option data-href="?style_category_id=3">European Amber Lager</option><option data-href="?style_category_id=20">Fruit Beer</option><option data-href="?style_category_id=15">German Wheat and Rye Beer</option><option data-href="?style_category_id=14">India Pale Ale (IPA)</option><option data-href="?style_category_id=6">Light Hybrid Beer</option><option data-href="?style_category_id=1">Light Lager</option><option data-href="?style_category_id=2">Pilsner</option><option data-href="?style_category_id=12">Porter</option><option data-href="?style_category_id=9">Scottish and Irish Ale</option><option data-href="?style_category_id=22">Smoke-Flavored and Wood-Aged Beer</option><option data-href="?style_category_id=17">Sour Ale</option><option data-href="?style_category_id=23">Specialty Beer</option><option data-href="?style_category_id=21">Spice / Herb / Vegetable Beer</option><option data-href="?style_category_id=13">Stout</option><option data-href="?style_category_id=19">Strong Ale</option></select></div><ul class="hide-on-mobile">
+<li class="active">
+<a href="https://www.brewtoad.com/styles">
+<span>All Styles</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=24">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Amber Hybrid Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=7">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Amber Hybrid Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=10">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>American Ale</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=16">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Belgian and French Ale</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=18">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Belgian Strong Ale</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=5">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Bock</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=4">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Dark Lager</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=11">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>English Brown Ale</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=8">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>English Pale Ale</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=3">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>European Amber Lager</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=20">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Fruit Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=15">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>German Wheat and Rye Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=14">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>India Pale Ale (IPA)</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=6">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Light Hybrid Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=1">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Light Lager</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=2">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Pilsner</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=12">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Porter</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=9">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Scottish and Irish Ale</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=22">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Smoke-Flavored and Wood-Aged Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=17">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Sour Ale</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=23">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Specialty Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=21">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Spice / Herb / Vegetable Beer</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=13">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Stout</span>
+</a>
+</li>
+<li class="">
+<a href="https://www.brewtoad.com/styles?style_category_id=19">
+<!-- %i.icon{:class => 'icon-' + cat.styles.first.glass.icon_name} -->
+<span>Strong Ale</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="subnav--content">
+<div class="soft">
+<h2>All Styles</h2>
+<table class="layer-3" id="styles">
+<thead>
+<tr>
+<th rowspan="2">Style</th>
+<th class="aligncenter hide-on-mobile" colspan="5">
+<small>(Averaged)</small>
+</th>
+</tr>
+<tr>
+<th class="hide-on-mobile">OG</th>
+<th class="hide-on-mobile">FG</th>
+<th class="hide-on-mobile">IBU</th>
+<th class="hide-on-mobile">°L</th>
+<th class="hide-on-mobile">ABV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/american-amber-ale">American Amber Ale</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">32</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+14 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/american-barleywine">American Barleywine</a></td>
+<td class="hide-on-mobile">1.100</td>
+<td class="hide-on-mobile">1.023</td>
+<td class="hide-on-mobile">85</td>
+<td class="hide-on-mobile">
+<span title="14">
+<div class="color_preview srm14"></div>
+15 °L
+</span>
+</td>
+<td class="hide-on-mobile">10.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/american-brown-ale">American Brown Ale</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.013</td>
+<td class="hide-on-mobile">30</td>
+<td class="hide-on-mobile">
+<span title="26">
+<div class="color_preview srm26"></div>
+27 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/american-ipa">American IPA</a></td>
+<td class="hide-on-mobile">1.066</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">55</td>
+<td class="hide-on-mobile">
+<span title="10">
+<div class="color_preview srm10"></div>
+11 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/american-pale-ale">American Pale Ale</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">37</td>
+<td class="hide-on-mobile">
+<span title="9">
+<div class="color_preview srm9"></div>
+10 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.3%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/american-stout">American Stout</a></td>
+<td class="hide-on-mobile">1.062</td>
+<td class="hide-on-mobile">1.016</td>
+<td class="hide-on-mobile">55</td>
+<td class="hide-on-mobile">
+<span title="35">
+<div class="color_preview srm35"></div>
+35 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/american-wheat-or-rye-beer">American Wheat or Rye Beer</a></td>
+<td class="hide-on-mobile">1.047</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">22</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/baltic-porter">Baltic Porter</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.020</td>
+<td class="hide-on-mobile">30</td>
+<td class="hide-on-mobile">
+<span title="23">
+<div class="color_preview srm23"></div>
+24 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/belgian-blond-ale">Belgian Blond Ale</a></td>
+<td class="hide-on-mobile">1.069</td>
+<td class="hide-on-mobile">1.013</td>
+<td class="hide-on-mobile">22</td>
+<td class="hide-on-mobile">
+<span title="5">
+<div class="color_preview srm5"></div>
+6 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/belgian-dark-strong-ale">Belgian Dark Strong Ale</a></td>
+<td class="hide-on-mobile">1.093</td>
+<td class="hide-on-mobile">1.017</td>
+<td class="hide-on-mobile">27</td>
+<td class="hide-on-mobile">
+<span title="17">
+<div class="color_preview srm17"></div>
+17 °L
+</span>
+</td>
+<td class="hide-on-mobile">9.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/belgian-dubbel">Belgian Dubbel</a></td>
+<td class="hide-on-mobile">1.069</td>
+<td class="hide-on-mobile">1.013</td>
+<td class="hide-on-mobile">20</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+14 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/belgian-golden-strong-ale">Belgian Golden Strong Ale</a></td>
+<td class="hide-on-mobile">1.083</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">28</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">9.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/belgian-pale-ale">Belgian Pale Ale</a></td>
+<td class="hide-on-mobile">1.051</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">25</td>
+<td class="hide-on-mobile">
+<span title="11">
+<div class="color_preview srm11"></div>
+11 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/belgian-specialty-ale">Belgian Specialty Ale</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">60</td>
+<td class="hide-on-mobile">
+<span title="20">
+<div class="color_preview srm20"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/belgian-tripel">Belgian Tripel</a></td>
+<td class="hide-on-mobile">1.080</td>
+<td class="hide-on-mobile">1.011</td>
+<td class="hide-on-mobile">30</td>
+<td class="hide-on-mobile">
+<span title="5">
+<div class="color_preview srm5"></div>
+6 °L
+</span>
+</td>
+<td class="hide-on-mobile">8.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/berliner-weisse">Berliner Weisse</a></td>
+<td class="hide-on-mobile">1.030</td>
+<td class="hide-on-mobile">1.004</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">
+<span title="2">
+<div class="color_preview srm2"></div>
+3 °L
+</span>
+</td>
+<td class="hide-on-mobile">3.3%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/bi-re-de-garde">Bière de Garde</a></td>
+<td class="hide-on-mobile">1.070</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">23</td>
+<td class="hide-on-mobile">
+<span title="12">
+<div class="color_preview srm12"></div>
+13 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/blonde-ale">Blonde Ale</a></td>
+<td class="hide-on-mobile">1.046</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">21</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.7%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/bohemian-pilsener">Bohemian Pilsener</a></td>
+<td class="hide-on-mobile">1.050</td>
+<td class="hide-on-mobile">1.015</td>
+<td class="hide-on-mobile">40</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/brown-porter">Brown Porter</a></td>
+<td class="hide-on-mobile">1.046</td>
+<td class="hide-on-mobile">1.011</td>
+<td class="hide-on-mobile">26</td>
+<td class="hide-on-mobile">
+<span title="25">
+<div class="color_preview srm25"></div>
+25 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.7%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/california-common-beer">California Common Beer</a></td>
+<td class="hide-on-mobile">1.051</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">37</td>
+<td class="hide-on-mobile">
+<span title="12">
+<div class="color_preview srm12"></div>
+12 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/christmas-winter-specialty-spiced-beer">Christmas/Winter Specialty Spiced Beer</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">60</td>
+<td class="hide-on-mobile">
+<span title="20">
+<div class="color_preview srm20"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/classic-american-pilsner">Classic American Pilsner</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">32</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/classic-rauchbier">Classic Rauchbier</a></td>
+<td class="hide-on-mobile">1.054</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">25</td>
+<td class="hide-on-mobile">
+<span title="17">
+<div class="color_preview srm17"></div>
+17 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.4%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/cream-ale">Cream Ale</a></td>
+<td class="hide-on-mobile">1.048</td>
+<td class="hide-on-mobile">1.009</td>
+<td class="hide-on-mobile">17</td>
+<td class="hide-on-mobile">
+<span title="3">
+<div class="color_preview srm3"></div>
+4 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.9%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/dark-american-lager">Dark American Lager</a></td>
+<td class="hide-on-mobile">1.050</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">14</td>
+<td class="hide-on-mobile">
+<span title="18">
+<div class="color_preview srm18"></div>
+18 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.1%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/doppelbock">Doppelbock</a></td>
+<td class="hide-on-mobile">1.092</td>
+<td class="hide-on-mobile">1.020</td>
+<td class="hide-on-mobile">21</td>
+<td class="hide-on-mobile">
+<span title="15">
+<div class="color_preview srm15"></div>
+16 °L
+</span>
+</td>
+<td class="hide-on-mobile">8.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/dortmunder-export">Dortmunder Export</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">26</td>
+<td class="hide-on-mobile">
+<span title="5">
+<div class="color_preview srm5"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.4%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/dry-stout">Dry Stout</a></td>
+<td class="hide-on-mobile">1.043</td>
+<td class="hide-on-mobile">1.009</td>
+<td class="hide-on-mobile">37</td>
+<td class="hide-on-mobile">
+<span title="32">
+<div class="color_preview srm32"></div>
+33 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/dunkelweizen">Dunkelweizen</a></td>
+<td class="hide-on-mobile">1.050</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">14</td>
+<td class="hide-on-mobile">
+<span title="18">
+<div class="color_preview srm18"></div>
+19 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.9%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/d-sseldorf-altbier">Düsseldorf Altbier</a></td>
+<td class="hide-on-mobile">1.050</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">42</td>
+<td class="hide-on-mobile">
+<span title="14">
+<div class="color_preview srm14"></div>
+14 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/eisbock">Eisbock</a></td>
+<td class="hide-on-mobile">1.099</td>
+<td class="hide-on-mobile">1.027</td>
+<td class="hide-on-mobile">30</td>
+<td class="hide-on-mobile">
+<span title="24">
+<div class="color_preview srm24"></div>
+24 °L
+</span>
+</td>
+<td class="hide-on-mobile">11.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/english-barleywine">English Barleywine</a></td>
+<td class="hide-on-mobile">1.100</td>
+<td class="hide-on-mobile">1.024</td>
+<td class="hide-on-mobile">52</td>
+<td class="hide-on-mobile">
+<span title="15">
+<div class="color_preview srm15"></div>
+15 °L
+</span>
+</td>
+<td class="hide-on-mobile">10.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/english-ipa">English IPA</a></td>
+<td class="hide-on-mobile">1.062</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">50</td>
+<td class="hide-on-mobile">
+<span title="11">
+<div class="color_preview srm11"></div>
+11 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/extra-special-strong-bitter-english-pale-ale">Extra Special/Strong Bitter (English Pale Ale)</a></td>
+<td class="hide-on-mobile">1.054</td>
+<td class="hide-on-mobile">1.013</td>
+<td class="hide-on-mobile">40</td>
+<td class="hide-on-mobile">
+<span title="12">
+<div class="color_preview srm12"></div>
+12 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.4%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/flanders-brown-ale-oud-bruin">Flanders Brown Ale/Oud Bruin</a></td>
+<td class="hide-on-mobile">1.057</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">22</td>
+<td class="hide-on-mobile">
+<span title="18">
+<div class="color_preview srm18"></div>
+19 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/flanders-red-ale">Flanders Red Ale</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.007</td>
+<td class="hide-on-mobile">17</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+13 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/foreign-extra-stout">Foreign Extra Stout</a></td>
+<td class="hide-on-mobile">1.066</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">50</td>
+<td class="hide-on-mobile">
+<span title="35">
+<div class="color_preview srm35"></div>
+35 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/fruit-beer">Fruit Beer</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">60</td>
+<td class="hide-on-mobile">
+<span title="20">
+<div class="color_preview srm20"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/fruit-lambic">Fruit Lambic</a></td>
+<td class="hide-on-mobile">1.050</td>
+<td class="hide-on-mobile">1.005</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">
+<span title="5">
+<div class="color_preview srm5"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/german-pilsner-pils">German Pilsner (Pils)</a></td>
+<td class="hide-on-mobile">1.047</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">35</td>
+<td class="hide-on-mobile">
+<span title="3">
+<div class="color_preview srm3"></div>
+4 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/gueuze">Gueuze</a></td>
+<td class="hide-on-mobile">1.050</td>
+<td class="hide-on-mobile">1.003</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">
+<span title="5">
+<div class="color_preview srm5"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/imperial-ipa">Imperial IPA</a></td>
+<td class="hide-on-mobile">1.080</td>
+<td class="hide-on-mobile">1.015</td>
+<td class="hide-on-mobile">90</td>
+<td class="hide-on-mobile">
+<span title="11">
+<div class="color_preview srm11"></div>
+12 °L
+</span>
+</td>
+<td class="hide-on-mobile">8.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/irish-red-ale">Irish Red Ale</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">22</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+14 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/k-lsch">Kölsch</a></td>
+<td class="hide-on-mobile">1.047</td>
+<td class="hide-on-mobile">1.009</td>
+<td class="hide-on-mobile">25</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+4 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/lite-american-lager">Lite American Lager</a></td>
+<td class="hide-on-mobile">1.042</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">10</td>
+<td class="hide-on-mobile">
+<span title="2">
+<div class="color_preview srm2"></div>
+3 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.3%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/maibock-helles-bock">Maibock/Helles Bock</a></td>
+<td class="hide-on-mobile">1.068</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">29</td>
+<td class="hide-on-mobile">
+<span title="8">
+<div class="color_preview srm8"></div>
+9 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/mild">Mild</a></td>
+<td class="hide-on-mobile">1.034</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">17</td>
+<td class="hide-on-mobile">
+<span title="18">
+<div class="color_preview srm18"></div>
+19 °L
+</span>
+</td>
+<td class="hide-on-mobile">3.6%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/munich-dunkel">Munich Dunkel</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.013</td>
+<td class="hide-on-mobile">23</td>
+<td class="hide-on-mobile">
+<span title="21">
+<div class="color_preview srm21"></div>
+21 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/munich-helles">Munich Helles</a></td>
+<td class="hide-on-mobile">1.048</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">19</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+4 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.1%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/northern-english-brown-ale">Northern English Brown Ale</a></td>
+<td class="hide-on-mobile">1.046</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">25</td>
+<td class="hide-on-mobile">
+<span title="17">
+<div class="color_preview srm17"></div>
+17 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/northern-german-altbier">Northern German Altbier</a></td>
+<td class="hide-on-mobile">1.050</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">32</td>
+<td class="hide-on-mobile">
+<span title="16">
+<div class="color_preview srm16"></div>
+16 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/oatmeal-stout">Oatmeal Stout</a></td>
+<td class="hide-on-mobile">1.056</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">32</td>
+<td class="hide-on-mobile">
+<span title="31">
+<div class="color_preview srm31"></div>
+31 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.1%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/oktoberfest-m-rzen">Oktoberfest/Märzen</a></td>
+<td class="hide-on-mobile">1.054</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">24</td>
+<td class="hide-on-mobile">
+<span title="10">
+<div class="color_preview srm10"></div>
+11 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/old-ale">Old Ale</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.018</td>
+<td class="hide-on-mobile">45</td>
+<td class="hide-on-mobile">
+<span title="16">
+<div class="color_preview srm16"></div>
+16 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/other-smoked-beer">Other Smoked Beer</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">60</td>
+<td class="hide-on-mobile">
+<span title="20">
+<div class="color_preview srm20"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/premium-american-lager">Premium American Lager</a></td>
+<td class="hide-on-mobile">1.051</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">20</td>
+<td class="hide-on-mobile">
+<span title="4">
+<div class="color_preview srm4"></div>
+4 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.3%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/robust-porter">Robust Porter</a></td>
+<td class="hide-on-mobile">1.056</td>
+<td class="hide-on-mobile">1.014</td>
+<td class="hide-on-mobile">37</td>
+<td class="hide-on-mobile">
+<span title="28">
+<div class="color_preview srm28"></div>
+29 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.7%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/roggenbier-german-rye-beer">Roggenbier (German Rye Beer)</a></td>
+<td class="hide-on-mobile">1.051</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">15</td>
+<td class="hide-on-mobile">
+<span title="16">
+<div class="color_preview srm16"></div>
+17 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/russian-imperial-stout">Russian Imperial Stout</a></td>
+<td class="hide-on-mobile">1.095</td>
+<td class="hide-on-mobile">1.024</td>
+<td class="hide-on-mobile">70</td>
+<td class="hide-on-mobile">
+<span title="35">
+<div class="color_preview srm35"></div>
+35 °L
+</span>
+</td>
+<td class="hide-on-mobile">10.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/saison">Saison</a></td>
+<td class="hide-on-mobile">1.056</td>
+<td class="hide-on-mobile">1.007</td>
+<td class="hide-on-mobile">27</td>
+<td class="hide-on-mobile">
+<span title="9">
+<div class="color_preview srm9"></div>
+10 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/schwarzbier-black-beer">Schwarzbier (Black Beer)</a></td>
+<td class="hide-on-mobile">1.049</td>
+<td class="hide-on-mobile">1.013</td>
+<td class="hide-on-mobile">27</td>
+<td class="hide-on-mobile">
+<span title="23">
+<div class="color_preview srm23"></div>
+24 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.9%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/scottish-export-80">Scottish Export 80/-</a></td>
+<td class="hide-on-mobile">1.047</td>
+<td class="hide-on-mobile">1.013</td>
+<td class="hide-on-mobile">22</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+13 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/scottish-heavy-70">Scottish Heavy 70/-</a></td>
+<td class="hide-on-mobile">1.038</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">17</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+13 °L
+</span>
+</td>
+<td class="hide-on-mobile">3.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/scottish-light-60">Scottish Light 60/-</a></td>
+<td class="hide-on-mobile">1.032</td>
+<td class="hide-on-mobile">1.011</td>
+<td class="hide-on-mobile">15</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+13 °L
+</span>
+</td>
+<td class="hide-on-mobile">2.9%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/southern-english-brown">Southern English Brown</a></td>
+<td class="hide-on-mobile">1.038</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">16</td>
+<td class="hide-on-mobile">
+<span title="27">
+<div class="color_preview srm27"></div>
+27 °L
+</span>
+</td>
+<td class="hide-on-mobile">3.4%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/special-best-premium-bitter">Special/Best/Premium Bitter</a></td>
+<td class="hide-on-mobile">1.044</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">32</td>
+<td class="hide-on-mobile">
+<span title="10">
+<div class="color_preview srm10"></div>
+11 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/specialty-beer">Specialty Beer</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">60</td>
+<td class="hide-on-mobile">
+<span title="20">
+<div class="color_preview srm20"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/spice-herb-or-vegetable-beer">Spice, Herb, or Vegetable Beer</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">60</td>
+<td class="hide-on-mobile">
+<span title="20">
+<div class="color_preview srm20"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/standard-american-lager">Standard American Lager</a></td>
+<td class="hide-on-mobile">1.045</td>
+<td class="hide-on-mobile">1.007</td>
+<td class="hide-on-mobile">11</td>
+<td class="hide-on-mobile">
+<span title="3">
+<div class="color_preview srm3"></div>
+3 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/standard-ordinary-bitter">Standard/Ordinary Bitter</a></td>
+<td class="hide-on-mobile">1.036</td>
+<td class="hide-on-mobile">1.009</td>
+<td class="hide-on-mobile">30</td>
+<td class="hide-on-mobile">
+<span title="9">
+<div class="color_preview srm9"></div>
+9 °L
+</span>
+</td>
+<td class="hide-on-mobile">3.5%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/straight-unblended-lambic">Straight (Unblended) Lambic</a></td>
+<td class="hide-on-mobile">1.047</td>
+<td class="hide-on-mobile">1.006</td>
+<td class="hide-on-mobile">5</td>
+<td class="hide-on-mobile">
+<span title="5">
+<div class="color_preview srm5"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/strong-scotch-ale">Strong Scotch Ale</a></td>
+<td class="hide-on-mobile">1.100</td>
+<td class="hide-on-mobile">1.074</td>
+<td class="hide-on-mobile">26</td>
+<td class="hide-on-mobile">
+<span title="19">
+<div class="color_preview srm19"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">8.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/sweet-stout">Sweet Stout</a></td>
+<td class="hide-on-mobile">1.052</td>
+<td class="hide-on-mobile">1.018</td>
+<td class="hide-on-mobile">30</td>
+<td class="hide-on-mobile">
+<span title="35">
+<div class="color_preview srm35"></div>
+35 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/traditional-bock">Traditional Bock</a></td>
+<td class="hide-on-mobile">1.068</td>
+<td class="hide-on-mobile">1.016</td>
+<td class="hide-on-mobile">23</td>
+<td class="hide-on-mobile">
+<span title="18">
+<div class="color_preview srm18"></div>
+18 °L
+</span>
+</td>
+<td class="hide-on-mobile">6.8%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/vienna-lager">Vienna Lager</a></td>
+<td class="hide-on-mobile">1.049</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">24</td>
+<td class="hide-on-mobile">
+<span title="13">
+<div class="color_preview srm13"></div>
+13 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/weizenbock">Weizenbock</a></td>
+<td class="hide-on-mobile">1.077</td>
+<td class="hide-on-mobile">1.018</td>
+<td class="hide-on-mobile">22</td>
+<td class="hide-on-mobile">
+<span title="18">
+<div class="color_preview srm18"></div>
+19 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.2%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/weizen-weissbier">Weizen/Weissbier</a></td>
+<td class="hide-on-mobile">1.048</td>
+<td class="hide-on-mobile">1.012</td>
+<td class="hide-on-mobile">11</td>
+<td class="hide-on-mobile">
+<span title="5">
+<div class="color_preview srm5"></div>
+5 °L
+</span>
+</td>
+<td class="hide-on-mobile">4.9%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/witbier">Witbier</a></td>
+<td class="hide-on-mobile">1.048</td>
+<td class="hide-on-mobile">1.010</td>
+<td class="hide-on-mobile">15</td>
+<td class="hide-on-mobile">
+<span title="3">
+<div class="color_preview srm3"></div>
+3 °L
+</span>
+</td>
+<td class="hide-on-mobile">5.0%</td>
+</tr>
+<tr>
+<td><a href="https://www.brewtoad.com/styles/wood-aged-beer">Wood-Aged Beer</a></td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">1.075</td>
+<td class="hide-on-mobile">60</td>
+<td class="hide-on-mobile">
+<span title="20">
+<div class="color_preview srm20"></div>
+20 °L
+</span>
+</td>
+<td class="hide-on-mobile">7.5%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<footer class="site-footer soft--top layer-0 hide-on-mobile">
+<div class="soft--sides">
+<div class="footer-nav container-row row">
+<div class="col-fourths soft--half-sides">
+<ul>
+<li>Home</li>
+<li>
+<a href="https://www.brewtoad.com/recipes" title="Explore homebrew recipes">All Recipes</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/users" title="Find homebrewers">Brewers</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/groups" title="Find homebrew groups near you!">Groups</a>
+</li>
+<!-- %li -->
+<!-- %a{:href => forums_path, :title => t("footer.forums_link.title")}= t("footer.forums_link.text") -->
+<li>
+<a href="https://www.brewtoad.com/pro" title="Learn about Brewtoad Pro">Features &amp; Pricing</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/sponsors" title="Thanks to our Sponsors!">Deals &amp; Sponsorship</a>
+</li>
+<!--
+<li><a href="http://brewtoad.myshopify.com/" target="_blank" class="blue"><haml_loud> t("footer.store_link.text") </haml_loud></a></li>
+<li><a href="http://blog.brewtoad.com/"      target="_blank" class="blue"><haml_loud> t("footer.blog_link.text") </haml_loud></a></li>
+<li><a href="http://brewtoad.com/faq/"       target="_blank" class="blue"><haml_loud> t("footer.faq_link.text") </haml_loud></a></li>
+-->
+</ul>
+</div>
+<div class="col-fourths soft--half-sides">
+<ul>
+<li>Tools &amp; Calculators</li>
+<li>
+<a href="https://www.brewtoad.com/tools/mash-water-calculator" title="Mash Water Calculator">Mash Water Calculator</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/mash-infusion-calculator" title="Mash Infusion Calculator">Mash Infusion Calculator</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/alcohol-calculator" title="Alcohol Calculator">Alcohol Calculator</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/color-converter" title="Color Converter">Color Converter</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/malt-potential-extract-calculator" title="Malt Potential Extract Calculator">Malt Potential Extract Calculator</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/hydrometer-temperature-correction" title="Hydrometer Temperature Correction">Hydrometer Temperature Correction</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/tools/pitch-rate-calculator" title="Pitch Rate Calculator">Pitch Rate Calculator</a>
+</li>
+</ul>
+</div>
+<div class="col-fourths soft--half-sides">
+<ul>
+<li>Styles &amp; Ingredients</li>
+<li>
+<a href="https://www.brewtoad.com/styles" title="Research Styles">Styles</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/generic-fermentables" title="Research Fermentables">Fermentables</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/hops" title="Research Hops">Hops</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/yeasts" title="Research Yeasts">Yeasts</a>
+</li>
+<li>
+<a href="https://www.brewtoad.com/extras" title="Research extras">Extras</a>
+</li>
+</ul>
+</div>
+<div class="col-fourths soft--half-sides">
+<ul class="social">
+<li>
+Follow Us
+</li>
+<li>
+<a href="https://twitter.com/brewtoad" target="_blank">
+<i class="icon ion-social-twitter"></i>
+@Brewtoad
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/Brewtoad" target="_blank">
+<i class="icon icon-facebook"></i>
+Facebook
+</a>
+</li>
+<li>
+<a href="https://instagram.com/brewtoad/" target="_blank">
+<i class="icon icon-instagram"></i>
+#Brewtoad
+</a>
+</li>
+<li>
+<a href="https://plus.google.com/+Brewtoad/posts" target="_blank">
+<i class="icon icon-google-plus"></i>
+Google+
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sep"></div>
+<div class="copyright soft--bottom">
+<ul class="nav with-separator footer-links">
+<li class="about">
+<a href="https://www.brewtoad.com/about" title="pricing and features">About</a>
+</li>
+<li class="advertise">
+<a href="https://www.brewtoad.com/sponsors" title="Sponsorship">Sponsorship</a>
+</li>
+<!-- <li class="ad no-border"><a href="http://www.ackmanndickenson.com" target="_blank" title="<haml_loud> t("footer.ackmann_dickenson_link.title") </haml_loud>"><img src="<haml_loud> asset_path('ad-logo.png') </haml_loud>"/></a></li> -->
+<li class="contact">
+<a href="https://www.brewtoad.com/contact" title="Contact us">Contact</a>
+</li>
+<li class="legal no-border">
+<a href="https://www.brewtoad.com/legal" title="Terms &amp; Conditions">Terms &amp; Privacy</a>
+</li>
+</ul>
+</div>
+</footer>
+
+</div>
+</div>
+<!-- = render :partial => 'shared/pro_modal' -->
+
+
+
+
+</body></html>
