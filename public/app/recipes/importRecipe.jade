@@ -1,0 +1,8 @@
+.container(ng-app='app', ng-controller="mvImportXmlRecipe", fxlayout='column', fxlayoutalign='space-evenly stretch')
+  h1(mat-dialog-title='') Upload Files
+  div
+  .form-group
+    label(for='file') Choose File
+    input(type='file', custom-on-change="uploadFile")
+    // This is the content of the dialog, containing a list of the files to upload
+    button.add-files-btn( ng-click='addFiles()') Add Files

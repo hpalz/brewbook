@@ -5,11 +5,19 @@ module.exports = {
   development: {
     db: 'mongodb://localhost/bruhaus',
     rootPath: rootPath,
-    port: process.env.PORT || 3030
+    port: process.env.PORT || 3030,
+    corsOptions : {
+      origin: '*',
+      optionsSuccessStatus: 200
+    }
   },
   production: {
     rootPath: rootPath,
     db: 'mongodb://jeames:bruhaus@ds053178.mongolab.com:53178/bruhaus',
-    port: process.env.PORT || 80
+    port: process.env.PORT || 80,
+    corsOptions : {
+      origin: '*',
+      optionsSuccessStatus: 200
+    }
   }
 }

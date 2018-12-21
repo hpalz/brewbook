@@ -14,5 +14,7 @@ require('./server/config/passport')();
 
 require('./server/config/routes')(app);
 
+require('./server/config/cors')(app, config);
+
 app.listen(config.port);
 console.log('Listening on port ' + config.port + '...');

@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 var Recipe = require('mongoose').model('Recipe');
+var parser = require('xml2json');
+var xmlImportUtility = require('../utilities/xmlImport');
 
 exports.getRecipes = function(req, res) {
   Recipe.find({}).exec(function(err, collection) {
@@ -23,6 +25,25 @@ exports.createRecipe = function(req, res, next) {
     },
     name: recipeBody.name,
     featured: recipeBody.featured
+  });
+  Recipe.create(newRecipe, function(err, recipe) {
+    if(err) {
+      // todo
+    }
+    res.send(recipe);
+  })
+};
+
+exports.importRecipe = function(req, res, next) {
+  var recipeBody = req.body.recipes.recipe;
+  var newRecipe = new Recipe ({
+    _id: new mongoose.Types.ObjectId(),
+    created: new Date(),
+    style: {
+      name: recipeBody.style.name
+    },
+    name: recipeBody.name,
+    featured: true
   });
   Recipe.create(newRecipe, function(err, recipe) {
     if(err) {

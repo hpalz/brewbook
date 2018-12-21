@@ -28,6 +28,9 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
       .when('/newRecipe', { templateUrl: '/partials/recipes/newRecipe',
         controller: 'mvCreateRecipeCtrl'
       })
+      .when('/importRecipe', { templateUrl: '/partials/recipes/importRecipe',
+        controller: 'mvImportXmlRecipe'
+      })
       .when('/recipes/:id', { templateUrl: '/partials/recipes/recipe-details',
         controller: 'mvRecipeDetailCtrl'
       })
