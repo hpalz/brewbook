@@ -12,6 +12,7 @@ module.exports = function(app) {
 
   app.get('/api/recipes', recipes.getRecipes);
   app.post('/api/recipes', recipes.createRecipe);
+  app.delete('/api/recipes', recipes.deleteRecipe);
   app.post('/api/importRecipes', recipes.importRecipe);
   app.get('/api/importRecipes', recipes.getRecipes);
   app.get('/api/recipes/:id', recipes.getRecipeById);

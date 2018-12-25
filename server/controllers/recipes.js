@@ -34,6 +34,17 @@ exports.createRecipe = function(req, res, next) {
   })
 };
 
+exports.deleteRecipe = function(req, res, next) {
+  var recipeId = req.query.id;
+  
+  Recipe.findByIdAndDelete(recipeId, function(err, recipe) {
+    if(err) {
+      // todo
+    }
+    res.send(recipe);
+  })
+};
+
 exports.importRecipe = function(req, res, next) {
   var recipeBody = req.body.recipes.recipe;
   var newRecipe = new Recipe ({
