@@ -33,3 +33,61 @@ footer p {
 .toast-success {
   background-color: #13987e;
 }
+.horizontal-bar-graph {
+  width: 100%;
+  height: 22px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.horizontal-bar-graph .bar {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 120px;
+  right: 0;
+  background: #ededed;
+  border: 1px solid #dedede;
+  box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05), 1px 1px 0 #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 0;
+}
+.horizontal-bar-graph .bar .range {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+  background: #b55002;
+  opacity: 0.2;
+}
+.horizontal-bar-graph .bar .marker {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+  height: 100%;
+  width: 3px;
+  background: #ce5b02;
+}
+.horizontal-bar-graph .label {
+  bottom: 0;
+  line-height: 20px;
+  font-size: 0.8rem;
+}
+.horizontal-bar-graph .value {
+  bottom: 0;
+  left: 55px;
+  line-height: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.horizontal-bar-graph .bar .range,
+.horizontal-bar-graph .bar .marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.horizontal-bar-graph .label,
+.horizontal-bar-graph .value {
+  position: absolute;
+  left: 0;
+  text-align: center;
+}

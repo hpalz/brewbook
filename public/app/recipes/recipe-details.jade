@@ -3,6 +3,286 @@
     .pull-left(ng-controller="mvDeleteRecipeCtrl")
       button.btn.btn-primary(ng-click="delete(recipe._id)") Delete Recipe
   h1 {{recipe.name}}
+  .subnav--content
+  .recipe-show
+    .recipe-show--stats
+      .horizontal-bar-graph
+        .bar
+          .range(style='left: 29.999999999999954%; right: 59.999999999999964%;')
+          .marker(style='left: 39.727272727273274%;')
+        .value 1.060
+        .label OG
+      .horizontal-bar-graph
+        .bar
+          .range(style='left: 6.666666666666673%; right: 90.00000000000006%;')
+          .marker(style='left: 9.931818181819985%;')
+        .value 1.015
+        .label FG
+      .horizontal-bar-graph
+        .bar
+          .range(style='left: 25.0%; right: 62.5%;')
+          .marker(style='left: 38.333333333333336%;')
+        .value 46
+        .label IBU
+      .horizontal-bar-graph
+        .bar
+          .range(style='left: 12.5%; right: 65.0%;')
+          .marker(style='left: 10.0%;')
+        .value 4
+        .label SRM
+      .horizontal-bar-graph
+        .bar
+          .range(style='left: 26.923076923076923%; right: 60.0%;')
+          .marker(style='left: 37.34466783216769%;')
+        .value 5.9%
+        .label ABV
+      .horizontal-bar-graph
+        .bar
+          .range(style='left: 50.0%; right: 0.0%;')
+          .marker(style='left: 78.696729128508%;')
+        .value(title='Bitter') 0.79
+        .label Balance
+.recipe-show--ingredients
+  // - cache(r.ingredients_cache_key) do
+  h3 Fermentables
+  table#fermentables(cellpadding='0', cellspacing='0')
+    thead
+      tr
+        th(width='100px') Amount
+        th Fermentable
+        th.hide-below-desktop-wide Maltster
+        th Use
+        th.hide-below-desktop-wide PPG
+        th.hide-below-desktop-wide Color
+    tbody
+      tr
+        td.nowrap
+          span(title='75.0%') 9.0 lb
+        td.nowrap
+          .swatch.srm1.hide-below-desktop
+          a.js-modal(data-title='Pale 2-Row (US)', href='https://www.brewtoad.com/generic-fermentables/52') Pale 2-Row (US)
+        td.nowrap.hide-below-desktop-wide Any
+        td
+          | Mash
+        td.hide-below-desktop-wide
+          | 37
+        td.hide-below-desktop-wide
+          | 1
+          | °L
+      tr
+        td.nowrap
+          span(title='16.0%') 2.0 lb
+        td.nowrap
+          .swatch.srm10.hide-below-desktop
+          a.js-modal(data-title='Munich - Light 10L (US)', href='https://www.brewtoad.com/generic-fermentables/143') Munich - Light 10L (US)
+        td.nowrap.hide-below-desktop-wide Any
+        td
+          | Mash
+        td.hide-below-desktop-wide
+          | 33
+        td.hide-below-desktop-wide
+          | 10
+          | °L
+      tr
+        td.nowrap
+          span(title='8.0%') 1.0 lb
+        td.nowrap
+          .swatch.srm1.hide-below-desktop
+          a.js-modal(data-title='Wheat (US)', href='https://www.brewtoad.com/generic-fermentables/34') Wheat (US)
+        td.nowrap.hide-below-desktop-wide Any
+        td
+          | Mash
+        td.hide-below-desktop-wide
+          | 38
+        td.hide-below-desktop-wide
+          | 1
+          | °L
+h3 Hops
+table#hops(cellpadding='0', cellspacing='0')
+  thead
+    tr
+      th Amount
+      th Hop
+      th Time
+      th.hide-on-mobile Use
+      th.hide-below-desktop-wide Form
+      th.hide-below-desktop-wide AA
+  tbody
+    tr
+      td.nowrap
+        | 1.0
+        | oz
+      td.nowrap
+        a.js-modal(data-title='Cascade (US)', href='https://www.brewtoad.com/hops/52139') Cascade (US)
+      td.nowrap
+        | 60
+        | min
+      td.hide-on-mobile
+        | Boil
+      td.hide-below-desktop-wide
+        | Pellet
+      td.hide-below-desktop-wide
+        | 7.0%
+    tr
+      td.nowrap
+        | 1.0
+        | oz
+      td.nowrap
+        a.js-modal(data-title='Cascade (US)', href='https://www.brewtoad.com/hops/52139') Cascade (US)
+      td.nowrap
+        | 40
+        | min
+      td.hide-on-mobile
+        | Boil
+      td.hide-below-desktop-wide
+        | Pellet
+      td.hide-below-desktop-wide
+        | 7.0%
+    tr
+      td.nowrap
+        | 0.5
+        | oz
+      td.nowrap
+        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
+      td.nowrap
+        | 20
+        | min
+      td.hide-on-mobile
+        | Boil
+      td.hide-below-desktop-wide
+        | Pellet
+      td.hide-below-desktop-wide
+        | 4.0%
+    tr
+      td.nowrap
+        | 0.5
+        | oz
+      td.nowrap
+        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
+      td.nowrap
+        | 10
+        | min
+      td.hide-on-mobile
+        | Boil
+      td.hide-below-desktop-wide
+        | Pellet
+      td.hide-below-desktop-wide
+        | 4.0%
+    tr
+      td.nowrap
+        | 0.5
+        | oz
+      td.nowrap
+        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
+      td.nowrap
+        | 5
+        | min
+      td.hide-on-mobile
+        | Boil
+      td.hide-below-desktop-wide
+        | Pellet
+      td.hide-below-desktop-wide
+        | 4.0%
+    tr
+      td.nowrap
+        | 0.5
+        | oz
+      td.nowrap
+        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
+      td.nowrap
+        | 0
+        | min
+      td.hide-on-mobile
+        | Boil
+      td.hide-below-desktop-wide
+        | Pellet
+      td.hide-below-desktop-wide
+        | 4.0%
+    tr
+      td.nowrap
+        | 1.0
+        | oz
+      td.nowrap
+        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
+      td.nowrap
+        | 14
+        | days
+      td.hide-on-mobile
+        | Dry Hop
+      td.hide-below-desktop-wide
+        | Pellet
+      td.hide-below-desktop-wide
+        | 4.0%
+h3 Yeasts
+table#yeasts(cellpadding='0', cellspacing='0')
+  thead
+    tr
+      th Name
+      th Lab/Product
+      th.hide-below-desktop-wide Attenuation
+  tbody
+    tr
+      td.nowrap
+        a.js-modal(data-title='American Ale', href='https://www.brewtoad.com/yeasts/55') American Ale
+      td
+        | Wyeast
+        | 1056
+      td.hide-below-desktop-wide
+        | 75.0%
+.soft
+  h3 Stats
+  h4 Batch & Boil
+  ul.stat-group-thirds
+    li
+      small Batch Size
+      | 5.5
+      | gal
+    li
+      small Boil Time
+      | 60 min
+  p
+    a#show-extended-stats(href='https://www.brewtoad.com/recipes/murica-pale-ale#') More stats...
+  #extended-stats.hidden
+    h4 Mash
+    ul.stat-group-thirds
+      li
+        small Efficiency
+        | 75.0%
+    h4 Fermentation
+    ul.stat-group-thirds
+      li
+        small Primary
+        | 7
+        | days
+      li
+        small Secondary
+        | 14
+        | days
+    h4 Misc.
+    ul.stat-group-thirds
+      li
+        small IBU Formula
+        | Tinseth
+.hide-above-mobile
+  .soft.hard--top
+    form.button_to(method='post', action='https://www.brewtoad.com/recipes/murica-pale-ale/order')
+      button.btn.btn-blue.buy-button(title='Buy Ingredients for this Recipe', rel='nofollow', data-position='bottom', type='submit')
+        i.icon-cart
+        | Buy Recipe Kit
+        | –
+        strong
+          | $31.50
+      input(type='hidden', name='authenticity_token', value='6RzWadS4rz7SiKqSoKvIYf6Tu+vSwk1bc6H7zT73LMPCwpVT6zqaHDvMcagW8qsIZlehFN2CyZ8VGiJbUT+UkA==')
+.sep.flush--ends
+.soft.soft--half-top
+  #comments.js-recipe-comments(data-count='0')
+    ol#js-comment-list-all.recipe-comments-list
+    h2#leave-comment
+      | Leave a Comment
+    .comment-form
+      textarea(rows='4', name='', placeholder='Leave a comment or ask a question')
+      a.btn-white.btn-small.js-submit-comment(href='https://www.brewtoad.com/recipes/murica-pale-ale#', data-value='/recipes/murica-pale-ale', data-path='/recipes/murica-pale-ale') Add Comment
+//
   .row
     .col-md-6
       h3(ng-show="recipe.featured") Featured

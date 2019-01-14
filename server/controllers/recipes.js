@@ -47,15 +47,43 @@ exports.deleteRecipe = function(req, res, next) {
 
 exports.importRecipe = function(req, res, next) {
   var recipeBody = req.body.recipes.recipe;
+  var i = 0;
   var newRecipe = new Recipe ({
     _id: new mongoose.Types.ObjectId(),
     created: new Date(),
     style: {
       name: recipeBody.style.name
     },
+    fermentables : JSON.parse(JSON.stringify(recipeBody.fermentables)),
+    hops : JSON.parse(JSON.stringify(recipeBody.hops)),
+    yeasts : JSON.parse(JSON.stringify(recipeBody.yeasts)),
     name: recipeBody.name,
     featured: true
   });
+/*  while(recipeBody.fermentables.fermentable[i])
+  {
+    newRecipe.fermentables.fermentable[i] = recipeBody.fermentables.fermentable[i];
+    i++;
+  }
+  i = 0;
+  while(recipeBody.hops.hop[i])
+  {
+    newRecipe.hops.hop[i] = recipeBody.hops.hop[i];
+    i++;
+  }
+  i = 0;
+  if(recipeBody.yeasts.yeast[i])
+  {
+    while(recipeBody.yeasts.yeast[i])
+    {
+      newRecipe.yeasts.yeast[i] = recipeBody.yeasts.yeast[i];
+      i++;
+    }
+  }
+  else
+  {
+    newRecipe.yeasts.yeast[0] = recipeBody.yeasts.yeast;
+  }*/
   Recipe.create(newRecipe, function(err, recipe) {
     if(err) {
       // todo
