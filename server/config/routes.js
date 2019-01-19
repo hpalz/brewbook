@@ -10,12 +10,12 @@ module.exports = function(app) {
   app.post('/api/users', users.createUser);
   app.put('/api/users', users.updateUser);
 
+  app.get('/api/recipes/:id', recipes.getRecipeById);
   app.get('/api/recipes', recipes.getRecipes);
   app.post('/api/recipes', recipes.createRecipe);
   app.delete('/api/recipes', recipes.deleteRecipe);
   app.post('/api/importRecipes', recipes.importRecipe);
   app.get('/api/importRecipes', recipes.getRecipes);
-  app.get('/api/recipes/:id', recipes.getRecipeById);
 
   app.get('/partials/*', function(req, res) {
     res.render('../../public/app/' + req.params[0]);

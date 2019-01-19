@@ -3,6 +3,8 @@
     .pull-left(ng-controller="mvDeleteRecipeCtrl")
       button.btn.btn-primary(ng-click="delete(recipe._id)") Delete Recipe
   h1 {{recipe.name}}
+  each val in recipe.fermentables.fermentable
+    p #{val.name}
   .subnav--content
   .recipe-show
     .recipe-show--stats
@@ -60,7 +62,7 @@
           span(title='75.0%') 9.0 lb
         td.nowrap
           .swatch.srm1.hide-below-desktop
-          a.js-modal(data-title='Pale 2-Row (US)', href='https://www.brewtoad.com/generic-fermentables/52') Pale 2-Row (US)
+          {{recipe.fermentables.fermentable[0].name}}
         td.nowrap.hide-below-desktop-wide Any
         td
           | Mash
@@ -69,34 +71,7 @@
         td.hide-below-desktop-wide
           | 1
           | °L
-      tr
-        td.nowrap
-          span(title='16.0%') 2.0 lb
-        td.nowrap
-          .swatch.srm10.hide-below-desktop
-          a.js-modal(data-title='Munich - Light 10L (US)', href='https://www.brewtoad.com/generic-fermentables/143') Munich - Light 10L (US)
-        td.nowrap.hide-below-desktop-wide Any
-        td
-          | Mash
-        td.hide-below-desktop-wide
-          | 33
-        td.hide-below-desktop-wide
-          | 10
-          | °L
-      tr
-        td.nowrap
-          span(title='8.0%') 1.0 lb
-        td.nowrap
-          .swatch.srm1.hide-below-desktop
-          a.js-modal(data-title='Wheat (US)', href='https://www.brewtoad.com/generic-fermentables/34') Wheat (US)
-        td.nowrap.hide-below-desktop-wide Any
-        td
-          | Mash
-        td.hide-below-desktop-wide
-          | 38
-        td.hide-below-desktop-wide
-          | 1
-          | °L
+        
 h3 Hops
 table#hops(cellpadding='0', cellspacing='0')
   thead
@@ -235,11 +210,11 @@ table#yeasts(cellpadding='0', cellspacing='0')
   ul.stat-group-thirds
     li
       small Batch Size
-      | 5.5
+      | {{recipe.batch_size}}
       | gal
     li
       small Boil Time
-      | 60 min
+      | {{recipe.boil_time}} min
   p
     a#show-extended-stats(href='https://www.brewtoad.com/recipes/murica-pale-ale#') More stats...
   #extended-stats.hidden
@@ -247,7 +222,7 @@ table#yeasts(cellpadding='0', cellspacing='0')
     ul.stat-group-thirds
       li
         small Efficiency
-        | 75.0%
+        | {{recipe.efficiency}}%
     h4 Fermentation
     ul.stat-group-thirds
       li
