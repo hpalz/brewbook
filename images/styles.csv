@@ -1,0 +1,81 @@
+Style,OG,FG,IBU,Color,ABV
+American Amber Ale,1.052,1.012,32,14 �L,5.20%
+American Barleywine,1.1,1.023,85,15 �L,10.00%
+American Brown Ale,1.052,1.013,30,27 �L,5.20%
+American IPA,1.066,1.014,55,11 �L,6.50%
+American Pale Ale,1.052,1.012,37,10 �L,5.30%
+American Stout,1.062,1.016,55,35 �L,6.00%
+American Wheat or Rye Beer,1.047,1.01,22,5 �L,4.80%
+Baltic Porter,1.075,1.02,30,24 �L,7.50%
+Belgian Blond Ale,1.069,1.013,22,6 �L,6.80%
+Belgian Dark Strong Ale,1.093,1.017,27,17 �L,9.50%
+Belgian Dubbel,1.069,1.013,20,14 �L,6.80%
+Belgian Golden Strong Ale,1.083,1.01,28,5 �L,9.00%
+Belgian Pale Ale,1.051,1.012,25,11 �L,5.20%
+Belgian Specialty Ale,1.075,1.075,60,20 �L,7.50%
+Belgian Tripel,1.08,1.011,30,6 �L,8.50%
+Berliner Weisse,1.03,1.004,5,3 �L,3.30%
+Bi�re de Garde,1.07,1.012,23,13 �L,7.20%
+Blonde Ale,1.046,1.01,21,5 �L,4.70%
+Bohemian Pilsener,1.05,1.015,40,5 �L,4.80%
+Brown Porter,1.046,1.011,26,25 �L,4.70%
+California Common Beer,1.051,1.012,37,12 �L,5.00%
+Christmas/Winter Specialty Spiced Beer,1.075,1.075,60,20 �L,7.50%
+Classic American Pilsner,1.052,1.012,32,5 �L,5.20%
+Classic Rauchbier,1.054,1.014,25,17 �L,5.40%
+Cream Ale,1.048,1.009,17,4 �L,4.90%
+Dark American Lager,1.05,1.01,14,18 �L,5.10%
+Doppelbock,1.092,1.02,21,16 �L,8.50%
+Dortmunder Export,1.052,1.012,26,5 �L,5.40%
+Dry Stout,1.043,1.009,37,33 �L,4.50%
+Dunkelweizen,1.05,1.012,14,19 �L,4.90%
+D�sseldorf Altbier,1.05,1.012,42,14 �L,4.80%
+Eisbock,1.099,1.027,30,24 �L,11.50%
+English Barleywine,1.1,1.024,52,15 �L,10.00%
+English IPA,1.062,1.014,50,11 �L,6.20%
+Extra Special/Strong Bitter (English Pale Ale),1.054,1.013,40,12 �L,5.40%
+Flanders Brown Ale/Oud Bruin,1.057,1.01,22,19 �L,6.00%
+Flanders Red Ale,1.052,1.007,17,13 �L,5.50%
+Foreign Extra Stout,1.066,1.014,50,35 �L,6.80%
+Fruit Beer,1.075,1.075,60,20 �L,7.50%
+Fruit Lambic,1.05,1.005,5,5 �L,6.00%
+German Pilsner (Pils),1.047,1.01,35,4 �L,4.80%
+Gueuze,1.05,1.003,5,5 �L,6.50%
+Imperial IPA,1.08,1.015,90,12 �L,8.80%
+Irish Red Ale,1.052,1.012,22,14 �L,5.00%
+K�lsch,1.047,1.009,25,4 �L,4.80%
+Lite American Lager,1.042,1.01,10,3 �L,5.30%
+Maibock/Helles Bock,1.068,1.014,29,9 �L,6.80%
+Mild,1.034,1.01,17,19 �L,3.60%
+Munich Dunkel,1.052,1.013,23,21 �L,5.00%
+Munich Helles,1.048,1.01,19,4 �L,5.10%
+Northern English Brown Ale,1.046,1.01,25,17 �L,4.80%
+Northern German Altbier,1.05,1.012,32,16 �L,4.80%
+Oatmeal Stout,1.056,1.014,32,31 �L,5.10%
+Oktoberfest/M�rzen,1.054,1.014,24,11 �L,5.20%
+Old Ale,1.075,1.018,45,16 �L,7.50%
+Other Smoked Beer,1.075,1.075,60,20 �L,7.50%
+Premium American Lager,1.051,1.01,20,4 �L,5.30%
+Robust Porter,1.056,1.014,37,29 �L,5.70%
+Roggenbier (German Rye Beer),1.051,1.012,15,17 �L,5.20%
+Russian Imperial Stout,1.095,1.024,70,35 �L,10.00%
+Saison,1.056,1.007,27,10 �L,6.00%
+Schwarzbier (Black Beer),1.049,1.013,27,24 �L,4.90%
+Scottish Export 80/-,1.047,1.013,22,13 �L,4.50%
+Scottish Heavy 70/-,1.038,1.012,17,13 �L,3.50%
+Scottish Light 60/-,1.032,1.011,15,13 �L,2.90%
+Southern English Brown,1.038,1.012,16,27 �L,3.40%
+Special/Best/Premium Bitter,1.044,1.01,32,11 �L,4.20%
+Specialty Beer,1.075,1.075,60,20 �L,7.50%
+"Spice, Herb, or Vegetable Beer",1.075,1.075,60,20 �L,7.50%
+Standard American Lager,1.045,1.007,11,3 �L,4.80%
+Standard/Ordinary Bitter,1.036,1.009,30,9 �L,3.50%
+Straight (Unblended) Lambic,1.047,1.006,5,5 �L,5.80%
+Strong Scotch Ale,1.1,1.074,26,20 �L,8.20%
+Sweet Stout,1.052,1.018,30,35 �L,5.00%
+Traditional Bock,1.068,1.016,23,18 �L,6.80%
+Vienna Lager,1.049,1.012,24,13 �L,5.00%
+Weizenbock,1.077,1.018,22,19 �L,7.20%
+Weizen/Weissbier,1.048,1.012,11,5 �L,4.90%
+Witbier,1.048,1.01,15,3 �L,5.00%
+Wood-Aged Beer,1.075,1.075,60,20 �L,7.50%

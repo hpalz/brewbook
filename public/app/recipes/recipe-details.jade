@@ -3,8 +3,6 @@
     .pull-left(ng-controller="mvDeleteRecipeCtrl")
       button.btn.btn-primary(ng-click="delete(recipe._id)") Delete Recipe
   h1 {{recipe.name}}
-  each val in recipe.fermentables.fermentable
-    p #{val.name}
   .subnav--content
   .recipe-show
     .recipe-show--stats
@@ -56,21 +54,21 @@
         th Use
         th.hide-below-desktop-wide PPG
         th.hide-below-desktop-wide Color
-    tbody
-      tr
-        td.nowrap
-          span(title='75.0%') 9.0 lb
-        td.nowrap
-          .swatch.srm1.hide-below-desktop
-          {{recipe.fermentables.fermentable[0].name}}
-        td.nowrap.hide-below-desktop-wide Any
-        td
-          | Mash
-        td.hide-below-desktop-wide
-          | 37
-        td.hide-below-desktop-wide
-          | 1
-          | °L
+    tbody 
+      tr(ng-repeat="ferm in recipe.fermentables.fermentable")
+          td.nowrap
+            span(title='75.0%') {{ferm.display_amount}}
+          td.nowrap
+            .swatch.srm1.hide-below-desktop
+            {{ferm.name}}
+          td.nowrap.hide-below-desktop-wide Any
+          td
+            | Mash
+          td.hide-below-desktop-wide
+            | {{ferm.potential}} * 1000
+          td.hide-below-desktop-wide
+            | {{ferm.color}}
+            | °L
         
 h3 Hops
 table#hops(cellpadding='0', cellspacing='0')
@@ -83,111 +81,20 @@ table#hops(cellpadding='0', cellspacing='0')
       th.hide-below-desktop-wide Form
       th.hide-below-desktop-wide AA
   tbody
-    tr
-      td.nowrap
-        | 1.0
-        | oz
-      td.nowrap
-        a.js-modal(data-title='Cascade (US)', href='https://www.brewtoad.com/hops/52139') Cascade (US)
-      td.nowrap
-        | 60
-        | min
-      td.hide-on-mobile
-        | Boil
-      td.hide-below-desktop-wide
-        | Pellet
-      td.hide-below-desktop-wide
-        | 7.0%
-    tr
-      td.nowrap
-        | 1.0
-        | oz
-      td.nowrap
-        a.js-modal(data-title='Cascade (US)', href='https://www.brewtoad.com/hops/52139') Cascade (US)
-      td.nowrap
-        | 40
-        | min
-      td.hide-on-mobile
-        | Boil
-      td.hide-below-desktop-wide
-        | Pellet
-      td.hide-below-desktop-wide
-        | 7.0%
-    tr
-      td.nowrap
-        | 0.5
-        | oz
-      td.nowrap
-        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
-      td.nowrap
-        | 20
-        | min
-      td.hide-on-mobile
-        | Boil
-      td.hide-below-desktop-wide
-        | Pellet
-      td.hide-below-desktop-wide
-        | 4.0%
-    tr
-      td.nowrap
-        | 0.5
-        | oz
-      td.nowrap
-        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
-      td.nowrap
-        | 10
-        | min
-      td.hide-on-mobile
-        | Boil
-      td.hide-below-desktop-wide
-        | Pellet
-      td.hide-below-desktop-wide
-        | 4.0%
-    tr
-      td.nowrap
-        | 0.5
-        | oz
-      td.nowrap
-        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
-      td.nowrap
-        | 5
-        | min
-      td.hide-on-mobile
-        | Boil
-      td.hide-below-desktop-wide
-        | Pellet
-      td.hide-below-desktop-wide
-        | 4.0%
-    tr
-      td.nowrap
-        | 0.5
-        | oz
-      td.nowrap
-        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
-      td.nowrap
-        | 0
-        | min
-      td.hide-on-mobile
-        | Boil
-      td.hide-below-desktop-wide
-        | Pellet
-      td.hide-below-desktop-wide
-        | 4.0%
-    tr
-      td.nowrap
-        | 1.0
-        | oz
-      td.nowrap
-        a.js-modal(data-title='Liberty (US)', href='https://www.brewtoad.com/hops/52164') Liberty (US)
-      td.nowrap
-        | 14
-        | days
-      td.hide-on-mobile
-        | Dry Hop
-      td.hide-below-desktop-wide
-        | Pellet
-      td.hide-below-desktop-wide
-        | 4.0%
+      tr(ng-repeat="hp in recipe.hops.hop")
+          td.nowrap
+            span(title='75.0%') {{hp.display_amount}}
+          td.nowrap
+             // a.js-modal(data-title='{{hp.name}}', href='https://www.brewtoad.com/hops/52139') {{hp.name}}
+            {{hp.name} 
+          td.nowrap
+            {{hp.display_time}}
+          td.hide-on-mobile
+            | {{hp.use}}
+          td.hide-below-desktop-wide
+            | {{hp.form}}
+          td.hide-below-desktop-wide
+            | {{hp.alpha}}
 h3 Yeasts
 table#yeasts(cellpadding='0', cellspacing='0')
   thead
@@ -196,14 +103,16 @@ table#yeasts(cellpadding='0', cellspacing='0')
       th Lab/Product
       th.hide-below-desktop-wide Attenuation
   tbody
-    tr
-      td.nowrap
-        a.js-modal(data-title='American Ale', href='https://www.brewtoad.com/yeasts/55') American Ale
-      td
-        | Wyeast
-        | 1056
-      td.hide-below-desktop-wide
-        | 75.0%
+      tr(ng-repeat="yst in recipe.yeasts.yeast")
+        //  td.nowrap
+              //a.js-modal(data-title='American Ale', href='https://www.brewtoad.com/yeasts/55') American Ale
+          //   {{yst.type} 
+        td.nowrap
+          | {{yst.laboratory}
+        td.nowrap
+          | {{yst.name}
+        td.hide-on-mobile
+          | {{yst.attenuation}} %
 .soft
   h3 Stats
   h4 Batch & Boil

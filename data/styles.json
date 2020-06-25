@@ -1,0 +1,642 @@
+[
+    {
+      "styleName": "American Amber Ale",
+      "og": 1.052,
+      "fg": 1.012,
+      "ibu": 32,
+      "color": "14 �L",
+      "abv": "5.20%"
+    },
+    {
+      "styleName": "American Barleywine",
+      "og": 1.1,
+      "fg": 1.023,
+      "ibu": 85,
+      "color": "15 �L",
+      "abv": "10.00%"
+    },
+    {
+      "styleName": "American Brown Ale",
+      "og": 1.052,
+      "fg": 1.013,
+      "ibu": 30,
+      "color": "27 �L",
+      "abv": "5.20%"
+    },
+    {
+      "styleName": "American IPA",
+      "og": 1.066,
+      "fg": 1.014,
+      "ibu": 55,
+      "color": "11 �L",
+      "abv": "6.50%"
+    },
+    {
+      "styleName": "American Pale Ale",
+      "og": 1.052,
+      "fg": 1.012,
+      "ibu": 37,
+      "color": "10 �L",
+      "abv": "5.30%"
+    },
+    {
+      "styleName": "American Stout",
+      "og": 1.062,
+      "fg": 1.016,
+      "ibu": 55,
+      "color": "35 �L",
+      "abv": "6.00%"
+    },
+    {
+      "styleName": "American Wheat or Rye Beer",
+      "og": 1.047,
+      "fg": 1.01,
+      "ibu": 22,
+      "color": "5 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Baltic Porter",
+      "og": 1.075,
+      "fg": 1.02,
+      "ibu": 30,
+      "color": "24 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Belgian Blond Ale",
+      "og": 1.069,
+      "fg": 1.013,
+      "ibu": 22,
+      "color": "6 �L",
+      "abv": "6.80%"
+    },
+    {
+      "styleName": "Belgian Dark Strong Ale",
+      "og": 1.093,
+      "fg": 1.017,
+      "ibu": 27,
+      "color": "17 �L",
+      "abv": "9.50%"
+    },
+    {
+      "styleName": "Belgian Dubbel",
+      "og": 1.069,
+      "fg": 1.013,
+      "ibu": 20,
+      "color": "14 �L",
+      "abv": "6.80%"
+    },
+    {
+      "styleName": "Belgian Golden Strong Ale",
+      "og": 1.083,
+      "fg": 1.01,
+      "ibu": 28,
+      "color": "5 �L",
+      "abv": "9.00%"
+    },
+    {
+      "styleName": "Belgian Pale Ale",
+      "og": 1.051,
+      "fg": 1.012,
+      "ibu": 25,
+      "color": "11 �L",
+      "abv": "5.20%"
+    },
+    {
+      "styleName": "Belgian Specialty Ale",
+      "og": 1.075,
+      "fg": 1.075,
+      "ibu": 60,
+      "color": "20 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Belgian Tripel",
+      "og": 1.08,
+      "fg": 1.011,
+      "ibu": 30,
+      "color": "6 �L",
+      "abv": "8.50%"
+    },
+    {
+      "styleName": "Berliner Weisse",
+      "og": 1.03,
+      "fg": 1.004,
+      "ibu": 5,
+      "color": "3 �L",
+      "abv": "3.30%"
+    },
+    {
+      "styleName": "Biere de Garde",
+      "og": 1.07,
+      "fg": 1.012,
+      "ibu": 23,
+      "color": "13 �L",
+      "abv": "7.20%"
+    },
+    {
+      "styleName": "Blonde Ale",
+      "og": 1.046,
+      "fg": 1.01,
+      "ibu": 21,
+      "color": "5 �L",
+      "abv": "4.70%"
+    },
+    {
+      "styleName": "Bohemian Pilsener",
+      "og": 1.05,
+      "fg": 1.015,
+      "ibu": 40,
+      "color": "5 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Brown Porter",
+      "og": 1.046,
+      "fg": 1.011,
+      "ibu": 26,
+      "color": "25 �L",
+      "abv": "4.70%"
+    },
+    {
+      "styleName": "California Common Beer",
+      "og": 1.051,
+      "fg": 1.012,
+      "ibu": 37,
+      "color": "12 �L",
+      "abv": "5.00%"
+    },
+    {
+      "styleName": "Christmas/Winter Specialty Spiced Beer",
+      "og": 1.075,
+      "fg": 1.075,
+      "ibu": 60,
+      "color": "20 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Classic American Pilsner",
+      "og": 1.052,
+      "fg": 1.012,
+      "ibu": 32,
+      "color": "5 �L",
+      "abv": "5.20%"
+    },
+    {
+      "styleName": "Classic Rauchbier",
+      "og": 1.054,
+      "fg": 1.014,
+      "ibu": 25,
+      "color": "17 �L",
+      "abv": "5.40%"
+    },
+    {
+      "styleName": "Cream Ale",
+      "og": 1.048,
+      "fg": 1.009,
+      "ibu": 17,
+      "color": "4 �L",
+      "abv": "4.90%"
+    },
+    {
+      "styleName": "Dark American Lager",
+      "og": 1.05,
+      "fg": 1.01,
+      "ibu": 14,
+      "color": "18 �L",
+      "abv": "5.10%"
+    },
+    {
+      "styleName": "Doppelbock",
+      "og": 1.092,
+      "fg": 1.02,
+      "ibu": 21,
+      "color": "16 �L",
+      "abv": "8.50%"
+    },
+    {
+      "styleName": "Dortmunder Export",
+      "og": 1.052,
+      "fg": 1.012,
+      "ibu": 26,
+      "color": "5 �L",
+      "abv": "5.40%"
+    },
+    {
+      "styleName": "Dry Stout",
+      "og": 1.043,
+      "fg": 1.009,
+      "ibu": 37,
+      "color": "33 �L",
+      "abv": "4.50%"
+    },
+    {
+      "styleName": "Dunkelweizen",
+      "og": 1.05,
+      "fg": 1.012,
+      "ibu": 14,
+      "color": "19 �L",
+      "abv": "4.90%"
+    },
+    {
+      "styleName": "D�sseldorf Altbier",
+      "og": 1.05,
+      "fg": 1.012,
+      "ibu": 42,
+      "color": "14 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Eisbock",
+      "og": 1.099,
+      "fg": 1.027,
+      "ibu": 30,
+      "color": "24 �L",
+      "abv": "11.50%"
+    },
+    {
+      "styleName": "English Barleywine",
+      "og": 1.1,
+      "fg": 1.024,
+      "ibu": 52,
+      "color": "15 �L",
+      "abv": "10.00%"
+    },
+    {
+      "styleName": "English IPA",
+      "og": 1.062,
+      "fg": 1.014,
+      "ibu": 50,
+      "color": "11 �L",
+      "abv": "6.20%"
+    },
+    {
+      "styleName": "Extra Special/Strong Bitter (English Pale Ale)",
+      "og": 1.054,
+      "fg": 1.013,
+      "ibu": 40,
+      "color": "12 �L",
+      "abv": "5.40%"
+    },
+    {
+      "styleName": "Flanders Brown Ale/Oud Bruin",
+      "og": 1.057,
+      "fg": 1.01,
+      "ibu": 22,
+      "color": "19 �L",
+      "abv": "6.00%"
+    },
+    {
+      "styleName": "Flanders Red Ale",
+      "og": 1.052,
+      "fg": 1.007,
+      "ibu": 17,
+      "color": "13 �L",
+      "abv": "5.50%"
+    },
+    {
+      "styleName": "Foreign Extra Stout",
+      "og": 1.066,
+      "fg": 1.014,
+      "ibu": 50,
+      "color": "35 �L",
+      "abv": "6.80%"
+    },
+    {
+      "styleName": "Fruit Beer",
+      "og": 1.075,
+      "fg": 1.075,
+      "ibu": 60,
+      "color": "20 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Fruit Lambic",
+      "og": 1.05,
+      "fg": 1.005,
+      "ibu": 5,
+      "color": "5 �L",
+      "abv": "6.00%"
+    },
+    {
+      "styleName": "German Pilsner (Pils)",
+      "og": 1.047,
+      "fg": 1.01,
+      "ibu": 35,
+      "color": "4 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Gueuze",
+      "og": 1.05,
+      "fg": 1.003,
+      "ibu": 5,
+      "color": "5 �L",
+      "abv": "6.50%"
+    },
+    {
+      "styleName": "Imperial IPA",
+      "og": 1.08,
+      "fg": 1.015,
+      "ibu": 90,
+      "color": "12 �L",
+      "abv": "8.80%"
+    },
+    {
+      "styleName": "Irish Red Ale",
+      "og": 1.052,
+      "fg": 1.012,
+      "ibu": 22,
+      "color": "14 �L",
+      "abv": "5.00%"
+    },
+    {
+      "styleName": "K�lsch",
+      "og": 1.047,
+      "fg": 1.009,
+      "ibu": 25,
+      "color": "4 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Lite American Lager",
+      "og": 1.042,
+      "fg": 1.01,
+      "ibu": 10,
+      "color": "3 �L",
+      "abv": "5.30%"
+    },
+    {
+      "styleName": "Maibock/Helles Bock",
+      "og": 1.068,
+      "fg": 1.014,
+      "ibu": 29,
+      "color": "9 �L",
+      "abv": "6.80%"
+    },
+    {
+      "styleName": "Mild",
+      "og": 1.034,
+      "fg": 1.01,
+      "ibu": 17,
+      "color": "19 �L",
+      "abv": "3.60%"
+    },
+    {
+      "styleName": "Munich Dunkel",
+      "og": 1.052,
+      "fg": 1.013,
+      "ibu": 23,
+      "color": "21 �L",
+      "abv": "5.00%"
+    },
+    {
+      "styleName": "Munich Helles",
+      "og": 1.048,
+      "fg": 1.01,
+      "ibu": 19,
+      "color": "4 �L",
+      "abv": "5.10%"
+    },
+    {
+      "styleName": "Northern English Brown Ale",
+      "og": 1.046,
+      "fg": 1.01,
+      "ibu": 25,
+      "color": "17 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Northern German Altbier",
+      "og": 1.05,
+      "fg": 1.012,
+      "ibu": 32,
+      "color": "16 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Oatmeal Stout",
+      "og": 1.056,
+      "fg": 1.014,
+      "ibu": 32,
+      "color": "31 �L",
+      "abv": "5.10%"
+    },
+    {
+      "styleName": "Oktoberfest/M�rzen",
+      "og": 1.054,
+      "fg": 1.014,
+      "ibu": 24,
+      "color": "11 �L",
+      "abv": "5.20%"
+    },
+    {
+      "styleName": "Old Ale",
+      "og": 1.075,
+      "fg": 1.018,
+      "ibu": 45,
+      "color": "16 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Other Smoked Beer",
+      "og": 1.075,
+      "fg": 1.075,
+      "ibu": 60,
+      "color": "20 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Premium American Lager",
+      "og": 1.051,
+      "fg": 1.01,
+      "ibu": 20,
+      "color": "4 �L",
+      "abv": "5.30%"
+    },
+    {
+      "styleName": "Robust Porter",
+      "og": 1.056,
+      "fg": 1.014,
+      "ibu": 37,
+      "color": "29 �L",
+      "abv": "5.70%"
+    },
+    {
+      "styleName": "Roggenbier (German Rye Beer)",
+      "og": 1.051,
+      "fg": 1.012,
+      "ibu": 15,
+      "color": "17 �L",
+      "abv": "5.20%"
+    },
+    {
+      "styleName": "Russian Imperial Stout",
+      "og": 1.095,
+      "fg": 1.024,
+      "ibu": 70,
+      "color": "35 �L",
+      "abv": "10.00%"
+    },
+    {
+      "styleName": "Saison",
+      "og": 1.056,
+      "fg": 1.007,
+      "ibu": 27,
+      "color": "10 �L",
+      "abv": "6.00%"
+    },
+    {
+      "styleName": "Schwarzbier (Black Beer)",
+      "og": 1.049,
+      "fg": 1.013,
+      "ibu": 27,
+      "color": "24 �L",
+      "abv": "4.90%"
+    },
+    {
+      "styleName": "Scottish Export 80/-",
+      "og": 1.047,
+      "fg": 1.013,
+      "ibu": 22,
+      "color": "13 �L",
+      "abv": "4.50%"
+    },
+    {
+      "styleName": "Scottish Heavy 70/-",
+      "og": 1.038,
+      "fg": 1.012,
+      "ibu": 17,
+      "color": "13 �L",
+      "abv": "3.50%"
+    },
+    {
+      "styleName": "Scottish Light 60/-",
+      "og": 1.032,
+      "fg": 1.011,
+      "ibu": 15,
+      "color": "13 �L",
+      "abv": "2.90%"
+    },
+    {
+      "styleName": "Southern English Brown",
+      "og": 1.038,
+      "fg": 1.012,
+      "ibu": 16,
+      "color": "27 �L",
+      "abv": "3.40%"
+    },
+    {
+      "styleName": "Special/Best/Premium Bitter",
+      "og": 1.044,
+      "fg": 1.01,
+      "ibu": 32,
+      "color": "11 �L",
+      "abv": "4.20%"
+    },
+    {
+      "styleName": "Specialty Beer",
+      "og": 1.075,
+      "fg": 1.075,
+      "ibu": 60,
+      "color": "20 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Spice, Herb, or Vegetable Beer",
+      "og": 1.075,
+      "fg": 1.075,
+      "ibu": 60,
+      "color": "20 �L",
+      "abv": "7.50%"
+    },
+    {
+      "styleName": "Standard American Lager",
+      "og": 1.045,
+      "fg": 1.007,
+      "ibu": 11,
+      "color": "3 �L",
+      "abv": "4.80%"
+    },
+    {
+      "styleName": "Standard/Ordinary Bitter",
+      "og": 1.036,
+      "fg": 1.009,
+      "ibu": 30,
+      "color": "9 �L",
+      "abv": "3.50%"
+    },
+    {
+      "styleName": "Straight (Unblended) Lambic",
+      "og": 1.047,
+      "fg": 1.006,
+      "ibu": 5,
+      "color": "5 �L",
+      "abv": "5.80%"
+    },
+    {
+      "styleName": "Strong Scotch Ale",
+      "og": 1.1,
+      "fg": 1.074,
+      "ibu": 26,
+      "color": "20 �L",
+      "abv": "8.20%"
+    },
+    {
+      "styleName": "Sweet Stout",
+      "og": 1.052,
+      "fg": 1.018,
+      "ibu": 30,
+      "color": "35 �L",
+      "abv": "5.00%"
+    },
+    {
+      "styleName": "Traditional Bock",
+      "og": 1.068,
+      "fg": 1.016,
+      "ibu": 23,
+      "color": "18 �L",
+      "abv": "6.80%"
+    },
+    {
+      "styleName": "Vienna Lager",
+      "og": 1.049,
+      "fg": 1.012,
+      "ibu": 24,
+      "color": "13 �L",
+      "abv": "5.00%"
+    },
+    {
+      "styleName": "Weizenbock",
+      "og": 1.077,
+      "fg": 1.018,
+      "ibu": 22,
+      "color": "19 �L",
+      "abv": "7.20%"
+    },
+    {
+      "styleName": "Weizen/Weissbier",
+      "og": 1.048,
+      "fg": 1.012,
+      "ibu": 11,
+      "color": "5 �L",
+      "abv": "4.90%"
+    },
+    {
+      "styleName": "Witbier",
+      "og": 1.048,
+      "fg": 1.01,
+      "ibu": 15,
+      "color": "3 �L",
+      "abv": "5.00%"
+    },
+    {
+      "styleName": "Wood-Aged Beer",
+      "og": 1.075,
+      "fg": 1.075,
+      "ibu": 60,
+      "color": "20 �L",
+      "abv": "7.50%"
+    }
+  ]

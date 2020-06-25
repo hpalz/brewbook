@@ -1,0 +1,758 @@
+[
+    {
+      "hopName": "3-6-9 Experimental (Simcoe Sister Strain) (US)",
+      "country": "United States",
+      "alphaMin": "10.7%",
+      "alphaMax": "10.7%"
+    },
+    {
+      "hopName": "Admiral (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "13.5%",
+      "alphaMax": "16.0%"
+    },
+    {
+      "hopName": "Ahtanum (US)",
+      "country": "United States",
+      "alphaMin": "5.7%",
+      "alphaMax": "6.3%"
+    },
+    {
+      "hopName": "Amarillo (US)",
+      "country": "United States",
+      "alphaMin": "9.3%",
+      "alphaMax": "9.3%"
+    },
+    {
+      "hopName": "Apollo (US)",
+      "country": "United States",
+      "alphaMin": "18.0%",
+      "alphaMax": "21.0%"
+    },
+    {
+      "hopName": "Bramling Cross (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "5.0%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "Bravo (US)",
+      "country": "United States",
+      "alphaMin": "13.0%",
+      "alphaMax": "13.0%"
+    },
+    {
+      "hopName": "Brewers Gold (DE)",
+      "country": "Germany",
+      "alphaMin": "5.5%",
+      "alphaMax": "6.5%"
+    },
+    {
+      "hopName": "Brewers Gold (US)",
+      "country": "United States",
+      "alphaMin": "8.0%",
+      "alphaMax": "10.0%"
+    },
+    {
+      "hopName": "Bullion (DE)",
+      "country": "Germany",
+      "alphaMin": "6.5%",
+      "alphaMax": "9.0%"
+    },
+    {
+      "hopName": "Calypso (US)",
+      "country": "United States",
+      "alphaMin": "12.0%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Cascade (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "6.0%",
+      "alphaMax": "8.0%"
+    },
+    {
+      "hopName": "Cascade (US)",
+      "country": "United States",
+      "alphaMin": "6.0%",
+      "alphaMax": "8.0%"
+    },
+    {
+      "hopName": "Centennial (US)",
+      "country": "United States",
+      "alphaMin": "9.5%",
+      "alphaMax": "11.5%"
+    },
+    {
+      "hopName": "Challenger (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "6.5%",
+      "alphaMax": "8.5%"
+    },
+    {
+      "hopName": "Chelan (US)",
+      "country": "United States",
+      "alphaMin": "12.0%",
+      "alphaMax": "14.5%"
+    },
+    {
+      "hopName": "Chinook (US)",
+      "country": "United States",
+      "alphaMin": "11.0%",
+      "alphaMax": "13.0%"
+    },
+    {
+      "hopName": "Citra (US)",
+      "country": "United States",
+      "alphaMin": "13.3%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Cluster (US)",
+      "country": "United States",
+      "alphaMin": "5.5%",
+      "alphaMax": "8.5%"
+    },
+    {
+      "hopName": "Columbus (US)",
+      "country": "United States",
+      "alphaMin": "14.0%",
+      "alphaMax": "16.0%"
+    },
+    {
+      "hopName": "Comet (US)",
+      "country": "United States",
+      "alphaMin": "9.5%",
+      "alphaMax": "9.5%"
+    },
+    {
+      "hopName": "Crystal (US)",
+      "country": "United States",
+      "alphaMin": "3.5%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Delta (US)",
+      "country": "United States",
+      "alphaMin": "5.5%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "East Kent Golding (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "4.0%",
+      "alphaMax": "6.0%"
+    },
+    {
+      "hopName": "El Dorado (US)",
+      "country": "United States",
+      "alphaMin": "15.0%",
+      "alphaMax": "17.0%"
+    },
+    {
+      "hopName": "Ella (Stella) (AU)",
+      "country": "Australia",
+      "alphaMin": "15.0%",
+      "alphaMax": "15.0%"
+    },
+    {
+      "hopName": "Endeavour (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "8.0%",
+      "alphaMax": "10.5%"
+    },
+    {
+      "hopName": "Eroica (US)",
+      "country": "United States",
+      "alphaMin": "10.0%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Falconer's Flight (US)",
+      "country": "United States",
+      "alphaMin": "10.5%",
+      "alphaMax": "10.5%"
+    },
+    {
+      "hopName": "First Gold (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "6.5%",
+      "alphaMax": "8.5%"
+    },
+    {
+      "hopName": "Fuggle (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "4.0%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Fuggle (US)",
+      "country": "United States",
+      "alphaMin": "4.0%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Galaxy (AU)",
+      "country": "Australia",
+      "alphaMin": "13.5%",
+      "alphaMax": "14.8%"
+    },
+    {
+      "hopName": "Galena (US)",
+      "country": "United States",
+      "alphaMin": "11.0%",
+      "alphaMax": "15.0%"
+    },
+    {
+      "hopName": "German Spalt Select (DE)",
+      "country": "Germany",
+      "alphaMin": "5.5%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Glacier (US)",
+      "country": "United States",
+      "alphaMin": "4.9%",
+      "alphaMax": "7.1%"
+    },
+    {
+      "hopName": "Golding (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "4.0%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Golding (US)",
+      "country": "United States",
+      "alphaMin": "4.0%",
+      "alphaMax": "5.0%"
+    },
+    {
+      "hopName": "Green Bullet (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "11.0%",
+      "alphaMax": "13.0%"
+    },
+    {
+      "hopName": "Hallertau (DE)",
+      "country": "Germany",
+      "alphaMin": "3.5%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Hallertauer Aroma (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "6.5%",
+      "alphaMax": "8.5%"
+    },
+    {
+      "hopName": "Hallertauer Tradition (DE)",
+      "country": "Germany",
+      "alphaMin": "3.5%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Hallertau Gold (DE)",
+      "country": "Germany",
+      "alphaMin": "6.0%",
+      "alphaMax": "6.5%"
+    },
+    {
+      "hopName": "Hallertau (US)",
+      "country": "United States",
+      "alphaMin": "3.5%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Herald (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "12.0%",
+      "alphaMax": "12.0%"
+    },
+    {
+      "hopName": "Herkules (DE)",
+      "country": "Germany",
+      "alphaMin": "12.0%",
+      "alphaMax": "17.0%"
+    },
+    {
+      "hopName": "Hersbrucker (DE)",
+      "country": "Germany",
+      "alphaMin": "3.0%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Horizon (US)",
+      "country": "United States",
+      "alphaMin": "11.0%",
+      "alphaMax": "13.0%"
+    },
+    {
+      "hopName": "Kohatu (AU)",
+      "country": "Australia",
+      "alphaMin": "6.5%",
+      "alphaMax": "6.5%"
+    },
+    {
+      "hopName": "Liberty (US)",
+      "country": "United States",
+      "alphaMin": "3.0%",
+      "alphaMax": "5.0%"
+    },
+    {
+      "hopName": "Magnum (DE)",
+      "country": "Germany",
+      "alphaMin": "14.6%",
+      "alphaMax": "14.8%"
+    },
+    {
+      "hopName": "Magnum (US)",
+      "country": "United States",
+      "alphaMin": "12.0%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Merkur (DE)",
+      "country": "Germany",
+      "alphaMin": "12.0%",
+      "alphaMax": "15.0%"
+    },
+    {
+      "hopName": "Millenium (US)",
+      "country": "United States",
+      "alphaMin": "15.5%",
+      "alphaMax": "15.5%"
+    },
+    {
+      "hopName": "Mosaic (US)",
+      "country": "United States",
+      "alphaMin": "11.5%",
+      "alphaMax": "13.5%"
+    },
+    {
+      "hopName": "Motueka (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "6.5%",
+      "alphaMax": "7.5%"
+    },
+    {
+      "hopName": "Mount Hood (US)",
+      "country": "United States",
+      "alphaMin": "5.0%",
+      "alphaMax": "8.0%"
+    },
+    {
+      "hopName": "Mount Rainier (US)",
+      "country": "United States",
+      "alphaMin": "5.0%",
+      "alphaMax": "8.1%"
+    },
+    {
+      "hopName": "Nelson Sauvin (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "12.5%",
+      "alphaMax": "12.5%"
+    },
+    {
+      "hopName": "Newport (US)",
+      "country": "United States",
+      "alphaMin": "13.5%",
+      "alphaMax": "17.0%"
+    },
+    {
+      "hopName": "Northdown (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "7.5%",
+      "alphaMax": "9.5%"
+    },
+    {
+      "hopName": "Northern Brewer (DE)",
+      "country": "Germany",
+      "alphaMin": "7.0%",
+      "alphaMax": "10.0%"
+    },
+    {
+      "hopName": "Northern Brewer (US)",
+      "country": "United States",
+      "alphaMin": "9.0%",
+      "alphaMax": "9.0%"
+    },
+    {
+      "hopName": "Nugget (US)",
+      "country": "United States",
+      "alphaMin": "14.3%",
+      "alphaMax": "14.3%"
+    },
+    {
+      "hopName": "Olympic (US)",
+      "country": "United States",
+      "alphaMin": "11.0%",
+      "alphaMax": "13.0%"
+    },
+    {
+      "hopName": "Opal (DE)",
+      "country": "Germany",
+      "alphaMin": "5.0%",
+      "alphaMax": "8.0%"
+    },
+    {
+      "hopName": "Pacifica (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "5.0%",
+      "alphaMax": "6.0%"
+    },
+    {
+      "hopName": "Pacific Gem (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "14.6%",
+      "alphaMax": "14.6%"
+    },
+    {
+      "hopName": "Pacific Jade (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "12.0%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Palisade (US)",
+      "country": "United States",
+      "alphaMin": "6.6%",
+      "alphaMax": "9.5%"
+    },
+    {
+      "hopName": "Perle (US)",
+      "country": "United States",
+      "alphaMin": "6.0%",
+      "alphaMax": "9.5%"
+    },
+    {
+      "hopName": "Phoenix (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "11.7%",
+      "alphaMax": "11.7%"
+    },
+    {
+      "hopName": "Pilgrim (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "9.0%",
+      "alphaMax": "13.0%"
+    },
+    {
+      "hopName": "Pioneer (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "8.0%",
+      "alphaMax": "10.0%"
+    },
+    {
+      "hopName": "Polaris (DE)",
+      "country": "Germany",
+      "alphaMin": "21.3%",
+      "alphaMax": "21.3%"
+    },
+    {
+      "hopName": "Polish Lublin (PL)",
+      "country": "Poland",
+      "alphaMin": "3.0%",
+      "alphaMax": "4.5%"
+    },
+    {
+      "hopName": "Pride of Ringwood (AU)",
+      "country": "Australia",
+      "alphaMin": "7.0%",
+      "alphaMax": "10.0%"
+    },
+    {
+      "hopName": "Progress (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "5.0%",
+      "alphaMax": "7.5%"
+    },
+    {
+      "hopName": "Rakau (AU)",
+      "country": "Australia",
+      "alphaMin": "12.0%",
+      "alphaMax": "12.0%"
+    },
+    {
+      "hopName": "Riwaka (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "4.5%",
+      "alphaMax": "6.5%"
+    },
+    {
+      "hopName": "Saaz (CZ)",
+      "country": "Czech Republic",
+      "alphaMin": "3.0%",
+      "alphaMax": "3.5%"
+    },
+    {
+      "hopName": "Saaz (US)",
+      "country": "United States",
+      "alphaMin": "3.0%",
+      "alphaMax": "4.5%"
+    },
+    {
+      "hopName": "San Juan Ruby Red (US)",
+      "country": "United States",
+      "alphaMin": "7.0%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "Santiam (US)",
+      "country": "United States",
+      "alphaMin": "5.0%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "Saphir (DE)",
+      "country": "Germany",
+      "alphaMin": "2.0%",
+      "alphaMax": "4.5%"
+    },
+    {
+      "hopName": "Satus (US)",
+      "country": "United States",
+      "alphaMin": "12.5%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Silva (AU)",
+      "country": "Australia",
+      "alphaMin": "5.6%",
+      "alphaMax": "7.3%"
+    },
+    {
+      "hopName": "Simcoe (US)",
+      "country": "United States",
+      "alphaMin": "12.0%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Smaragd (DE)",
+      "country": "Germany",
+      "alphaMin": "4.0%",
+      "alphaMax": "6.0%"
+    },
+    {
+      "hopName": "Sorachi Ace (JP)",
+      "country": "Japan",
+      "alphaMin": "10.7%",
+      "alphaMax": "12.2%"
+    },
+    {
+      "hopName": "Southern Cross (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "11.0%",
+      "alphaMax": "14.0%"
+    },
+    {
+      "hopName": "Spalt (DE)",
+      "country": "Germany",
+      "alphaMin": "4.0%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Spalt Select (DE)",
+      "country": "Germany",
+      "alphaMin": "4.0%",
+      "alphaMax": "6.0%"
+    },
+    {
+      "hopName": "Spalt Select (US)",
+      "country": "United States",
+      "alphaMin": "3.0%",
+      "alphaMax": "5.0%"
+    },
+    {
+      "hopName": "Sterling (US)",
+      "country": "United States",
+      "alphaMin": "6.0%",
+      "alphaMax": "9.0%"
+    },
+    {
+      "hopName": "Sticklebract (AU)",
+      "country": "Australia",
+      "alphaMin": "13.5%",
+      "alphaMax": "13.5%"
+    },
+    {
+      "hopName": "Strisselspalt (FR)",
+      "country": "France",
+      "alphaMin": "3.0%",
+      "alphaMax": "5.0%"
+    },
+    {
+      "hopName": "Styrian Arora (SI)",
+      "country": "Slovenia",
+      "alphaMin": "7.0%",
+      "alphaMax": "9.5%"
+    },
+    {
+      "hopName": "Styrian Bobek (SI)",
+      "country": "Slovenia",
+      "alphaMin": "3.5%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "Styrian Celeia (SI)",
+      "country": "Slovenia",
+      "alphaMin": "3.0%",
+      "alphaMax": "6.0%"
+    },
+    {
+      "hopName": "Styrian Golding (SI)",
+      "country": "Slovenia",
+      "alphaMin": "4.5%",
+      "alphaMax": "6.0%"
+    },
+    {
+      "hopName": "Summer (AU)",
+      "country": "Australia",
+      "alphaMin": "5.5%",
+      "alphaMax": "6.4%"
+    },
+    {
+      "hopName": "Summit (US)",
+      "country": "United States",
+      "alphaMin": "16.9%",
+      "alphaMax": "18.5%"
+    },
+    {
+      "hopName": "Super Galena (US)",
+      "country": "United States",
+      "alphaMin": "12.9%",
+      "alphaMax": "12.9%"
+    },
+    {
+      "hopName": "Super Pride (AU)",
+      "country": "Australia",
+      "alphaMin": "13.0%",
+      "alphaMax": "15.0%"
+    },
+    {
+      "hopName": "Sylva (AU)",
+      "country": "Australia",
+      "alphaMin": "5.6%",
+      "alphaMax": "7.3%"
+    },
+    {
+      "hopName": "Tardif de Bourgogne (FR)",
+      "country": "France",
+      "alphaMin": "3.1%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Target (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "9.5%",
+      "alphaMax": "12.5%"
+    },
+    {
+      "hopName": "Taurus (DE)",
+      "country": "Germany",
+      "alphaMin": "12.0%",
+      "alphaMax": "17.0%"
+    },
+    {
+      "hopName": "Tettnanger (DE)",
+      "country": "Germany",
+      "alphaMin": "3.5%",
+      "alphaMax": "5.5%"
+    },
+    {
+      "hopName": "Tettnanger (US)",
+      "country": "United States",
+      "alphaMin": "4.0%",
+      "alphaMax": "5.0%"
+    },
+    {
+      "hopName": "Tomahawk (US)",
+      "country": "United States",
+      "alphaMin": "14.0%",
+      "alphaMax": "18.0%"
+    },
+    {
+      "hopName": "Topaz (AU)",
+      "country": "Australia",
+      "alphaMin": "16.4%",
+      "alphaMax": "16.4%"
+    },
+    {
+      "hopName": "Tradition (DE)",
+      "country": "Germany",
+      "alphaMin": "5.0%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "Ultra (US)",
+      "country": "United States",
+      "alphaMin": "4.5%",
+      "alphaMax": "5.0%"
+    },
+    {
+      "hopName": "Vanguard (US)",
+      "country": "United States",
+      "alphaMin": "4.0%",
+      "alphaMax": "5.7%"
+    },
+    {
+      "hopName": "Vic Secret (AU)",
+      "country": "Australia",
+      "alphaMin": "14.0%",
+      "alphaMax": "17.0%"
+    },
+    {
+      "hopName": "Wai-iti (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "3.5%",
+      "alphaMax": "3.5%"
+    },
+    {
+      "hopName": "Waimea (NZ)",
+      "country": "New Zealand",
+      "alphaMin": "13.9%",
+      "alphaMax": "14.9%"
+    },
+    {
+      "hopName": "Warrior (US)",
+      "country": "United States",
+      "alphaMin": "15.0%",
+      "alphaMax": "17.0%"
+    },
+    {
+      "hopName": "WGV (Whitbread Golding Variety) (UK)",
+      "country": "United Kingdom",
+      "alphaMin": "5.0%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "Willamette (US)",
+      "country": "United States",
+      "alphaMin": "4.0%",
+      "alphaMax": "6.0%"
+    },
+    {
+      "hopName": "Williamette (US)",
+      "country": "United States",
+      "alphaMin": "5.0%",
+      "alphaMax": "7.0%"
+    },
+    {
+      "hopName": "Yakima Cluster (US)",
+      "country": "United States",
+      "alphaMin": "6.0%",
+      "alphaMax": "8.5%"
+    },
+    {
+      "hopName": "Zeus (US)",
+      "country": "United States",
+      "alphaMin": "13.0%",
+      "alphaMax": "17.0%"
+    },
+    {
+      "hopName": "Zythos (US)",
+      "country": "United States",
+      "alphaMin": "10.0%",
+      "alphaMax": "12.0%"
+    }
+  ]

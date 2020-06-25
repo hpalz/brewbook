@@ -1,9 +1,11 @@
 var mongoose = require('mongoose'),
     userModel = require('../models/User'),
+    dictionaryModel = require('../models/Dictionary'),
     recipeModel = require('../models/Recipe');
 
 module.exports = function(config) {
-  mongoose.connect(config.db);
+  mongoose.connect(config.db, { useNewUrlParser: true })
+  mongoose.set('useCreateIndex', true);
   var db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error...'));
   db.once('open', function callback() {
@@ -27,6 +29,11 @@ module.exports = function(config) {
 
   userModel.createDefaultUsers();
   recipeModel.createDefaultRecipes();
+  dictionaryModel.createDefaultFermentables();
+  dictionaryModel.createDefaultHops();
+  dictionaryModel.createDefaultYeasts();
+  dictionaryModel.createDefaultExtras();
+  dictionaryModel.createDefaultStyles();
 
 };
 

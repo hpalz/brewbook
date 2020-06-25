@@ -51,13 +51,17 @@ exports.importRecipe = function(req, res, next) {
   var newRecipe = new Recipe ({
     _id: new mongoose.Types.ObjectId(),
     created: new Date(),
-    style: {
-      name: recipeBody.style.name
-    },
+    style: JSON.parse(JSON.stringify(recipeBody.style)),
     fermentables : JSON.parse(JSON.stringify(recipeBody.fermentables)),
     hops : JSON.parse(JSON.stringify(recipeBody.hops)),
     yeasts : JSON.parse(JSON.stringify(recipeBody.yeasts)),
     name: recipeBody.name,
+    grainType: recipeBody.type,
+    boil_time: recipeBody.boil_time,
+    boil_size: recipeBody.boil_size,
+    batch_size: recipeBody.batch_size,
+    efficiency: recipeBody.efficiency,
+    brewer: recipeBody.brewer,
     featured: true
   });
 /*  while(recipeBody.fermentables.fermentable[i])
