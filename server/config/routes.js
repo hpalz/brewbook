@@ -1,10 +1,14 @@
 var auth = require('./auth'),
   users = require('../controllers/users'),
   recipes = require('../controllers/recipes'),
+  stylesAdvanced = require('../../data/stylesAdvanced.json'),
   mongoose = require('mongoose'),
   User = mongoose.model('User');
 
 module.exports = function(app) {
+  app.get('/stylesAdvanced', function (req, res) {
+    res.send(stylesAdvanced)
+})
 
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
   app.post('/api/users', users.createUser);

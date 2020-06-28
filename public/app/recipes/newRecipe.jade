@@ -1,20 +1,28 @@
-.container
+
+.container(ng-app='app', ng-controller="mvCreateRecipeCtrl", fxlayout='column', fxlayoutalign='space-evenly stretch')
   .well
     form.form-horizontal(name="newRecipeForm")
       fieldset
-        legend New User Information
+        legend Create New Recipe
         .form-group
           label.col-md-2.control-label(for="name") Name
           .col-md-10
-            input.form-control(name="name", type="text", placeholder="Name", ng-model="name", required)
+            input.form-control(name="name", type="text", placeholder="Recipe Name", ng-model="name", required)
         .form-group
           label.col-md-2.control-label(for="style") Style
           .col-md-10
-            input.form-control(name="style", type="text", placeholder="Style", ng-model="style", required)
+            select#styleSelect(ng-model="selectedStyle",ng-change='show()')
+              option(value='') -- Select --
+
         .form-group
           label.col-md-2.control-label(for="featured") Featured
           .col-md-1
             input.form-control(name="featured", type="checkbox", placeholder="Featured", ng-model="featured", required)
+
+        .form-group
+          nvd3(options='options', data='data')
+
+
         .form-group
           .col-md-10.col-md-offset-2
             .pull-right
