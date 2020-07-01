@@ -11,8 +11,8 @@
         .form-group
           label.col-md-2.control-label(for="style") Style
           .col-md-10
-            select#styleSelect(ng-model="selectedStyle",ng-change='show()')
-              option(value='') -- Select --
+            select(ng-model='style', ng-change="value = ''; updateStyle()", ng-options='style as style.Style for style in styleList')
+              option(value='') - Select Style -
 
         .form-group
           label.col-md-2.control-label(for="featured") Featured
@@ -21,6 +21,29 @@
 
         .form-group
           nvd3(options='options', data='data')
+          
+        .form-group
+          .col-md-6
+            .panel.panel-primary
+              .panel-heading.text-center Fermentables
+              .panel-body
+                input(ng-model='fermWeight', size="4")
+                select(ng-model='unit', ng-options='unit as unit.unitName for unit in unitList')
+                  option(value='') - unit -
+                select(ng-model='fermentable', ng-options='fermentable as fermentable.fermentableName for fermentable in fermentableList')
+                  option(value='') - Add Fermentable -
+                md-button.md-icon-button(aria-label='Add' ng-click="addFermentable()")
+                    md-icon.material-icons add
+                  div(ng-repeat='newFerm in addedFermentables') {{newFerm.name}}
+                  md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
+                    md-icon.material-icons delete
+
+          .col-md-6
+            .panel.panel-primary
+              .panel-heading.text-center Hops
+              .panel-body
+                select(ng-model='hop', ng-change="value = ''; updateHop()", ng-options='hop as hop.hopName for hop in hopList')
+                  option(value='') - Add Hop -
 
 
         .form-group

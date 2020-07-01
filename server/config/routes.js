@@ -2,13 +2,21 @@ var auth = require('./auth'),
   users = require('../controllers/users'),
   recipes = require('../controllers/recipes'),
   stylesAdvanced = require('../../data/stylesAdvanced.json'),
+  fermentables = require('../../data/fermentables.json'),
+  hops = require('../../data/hops.json'),
   mongoose = require('mongoose'),
   User = mongoose.model('User');
 
-module.exports = function(app) {
+module.exports = function (app) {
   app.get('/stylesAdvanced', function (req, res) {
     res.send(stylesAdvanced)
-})
+  })
+  app.get('/fermentables', function (req, res) {
+    res.send(fermentables)
+  })
+  app.get('/hops', function (req, res) {
+    res.send(hops)
+  })
 
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
   app.post('/api/users', users.createUser);
@@ -21,22 +29,22 @@ module.exports = function(app) {
   app.post('/api/importRecipes', recipes.importRecipe);
   app.get('/api/importRecipes', recipes.getRecipes);
 
-  app.get('/partials/*', function(req, res) {
+  app.get('/partials/*', function (req, res) {
     res.render('../../public/app/' + req.params[0]);
   });
 
   app.post('/login', auth.authenticate);
 
-  app.post('/logout', function(req, res) {
+  app.post('/logout', function (req, res) {
     req.logout();
     res.end();
   });
 
-  app.all('/api/*', function(req, res) {
+  app.all('/api/*', function (req, res) {
     res.send(404);
   });
 
-  app.get('*', function(req, res) {
+  app.get('*', function (req, res) {
     res.render('index', {
       bootstrappedUser: req.user
     });

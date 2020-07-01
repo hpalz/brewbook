@@ -1,185 +1,219 @@
-angular.module('app').controller('mvCreateRecipeCtrl', function($scope, $http, mvAuthRecipe, mvNotifier, $location) {
-  var MAX_PERCENT = 60;
-  var DURATION = 500;
-  var groupSpace = 1;
-  var AXISY_WIDTH = 150;
-  var EXTED_LABEL_WIDTH = 20;
-  var rectangle;
-  var thisCtrl = this;
-  this.route = 'stylesAdvanced';
+var MIN_G = 0
+var MAX_G = 115
+var MIN_ABV = 0
+var MAX_ABV = 20
+var MIN_IBU = 0
+var MAX_IBU = 140
+var MIN_COLOR = 0
+var MAX_COLOR = 55
+var fermCount = 0
+
+angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, $location) {
+  var DURATION = 300;
+  var vm = this;
   var chosenStyle = null;
   var styleList = null;
-  $scope.value='30%';
-  var styleDropdown = document.getElementById('styleSelect');
-  $http.get(thisCtrl.route).then(function(styleJson) {
-    styleList = styleJson;    
-    for (var i = 0; i < styleList.length; i++) {
-        // POPULATE SELECT ELEMENT WITH JSON.
-        styleDropdown.innerHTML = styleDropdown.innerHTML +
-            '<option value="' + styleList[i]['Style'] + '">' + styleList[i]['Style'] + '</option>';
-    }
+  var fermentableList = null;
+  var hopList = null;
+  var thisFermWeight = 0;
+  $scope.value = '30%';
+  $scope.addedFermentables = []
+  $scope.data = [];
+  this.route = 'stylesAdvanced';
+  $http.get(vm.route).then(function (styleJson) {
+    styleList = styleJson.data;
+    $scope.styleList = styleJson.data;
   });
+  this.route = 'fermentables';
+  $http.get(vm.route).then(function (fermentableJson) {
+    fermentableList = fermentableJson.data;
+    $scope.fermentableList = fermentableJson.data;
+  });
+  this.route = 'hops';
+  $http.get(vm.route).then(function (hopJson) {
+    hopList = hopJson.data;
+    $scope.hopList = hopJson.data;
+  });
+  $scope.unitList = [{"unitName":"lbs", "id":0},{"unitName":"oz", "id":1}];
+  $scope.fermCalc = function () {
 
-  $scope.show = function() {
+  }
+  $scope.fermDelete = function (x) {
+    console.log("Removed " + x.newFerm.name)
+    for (var i = $scope.addedFermentables.length - 1; i >= 0; i--) {
+      if ($scope.addedFermentables[i].count === x.newFerm.count) {
+        $scope.addedFermentables.splice(i, 1)
+        break
+      }
+    }
+  }
+
+  $scope.addFermentable = function () {
+    //Create an input type dynamically.
+    $scope.addedFermentables.push({ name: $scope.fermWeight + $scope.unit.unitName + " " + $scope.fermentable.fermentableName, count: fermCount });
+    fermCount++;
+    thisFermWeight = 0
+    $scope.fermWeight = ""
+    /* var linebreak = document.createElement("br");
+     var foo = document.getElementById("addedFermentables");
+     var fermElement = document.createElement("label");
+     var fermlbs2 = document.createElement("input");
+ 
+     //Assign different attributes to the fermlbs.
+     var fermlbs = angular.element('<input type="text" ng-change="calc(this)" ng-model="weightInput" + '+fermCount+'" />')
+ 
+     //Assign different attributes to the element2.
+     fermlbs2.setAttribute("type", "text");
+     fermlbs2.setAttribute("value", "lbs");
+ 
+     //Assign different attributes to the element.
+     var t = document.createTextNode($scope.fermentable.fermentableName);
+     fermElement.setAttribute("for", "weightInput" + fermCount);
+     fermElement.appendChild(t);
+ 
+     //Append the element in page (in span).
+     foo.appendChild(linebreak);
+     foo.appendChild(fermlbs);
+     foo.appendChild(fermlbs2);
+     foo.appendChild(fermElement);*/
+  }
+  $scope.addHop = function () {
+  }
+  $scope.updateStyle = function () {
     // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
-    chosenStyle = styleList[styleDropdown.selectedIndex - 1];
-    
-}
-  $scope.create = function() {
+    chosenStyle = $scope.style;
+    updateChart();
+  }
+  $scope.create = function () {
     var newRecipe = {
       name: $scope.name,
       featured: $scope.featured,
       style: $scope.style
     };
-    $scope.style = function(){
+    $scope.style = function () {
       styleToCreate = styleList[0].styleName;
     }
 
-    mvAuthRecipe.createRecipe(newRecipe).then(function() {
+    mvAuthRecipe.createRecipe(newRecipe).then(function () {
       mvNotifier.notify('Recipe created!');
       $location.path('/');
-    }, function(reason) {
+    }, function (reason) {
       mvNotifier.error(reason);
     })
   }
-  
-  $scope.data = [{
-    "key": "Series1",
-    "color": "#d62728",
-    "values": [{
-      "label": "Group A asd sa das d as",
-      "value": 3
-    }, {
-      "label": "Group B",
-      "value": 8.0961543492239
-    }, {
-      "label": "Group C",
-      "value": 2.57072943117674
-    }, {
-      "label": "Group D",
-      "value": 2.4174010336624
-    }, {
-      "label": "Group E",
-      "value": 4.72009071426284
-    }, {
-      "label": "Group F",
-      "value": 3.77154485523777
-    }, {
-      "label": "Group G",
-      "value": 11.987
-    }, {
-      "label": "Group H",
-      "value": 6.91445417330854
-    }, {
-      "label": "Group I",
-      "value": 12
-    }]
-  }, {
-    "key": "Series2",
-    "color": "#1f77b4",
-    "values": [{
-      "label": "Group A asd sa das d as",
-      "value": 25.307646510375
-    }, {
-      "label": "Group B",
-      "value": 16.756779544553
-    }, {
-      "label": "Group C",
-      "value": 18.451534877007
-    }, {
-      "label": "Group D",
-      "value": 8.6142352811805
-    }, {
-      "label": "Group E",
-      "value": 7.8082472075876
-    }, {
-      "label": "Group F",
-      "value": 5.259101026956
-    }, {
-      "label": "Group G",
-      "value": 9.6
-    }, {
-      "label": "Group H",
-      "value": 23
-    }, {
-      "label": "Group I",
-      "value": 8
-    }]
-  }]
-  var percent = [];
-  var maxVal;
-  $scope.data[0].values.forEach(function(item, index) {
-    var tmp = 0;
-    $scope.data.forEach(function(group) {
-      tmp += group.values[index].value;
-    })
-    if (!maxVal || maxVal < tmp) {
-      maxVal = parseInt((tmp + 20) / 20) * 20;
-    }
-    percent.push(tmp.toFixed(2));
-  })
-  var myChart;
-  $scope.options = {
-    chart: {
-      type: 'multiBarHorizontalChart',
-      height: DURATION,
-      x: function(d) {
-        return d.label;
-      },
-      y: function(d) {
-        return d.value;
-      },
-      margin: {
-        left: AXISY_WIDTH
-      },
-      showControls: true,
-      showValues: true,
-      duration: 500,
-      stacked: true,
-      showLegend: false,
-      showControls: false,
-      yDomain: [0, maxVal],
-      groupSpacing: 0.1,
-      xAxis: {
-        showMaxMin: false,
-        valuePadding: 100
-      },
-      yAxis: {
-        showMaxMin: false,
-        axisLabel: 'Values',
-        hideTick: true,
-        tickFormat: function(d) {
-          return d3.format(',.2f')(d);
-        }
-      },
-      callback: function(chart) {
-        console.log(123);
-        chart.multibar.dispatch.on('elementClick', function(e) {
-          console.log('elementClick in callback', e.data);
-        });
-        chart.dispatch.on('changeState', function(e) {
-          console.log('changeState in callback', e.data);
-        });
-        chart.dispatch.on('renderEnd', function() {
-          console.log('render complete');
-          var grap = d3.selectAll('.nv-multibarHorizontal');
-          var groups = grap.selectAll('.nv-group')[0];
-          var lastGroup = groups[groups.length - 1];
-          var children = lastGroup.children;
-          for (var i = 0; i < children.length; i++) {
-            var g = children[i];
-            var text = g.getElementsByTagName('text')[0];
-            var rect = g.getElementsByTagName('rect')[0];
-            text.setAttribute('x', parseFloat(rect.getAttribute('width')) + 5);
-            text.setAttribute('y', parseFloat(rect.getAttribute('height')) / 2);
-            text.setAttribute("text-anchor", "start");
-            text.setAttribute("dy", ".32em");
-            text.textContent = percent[i]+"%";
-          }
 
-        });
+
+  function updateChart() {
+
+    $scope.data = [{
+      "key": "Min",
+      "color": "#ecf0f1",
+      "values": [{
+        "label": "OG",
+        "value": ((chosenStyle.OGMin - 1.0) * 1000) / MAX_G * 100
+      }, {
+        "label": "FG",
+        "value": ((chosenStyle.FGMin - 1.0) * 1000) / MAX_G * 100
+      }, {
+        "label": "IBU",
+        "value": chosenStyle.IBUMin / MAX_IBU * 100
+      }, {
+        "label": "Color",
+        "value": chosenStyle.ColorMin / MAX_COLOR * 100
+      }, {
+        "label": "ABV",
+        "value": chosenStyle.ABVMin / MAX_ABV * 100
+      }, {
+        "label": "",
+        "value": 100
+      }]
+    }, {
+      "key": "Max",
+      "color": "#d62728",
+      "values": [{
+        "label": "OG",
+        "value": ((chosenStyle.OGMax - 1.0) * 1000) / MAX_G * 100
+      }, {
+        "label": "FG",
+        "value": ((chosenStyle.FGMax - 1.0) * 1000) / MAX_G * 100
+      }, {
+        "label": "IBU",
+        "value": chosenStyle.IBUMax / MAX_IBU * 100
+      }, {
+        "label": "Color",
+        "value": chosenStyle.ColorMax / MAX_COLOR * 100
+      }, {
+        "label": "ABV",
+        "value": chosenStyle.ABVMax / MAX_ABV * 100
+      }, {
+        "label": "",
+        "value": 0
       }
+      ]
+    }]
+    $scope.options = {
+      chart: {
+        type: 'multiBarHorizontalChart',
+        height: DURATION,
+        x: function (d) {
+          return d.label;
+        },
+        y: function (d) {
+          return d.value;
+        },
+        margin: {
+          left: 100
+        },
+        showControls: true,
+        showValues: true,
+        duration: 300,
+        stacked: true,
+        showLegend: false,
+        showControls: false,
+        yDomain: [0, 100],
+        groupSpacing: 0.1,
+        xAxis: {
+          showMaxMin: false,
+          hideTick: true,
+          valuePadding: 100
+        },
+        yAxis: {
+          showMaxMin: false,
+          showValues: false,
+          hideTick: true,
+          tickFormat: function (d) {
+            return d3.format(',.2f')(d);
+          }
+        },
+        callback: function (chart) {
+          console.log(123);
+          chart.multibar.dispatch.on('elementClick', function (e) {
+            console.log('elementClick in callback', e.data);
+          });
+          chart.dispatch.on('changeState', function (e) {
+            console.log('changeState in callback', e.data);
+          });
+          chart.dispatch.on('renderEnd', function () {
+            console.log('render complete');
+            var grap = d3.selectAll('.nv-multibarHorizontal');
+            var groups = grap.selectAll('.nv-group')[0];
+            var lastGroup = groups[groups.length - 1];
+            var children = lastGroup.children;
+            for (var i = 0; i < children.length; i++) {
+              var g = children[i];
+              var text = g.getElementsByTagName('text')[0];
+              var rect = g.getElementsByTagName('rect')[0];
+              text.setAttribute('x', parseFloat(rect.getAttribute('width')) + 5);
+              text.setAttribute('y', parseFloat(rect.getAttribute('height')) / 2);
+              text.setAttribute("text-anchor", "start");
+              text.setAttribute("dy", ".32em");
+              text.textContent = percent[i] + "%";
+            }
 
-    }
-  };
+          });
+        }
+
+      }
+    };
+  }
 })
