@@ -7,6 +7,12 @@ var MAX_IBU = 140
 var MIN_COLOR = 0
 var MAX_COLOR = 55
 var fermCount = 0
+var numGal = 5.5
+var curOG = 0
+var curFG = 0
+var curColor = 0
+var curABV = 0
+var curIBU = 0
 
 angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, $location) {
   var DURATION = 300;
@@ -16,6 +22,8 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
   var fermentableList = null;
   var hopList = null;
   var thisFermWeight = 0;
+  var myLineChart = null;
+  var ctx = document.getElementById('canvas').getContext('2d');
   $scope.value = '30%';
   $scope.addedFermentables = []
   $scope.data = [];
@@ -35,7 +43,15 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
     $scope.hopList = hopJson.data;
   });
   $scope.unitList = [{"unitName":"lbs", "id":0},{"unitName":"oz", "id":1}];
-  $scope.fermCalc = function () {
+  function fermCalc (ferm, count, weight) {
+    curOG += ferm.ppg * weight / numGal;
+    updateChart();
+    /*for (var i = $scope.addedFermentables.length - 1; i >= 0; i--) {
+      if ($scope.addedFermentables[i].count === x.newFerm.count) {
+        $scope.addedFermentables.splice(i, 1)
+        break
+      }
+    }*/
 
   }
   $scope.fermDelete = function (x) {
@@ -50,12 +66,16 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
 
   $scope.addFermentable = function () {
     //Create an input type dynamically.
-    $scope.addedFermentables.push({ name: $scope.fermWeight + $scope.unit.unitName + " " + $scope.fermentable.fermentableName, count: fermCount });
-    fermCount++;
-    thisFermWeight = 0
-    $scope.fermWeight = ""
+    if($scope.fermWeight > 0 && $scope.unit != undefined && $scope.fermentable != undefined){
+      $scope.addedFermentables.push({ name: $scope.fermWeight + $scope.unit.unitName + " " + $scope.fermentable.fermentableName, count: fermCount });
+      thisFermWeight = 0
+      fermCalc($scope.fermentable, fermCount, $scope.fermWeight);
+      $scope.fermWeight = ""
+      fermCount++;
+
+    }
     /* var linebreak = document.createElement("br");
-     var foo = document.getElementById("addedFermentables");
+     var foo = document.getElemcentById("addedFermentables");
      var fermElement = document.createElement("label");
      var fermlbs2 = document.createElement("input");
  
@@ -104,116 +124,102 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
 
 
   function updateChart() {
+    window.chartColors = {
+      red: 'rgb(255, 99, 132)',
+      orange: 'rgb(255, 159, 64)',
+      yellow: 'rgb(255, 205, 86)',
+      green: 'rgb(75, 192, 192)',
+      blue: 'rgb(54, 162, 235)',
+      purple: 'rgb(153, 102, 255)',
+      grey: 'rgb(201, 203, 207)'
+    };
+		var color = Chart.helpers.color;
+		var horizontalBarChartData = {
+			labels: ["OG", "FG", "IBU", "Color", "ABV", ""],
+			datasets: [{
+				label: 'Dataset 1',
+				backgroundColor: '#ecf0f1',
+        borderWidth: 0,
+        stack: 'Stack 0',
+				data: [
+          ((chosenStyle.OGMin - 1.0) * 1000) / MAX_G * 100,
+          ((chosenStyle.FGMin - 1.0) * 1000) / MAX_G * 100,
+          chosenStyle.IBUMin / MAX_IBU * 100,
+          chosenStyle.ColorMin / MAX_COLOR * 100,
+          chosenStyle.ABVMin / MAX_ABV * 100,
+          100
+        ]
+			}, {
+				label: 'Dataset 2',
+				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+        stack: 'Stack 0',
+				data: [
+         ((chosenStyle.OGMax - chosenStyle.OGMin) * 1000) ,
+         ((chosenStyle.FGMax - chosenStyle.FGMin) * 1000) ,
+         (chosenStyle.IBUMax - chosenStyle.IBUMin) / MAX_IBU * 100,
+         (chosenStyle.ColorMax - chosenStyle.ColorMin) / MAX_COLOR * 100,
+         (chosenStyle.ABVMax - chosenStyle.ABVMin) / MAX_ABV * 100,
+         0
+				]
+			}, {
+				label: 'Dataset 3',
+				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+        stack: 'Stack 1',
+				data: [
+          ((curOG)) / MAX_G * 100,
+          ((curFG) * 1000) / MAX_G * 100,
+          (curIBU) / MAX_IBU * 100,
+          (curColor) / MAX_COLOR * 100,
+          (curABV) / MAX_ABV * 100,
+          0
+				]
+			}]
 
-    $scope.data = [{
-      "key": "Min",
-      "color": "#ecf0f1",
-      "values": [{
-        "label": "OG",
-        "value": ((chosenStyle.OGMin - 1.0) * 1000) / MAX_G * 100
-      }, {
-        "label": "FG",
-        "value": ((chosenStyle.FGMin - 1.0) * 1000) / MAX_G * 100
-      }, {
-        "label": "IBU",
-        "value": chosenStyle.IBUMin / MAX_IBU * 100
-      }, {
-        "label": "Color",
-        "value": chosenStyle.ColorMin / MAX_COLOR * 100
-      }, {
-        "label": "ABV",
-        "value": chosenStyle.ABVMin / MAX_ABV * 100
-      }, {
-        "label": "",
-        "value": 100
-      }]
-    }, {
-      "key": "Max",
-      "color": "#d62728",
-      "values": [{
-        "label": "OG",
-        "value": ((chosenStyle.OGMax - 1.0) * 1000) / MAX_G * 100
-      }, {
-        "label": "FG",
-        "value": ((chosenStyle.FGMax - 1.0) * 1000) / MAX_G * 100
-      }, {
-        "label": "IBU",
-        "value": chosenStyle.IBUMax / MAX_IBU * 100
-      }, {
-        "label": "Color",
-        "value": chosenStyle.ColorMax / MAX_COLOR * 100
-      }, {
-        "label": "ABV",
-        "value": chosenStyle.ABVMax / MAX_ABV * 100
-      }, {
-        "label": "",
-        "value": 0
-      }
-      ]
-    }]
-    $scope.options = {
-      chart: {
-        type: 'multiBarHorizontalChart',
-        height: DURATION,
-        x: function (d) {
-          return d.label;
+    };
+    var config = {
+      type: 'horizontalBar',
+      data: horizontalBarChartData,
+      options: {
+        tooltips: {
+          callbacks: {
+            title: function(tooltipItem, data) {
+              return data['labels'][tooltipItem[0]['index']];
+            },
+            label: function(tooltipItem, data) {
+              return data['datasets'][0]['data'][tooltipItem['index']];
+            },
+            afterLabel: function(tooltipItem, data) {
+              var dataset = data['datasets'][0];
+              var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
+              return '(' + percent + '%)';
+            }
+          },
+          backgroundColor: '#FFF',
+          titleFontSize: 16,
+          titleFontColor: '#0066ff',
+          bodyFontColor: '#000',
+          bodyFontSize: 14,
+          displayColors: false
         },
-        y: function (d) {
-          return d.value;
-        },
-        margin: {
-          left: 100
-        },
-        showControls: true,
-        showValues: true,
-        duration: 300,
-        stacked: true,
-        showLegend: false,
-        showControls: false,
-        yDomain: [0, 100],
-        groupSpacing: 0.1,
-        xAxis: {
-          showMaxMin: false,
-          hideTick: true,
-          valuePadding: 100
-        },
-        yAxis: {
-          showMaxMin: false,
-          showValues: false,
-          hideTick: true,
-          tickFormat: function (d) {
-            return d3.format(',.2f')(d);
+        // Elements options apply to all of the options unless overridden in a dataset
+        // In this case, we are setting the border of each horizontal bar to be 2px wide
+        elements: {
+          rectangle: {
+            borderWidth: 2,
           }
         },
-        callback: function (chart) {
-          console.log(123);
-          chart.multibar.dispatch.on('elementClick', function (e) {
-            console.log('elementClick in callback', e.data);
-          });
-          chart.dispatch.on('changeState', function (e) {
-            console.log('changeState in callback', e.data);
-          });
-          chart.dispatch.on('renderEnd', function () {
-            console.log('render complete');
-            var grap = d3.selectAll('.nv-multibarHorizontal');
-            var groups = grap.selectAll('.nv-group')[0];
-            var lastGroup = groups[groups.length - 1];
-            var children = lastGroup.children;
-            for (var i = 0; i < children.length; i++) {
-              var g = children[i];
-              var text = g.getElementsByTagName('text')[0];
-              var rect = g.getElementsByTagName('rect')[0];
-              text.setAttribute('x', parseFloat(rect.getAttribute('width')) + 5);
-              text.setAttribute('y', parseFloat(rect.getAttribute('height')) / 2);
-              text.setAttribute("text-anchor", "start");
-              text.setAttribute("dy", ".32em");
-              text.textContent = percent[i] + "%";
-            }
-
-          });
+        responsive: true,
+        title: {
+          display: false
         }
-
       }
     };
+    if( myLineChart != null){
+      myLineChart.destroy();
+    }
+    myLineChart = new Chart(ctx, config);
+			window.myHorizontalBar = myLineChart;
   }
 })

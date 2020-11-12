@@ -19,8 +19,16 @@
           .col-md-1
             input.form-control(name="featured", type="checkbox", placeholder="Featured", ng-model="featured", required)
 
+        //.form-group
+          table
+            tbody
+              tr
+                td
+                  input.form-control(name="curOg", type="label", placeholder="1.000", ng-model="curOg", required)
+                td(rowspan='3')
         .form-group
-          nvd3(options='options', data='data')
+          canvas#canvas
+          //nvd3(options='options', data='data')
           
         .form-group
           .col-md-6

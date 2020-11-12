@@ -85,6 +85,12 @@ footer p {
   top: 0;
   bottom: 0;
 }
+.nv-y {
+  display: none;
+}
+.tick .line {
+  display: none;
+}
 .horizontal-bar-graph .label,
 .horizontal-bar-graph .value {
   position: absolute;
