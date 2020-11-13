@@ -1,18 +1,19 @@
-var MIN_G = 0
-var MAX_G = 115
-var MIN_ABV = 0
-var MAX_ABV = 20
-var MIN_IBU = 0
-var MAX_IBU = 140
-var MIN_COLOR = 0
-var MAX_COLOR = 55
-var fermCount = 0
-var numGal = 5.5
-var curOG = 0
-var curFG = 0
-var curColor = 0
-var curABV = 0
-var curIBU = 0
+var MIN_G = 0;
+var MAX_G = 115;
+var MIN_ABV = 0;
+var MAX_ABV = 20;
+var MIN_IBU = 0;
+var MAX_IBU = 140;
+var MIN_COLOR = 0;
+var MAX_COLOR = 55;
+var fermCount = 0;
+var numGal = 5.5;
+var curOG = 0;
+var curFG = 0;
+var curColor = 0;
+var curABV = 0;
+var curIBU = 0;
+var efficiency = .75;
 
 angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, $location) {
   var DURATION = 300;
@@ -23,7 +24,10 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
   var hopList = null;
   var thisFermWeight = 0;
   var myLineChart = null;
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas");  
+  if(ctx) {  
+    ctx = canvas.getContext("2d");  
+  }
   $scope.value = '30%';
   $scope.addedFermentables = []
   $scope.data = [];
@@ -74,30 +78,12 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
       fermCount++;
 
     }
-    /* var linebreak = document.createElement("br");
-     var foo = document.getElemcentById("addedFermentables");
-     var fermElement = document.createElement("label");
-     var fermlbs2 = document.createElement("input");
- 
-     //Assign different attributes to the fermlbs.
-     var fermlbs = angular.element('<input type="text" ng-change="calc(this)" ng-model="weightInput" + '+fermCount+'" />')
- 
-     //Assign different attributes to the element2.
-     fermlbs2.setAttribute("type", "text");
-     fermlbs2.setAttribute("value", "lbs");
- 
-     //Assign different attributes to the element.
-     var t = document.createTextNode($scope.fermentable.fermentableName);
-     fermElement.setAttribute("for", "weightInput" + fermCount);
-     fermElement.appendChild(t);
- 
-     //Append the element in page (in span).
-     foo.appendChild(linebreak);
-     foo.appendChild(fermlbs);
-     foo.appendChild(fermlbs2);
-     foo.appendChild(fermElement);*/
   }
   $scope.addHop = function () {
+  }
+  $scope.updateEff = function () {
+    efficiency = $scope.efficiency/100;
+    updateChart();
   }
   $scope.updateStyle = function () {
     // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
@@ -124,6 +110,9 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
 
 
   function updateChart() {
+    var recipeMinValues = [chosenStyle.OGMin, chosenStyle.FGMin, chosenStyle.IBUMin,chosenStyle.ColorMin, chosenStyle.ABVMin];
+    var recipeMaxValues = [chosenStyle.OGMax, chosenStyle.FGMax, chosenStyle.IBUMax,chosenStyle.ColorMax, chosenStyle.ABVMax];
+    var recipeValues = [(1+(curOG*efficiency / 1000)).toFixed(3), 1+(curFG / 1000).toFixed(3), curIBU, curColor, curABV];
     window.chartColors = {
       red: 'rgb(255, 99, 132)',
       orange: 'rgb(255, 159, 64)',
@@ -168,7 +157,7 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
 				borderColor: window.chartColors.blue,
         stack: 'Stack 1',
 				data: [
-          ((curOG)) / MAX_G * 100,
+          ((recipeValues[0]-1.0)*1000) / MAX_G * 100,
           ((curFG) * 1000) / MAX_G * 100,
           (curIBU) / MAX_IBU * 100,
           (curColor) / MAX_COLOR * 100,
@@ -188,12 +177,10 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
               return data['labels'][tooltipItem[0]['index']];
             },
             label: function(tooltipItem, data) {
-              return data['datasets'][0]['data'][tooltipItem['index']];
+              return "min: " + recipeMinValues[tooltipItem.index] + "\nmax: " + recipeMaxValues[tooltipItem.index];
             },
             afterLabel: function(tooltipItem, data) {
-              var dataset = data['datasets'][0];
-              var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
-              return '(' + percent + '%)';
+              return "current: " + recipeValues[tooltipItem.index];
             }
           },
           backgroundColor: '#FFF',
