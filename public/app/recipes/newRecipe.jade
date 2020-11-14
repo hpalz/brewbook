@@ -15,7 +15,7 @@
               option(value='') - Select Style -
 
         .form-group
-          label.col-md-2.control-label(for="featured") Featured
+          label.col-md-2.control-label(for="efficiency") Efficiency
           .col-md-1
             input.form-control(name="efficiency", ng-change="updateEff()",type="text",default="75",ng-model="efficiency",required)
             //input.form-control(name="featured", type="checkbox", placeholder="Featured", ng-model="featured", required)
@@ -29,22 +29,30 @@
               .panel-heading.text-center Fermentables
               .panel-body
                 input(ng-model='fermWeight', size="4")
-                select(ng-model='unit', ng-options='unit as unit.unitName for unit in unitList')
+                select(ng-model='fermUnit', ng-options='fermUnit as fermUnit.fermUnitName for fermUnit in fermUnitList')
                   option(value='') - unit -
                 select(ng-model='fermentable', ng-options='fermentable as fermentable.fermentableName for fermentable in fermentableList')
                   option(value='') - Add Fermentable -
                 md-button.md-icon-button(aria-label='Add' ng-click="addFermentable()")
                     md-icon.material-icons add
                   div(ng-repeat='newFerm in addedFermentables') {{newFerm.name}}
-                  md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
+                  md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
                     md-icon.material-icons delete
 
           .col-md-6
             .panel.panel-primary
               .panel-heading.text-center Hops
               .panel-body
+                input(ng-model='hopWeight', size="4")
+                select(ng-model='hopUnit', ng-options='hopUnit as hopUnit.hopUnitName for hopUnit in hopUnitList')
+                  option(value='') - unit -
                 select(ng-model='hop', ng-change="value = ''; updateHop()", ng-options='hop as hop.hopName for hop in hopList')
                   option(value='') - Add Hop -
+                  md-button.md-icon-button(aria-label='Add' ng-click="addHopFermentable()")
+                    md-icon.material-icons add
+                  div(ng-repeat='newHop in addedHops') {{newHop.name}}
+                  md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
+                    md-icon.material-icons delete
 
 
         .form-group

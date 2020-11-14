@@ -15,7 +15,7 @@ var curABV = 0;
 var curIBU = 0;
 var efficiency = .75;
 
-angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, $location) {
+angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, mvCalculator, $location) {
   var DURATION = 300;
   var vm = this;
   var chosenStyle = null;
@@ -46,38 +46,35 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
     hopList = hopJson.data;
     $scope.hopList = hopJson.data;
   });
-  $scope.unitList = [{"unitName":"lbs", "id":0},{"unitName":"oz", "id":1}];
-  function fermCalc (ferm, count, weight) {
-    curOG += ferm.ppg * weight / numGal;
-    updateChart();
-    /*for (var i = $scope.addedFermentables.length - 1; i >= 0; i--) {
-      if ($scope.addedFermentables[i].count === x.newFerm.count) {
-        $scope.addedFermentables.splice(i, 1)
-        break
-      }
-    }*/
-
-  }
+  $scope.fermUnitList = [{"fermUnitName":"lbs", "id":0},{"fermUnitName":"oz", "id":1}];
   $scope.fermDelete = function (x) {
     console.log("Removed " + x.newFerm.name)
-    for (var i = $scope.addedFermentables.length - 1; i >= 0; i--) {
-      if ($scope.addedFermentables[i].count === x.newFerm.count) {
-        $scope.addedFermentables.splice(i, 1)
-        break
-      }
-    }
+    mvCalculator.delFerm(x.newFerm.count).then(function(returnFermList){
+      mvCalculator.calcOG().then(function(returnOG){
+        curOG = returnOG;
+        updateChart();
+        for (var i = $scope.addedFermentables.length - 1; i >= 0; i--) {
+          if ($scope.addedFermentables[i].count === x.newFerm.count) {
+            $scope.addedFermentables.splice(i, 1)
+            break
+          }
+        }
+      });
+    })
   }
 
   $scope.addFermentable = function () {
     //Create an input type dynamically.
-    if($scope.fermWeight > 0 && $scope.unit != undefined && $scope.fermentable != undefined){
-      $scope.addedFermentables.push({ name: $scope.fermWeight + $scope.unit.unitName + " " + $scope.fermentable.fermentableName, count: fermCount });
       thisFermWeight = 0
-      fermCalc($scope.fermentable, fermCount, $scope.fermWeight);
-      $scope.fermWeight = ""
-      fermCount++;
-
-    }
+      mvCalculator.addFerm($scope.fermentable, $scope.fermWeight, numGal, fermCount).then(function(returnFermList){
+          $scope.addedFermentables.push({ name: $scope.fermWeight + $scope.fermUnit.fermUnitName + " " + $scope.fermentable.fermentableName, count: fermCount });
+          mvCalculator.calcOG().then(function(returnOG){
+            curOG = returnOG;
+            updateChart();
+            $scope.fermWeight = ""
+            fermCount++;
+        });
+      });
   }
   $scope.addHop = function () {
   }
@@ -112,7 +109,7 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
   function updateChart() {
     var recipeMinValues = [chosenStyle.OGMin, chosenStyle.FGMin, chosenStyle.IBUMin,chosenStyle.ColorMin, chosenStyle.ABVMin];
     var recipeMaxValues = [chosenStyle.OGMax, chosenStyle.FGMax, chosenStyle.IBUMax,chosenStyle.ColorMax, chosenStyle.ABVMax];
-    var recipeValues = [(1+(curOG*efficiency / 1000)).toFixed(3), 1+(curFG / 1000).toFixed(3), curIBU, curColor, curABV];
+    var recipeValues = [(1+(curOG*efficiency / 1000)).toFixed(3), (1+(curFG / 1000).toFixed(3)), curIBU, curColor, curABV];
     window.chartColors = {
       red: 'rgb(255, 99, 132)',
       orange: 'rgb(255, 159, 64)',
