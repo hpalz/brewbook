@@ -7,6 +7,8 @@ var MAX_IBU = 140;
 var MIN_COLOR = 0;
 var MAX_COLOR = 55;
 var fermCount = 0;
+var hopCount = 0;
+var yeastCount = 0;
 var numGal = 5.5;
 var curOG = 0;
 var curFG = 0;
@@ -23,13 +25,16 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
   var fermentableList = null;
   var hopList = null;
   var thisFermWeight = 0;
+  var thisHopWeight = 0;
   var myLineChart = null;
   var ctx = document.getElementById("canvas");  
   if(ctx) {  
     ctx = canvas.getContext("2d");  
   }
   $scope.value = '30%';
-  $scope.addedFermentables = []
+  $scope.addedFermentables = [];
+  $scope.addedHops = [];
+  $scope.addedYeasts = [];
   $scope.data = [];
   this.route = 'stylesAdvanced';
   $http.get(vm.route).then(function (styleJson) {
@@ -76,7 +81,35 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
         });
       });
   }
+  $scope.hopUnitList = [{"hopUnitName":"oz", "id":0}];
+  $scope.hopDelete = function (x) {
+    console.log("Removed " + x.newHop.name)
+    mvCalculator.delHop(x.newHop.count).then(function(returnHopList){
+      mvCalculator.calcIBU().then(function(returnIBU){
+        curIBU = returnIBU;
+        updateChart();
+        for (var i = $scope.addedHops.length - 1; i >= 0; i--) {
+          if ($scope.addedHops[i].count === x.newHop.count) {
+            $scope.addedHops.splice(i, 1)
+            break
+          }
+        }
+      });
+    })
+  }
+
   $scope.addHop = function () {
+    //Create an input type dynamically.
+      thisHopWeight = 0
+      mvCalculator.addHop($scope.hop, $scope.hopWeight, $scope.hopDuration, numGal, hopCount, (1+(curOG*efficiency / 1000))).then(function(returnHopList){
+          $scope.addedHops.push({ name: $scope.hopDuration + "min:" + $scope.hopWeight + $scope.hopUnit.hopUnitName + " " + $scope.hop.hopName, count: hopCount });
+          mvCalculator.calcIBU().then(function(returnIBU){
+            curIBU = returnIBU;
+            updateChart();
+            $scope.hopWeight = ""
+            hopCount++;
+        });
+      });
   }
   $scope.updateEff = function () {
     efficiency = $scope.efficiency/100;

@@ -36,7 +36,7 @@
                 md-button.md-icon-button(aria-label='Add' ng-click="addFermentable()")
                     md-icon.material-icons add
                   div(ng-repeat='newFerm in addedFermentables') {{newFerm.name}}
-                  md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
+                  md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
                     md-icon.material-icons delete
 
           .col-md-6
@@ -46,12 +46,14 @@
                 input(ng-model='hopWeight', size="4")
                 select(ng-model='hopUnit', ng-options='hopUnit as hopUnit.hopUnitName for hopUnit in hopUnitList')
                   option(value='') - unit -
+                input(ng-model='hopDuration',size="4")
+                label.col-md-2.control-label(for="hopDuration") min
                 select(ng-model='hop', ng-change="value = ''; updateHop()", ng-options='hop as hop.hopName for hop in hopList')
                   option(value='') - Add Hop -
-                  md-button.md-icon-button(aria-label='Add' ng-click="addHopFermentable()")
+                md-button.md-icon-button(aria-label='Add' ng-click="addHop()")
                     md-icon.material-icons add
                   div(ng-repeat='newHop in addedHops') {{newHop.name}}
-                  md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
+                  md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
                     md-icon.material-icons delete
 
 
