@@ -4,6 +4,7 @@ var auth = require('./auth'),
   stylesAdvanced = require('../../data/stylesAdvanced.json'),
   fermentables = require('../../data/fermentables.json'),
   hops = require('../../data/hops.json'),
+  yeasts = require('../../data/yeasts.json'),
   mongoose = require('mongoose'),
   User = mongoose.model('User');
 
@@ -16,6 +17,9 @@ module.exports = function (app) {
   })
   app.get('/hops', function (req, res) {
     res.send(hops)
+  })
+  app.get('/yeasts', function (req, res) {
+    res.send(yeasts)
   })
 
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);

@@ -51,6 +51,11 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
     hopList = hopJson.data;
     $scope.hopList = hopJson.data;
   });
+  this.route = 'yeasts';
+  $http.get(vm.route).then(function (yeastJson) {
+    yeastList = yeastJson.data;
+    $scope.yeastList = yeastJson.data;
+  });
   $scope.fermUnitList = [{"fermUnitName":"lbs", "id":0},{"fermUnitName":"oz", "id":1}];
   $scope.fermDelete = function (x) {
     console.log("Removed " + x.newFerm.name)
@@ -108,6 +113,35 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
             updateChart();
             $scope.hopWeight = ""
             hopCount++;
+        });
+      });
+  }
+  
+  $scope.yeastDelete = function (x) {
+    console.log("Removed " + x.newYeast.name)
+    mvCalculator.delYeast(x.newYeast.count).then(function(){
+      mvCalculator.calcFG().then(function(returnFG){
+        curFG = returnFG;
+        updateChart();
+        for (var i = $scope.addedYeasts.length - 1; i >= 0; i--) {
+          if ($scope.addedYeasts[i].count === x.newYeast.count) {
+            $scope.addedYeasts.splice(i, 1)
+            break
+          }
+        }
+      });
+    })
+  }
+
+  $scope.addYeast = function () {
+    //Create an input type dynamically.
+      thisYeastWeight = 0
+      mvCalculator.addYeast($scope.yeast, numGal, yeastCount, (1+(curOG*efficiency / 1000))).then(function(){
+          $scope.addedYeasts.push({ name: $scope.yeast.yeastName, count: yeastCount });
+          mvCalculator.calcFG().then(function(returnFG){
+            curFG = returnFG;
+            updateChart();
+            yeastCount++;
         });
       });
   }

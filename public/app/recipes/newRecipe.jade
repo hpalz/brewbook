@@ -55,6 +55,17 @@
                   div(ng-repeat='newHop in addedHops') {{newHop.name}}
                   md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
                     md-icon.material-icons delete
+          .col-md-6
+            .panel.panel-primary
+              .panel-heading.text-center Yeasts
+              .panel-body
+                select(ng-model='yeast', ng-change="value = ''; updateYeast()", ng-options='yeast as yeast.yeastName for yeast in yeastList')
+                  option(value='') - Add Yeast -
+                md-button.md-icon-button(aria-label='Add' ng-click="addYeast()")
+                    md-icon.material-icons add
+                  div(ng-repeat='newYeast in addedYeasts') {{newYeast.name}}
+                  md-button.md-icon-button(aria-label='Delete' ng-click="yeastDelete(this)")
+                    md-icon.material-icons delete
 
 
         .form-group
