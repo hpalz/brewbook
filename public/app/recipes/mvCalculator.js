@@ -17,6 +17,7 @@ var ibuUtilLookup = [
 angular.module('app').factory('mvCalculator', function ($q) {
   var currentFermentables = [];
   var currentHops = [];
+  var currentYeasts = [];
   return {
     calcOG: function () {
       var dfd = $q.defer();
@@ -51,6 +52,42 @@ angular.module('app').factory('mvCalculator', function ($q) {
       for (var key in currentFermentables) {
         if (currentFermentables[key].id == id) {
           currentFermentables.splice(key, 1)
+        }
+      }
+      dfd.resolve();
+      return dfd.promise;
+    },
+    calcFG: function () {
+      var dfd = $q.defer();
+      var returnFG = 0;
+      for (var key in currentYeasts) {
+        returnFG = currentYeasts[key].curFG;
+        break;
+      }
+      dfd.resolve(returnFG);
+      return dfd.promise;
+    },
+    addYeast: function (yeast, totalPoints, id) {
+      var dfd = $q.defer();
+      if (totalPoints > 0 && yeast != undefined) {
+        var tempFG = 1 + ((totalPoints * (100 - yeast.attenuation.replace(/[^\d.-]/g, ''))/100) / 1000);
+        currentYeasts.push({
+          id: id,
+          curFG: tempFG,
+          name: yeast.yeastName,
+          attenuation: yeast.attenuation
+        })
+        dfd.resolve();
+      } else {
+        dfd.reject();
+      }
+      return dfd.promise;
+    },
+    delYeast: function (id) {
+      var dfd = $q.defer();
+      for (var key in currentYeasts) {
+        if (currentYeasts[key].id == id) {
+          currentYeasts.splice(key, 1)
         }
       }
       dfd.resolve();

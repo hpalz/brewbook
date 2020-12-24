@@ -1,32 +1,10 @@
 
-.container(ng-app='app', ng-controller="mvCreateRecipeCtrl", fxlayout='column', fxlayoutalign='space-evenly stretch')
+.container(ng-app='app', ng-controller="mvInventoryCtrl", fxlayout='column', fxlayoutalign='space-evenly stretch')
   .well
-    form.form-inline(name="newRecipeForm")
+    form.form-inline(name="inventoryForm")
       fieldset
-        legend Create New Recipe
+        legend Inventory
         .form-group
-          label.col-md-2.control-label(for="name") Name
-          .col-md-10
-            input.form-control(name="name", type="text", placeholder="Recipe Name", ng-model="name", required)
-        .form-group
-          label.col-md-2.control-label(for="style") Style
-          .col-md-10
-            select(ng-model='style', ng-change="value = ''; updateStyle()", ng-options='style as style.Style for style in styleList')
-              option(value='') - Select Style -
-
-        .form-group
-          label.col-md-3.control-label(for="efficiency") Efficiency%
-          .col-md-4 
-            input.form-control(name="efficiency", ng-change="updateEff()",type="text",default="75",ng-model="efficiency",required)
-            //input.form-control(name="featured", type="checkbox", placeholder="Featured", ng-model="featured", required)
-
-      form.form-horizontal(name="newRecipeForm1")
-        .form-group
-          .col-md-12
-            canvas#canvas(width='600' height='400')
-          
-        .form-group
-          .col-md-6
             .panel.panel-primary
               .panel-heading.text-center Fermentables
               .panel-body
@@ -37,19 +15,17 @@
                   option(value='') - Add Fermentable -
                 md-button.md-icon-button(aria-label='Add' ng-click="addFermentable()")
                     md-icon.material-icons add
-                  div(ng-repeat='newFerm in addedFermentables') {{newFerm.name}}
+                  div(ng-repeat='newFerm in addedFermentables') {{newFerm.weight}}{{newFerm.unit}}  {{newFerm.name}}
                   md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
                     md-icon.material-icons delete
 
-          .col-md-6
+          .col-md-10
             .panel.panel-primary
               .panel-heading.text-center Hops
               .panel-body
                 input(ng-model='hopWeight', size="4")
                 select(ng-model='hopUnit', ng-options='hopUnit as hopUnit.hopUnitName for hopUnit in hopUnitList')
                   option(value='') - unit -
-                input(ng-model='hopDuration',size="4")
-                label.col-md-2.control-label(for="hopDuration") min
                 select(ng-model='hop', ng-change="value = ''; updateHop()", ng-options='hop as hop.hopName for hop in hopList')
                   option(value='') - Add Hop -
                 md-button.md-icon-button(aria-label='Add' ng-click="addHop()")
@@ -57,7 +33,7 @@
                   div(ng-repeat='newHop in addedHops') {{newHop.name}}
                   md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
                     md-icon.material-icons delete
-          .col-md-6
+          .col-md-10
             .panel.panel-primary
               .panel-heading.text-center Yeasts
               .panel-body

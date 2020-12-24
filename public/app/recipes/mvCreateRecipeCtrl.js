@@ -136,7 +136,7 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
   $scope.addYeast = function () {
     //Create an input type dynamically.
       thisYeastWeight = 0
-      mvCalculator.addYeast($scope.yeast, numGal, yeastCount, (1+(curOG*efficiency / 1000))).then(function(){
+      mvCalculator.addYeast($scope.yeast, curOG * numGal, yeastCount).then(function(){
           $scope.addedYeasts.push({ name: $scope.yeast.yeastName, count: yeastCount });
           mvCalculator.calcFG().then(function(returnFG){
             curFG = returnFG;
@@ -176,7 +176,7 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
   function updateChart() {
     var recipeMinValues = [chosenStyle.OGMin, chosenStyle.FGMin, chosenStyle.IBUMin,chosenStyle.ColorMin, chosenStyle.ABVMin];
     var recipeMaxValues = [chosenStyle.OGMax, chosenStyle.FGMax, chosenStyle.IBUMax,chosenStyle.ColorMax, chosenStyle.ABVMax];
-    var recipeValues = [(1+(curOG*efficiency / 1000)).toFixed(3), (1+(curFG / 1000).toFixed(3)), curIBU, curColor, curABV];
+    var recipeValues = [(1+(curOG*efficiency / 1000)).toFixed(3), curFG.toFixed(3), curIBU, curColor, curABV];
     window.chartColors = {
       red: 'rgb(255, 99, 132)',
       orange: 'rgb(255, 159, 64)',
@@ -222,7 +222,7 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
         stack: 'Stack 1',
 				data: [
           ((recipeValues[0]-1.0)*1000) / MAX_G * 100,
-          ((curFG) * 1000) / MAX_G * 100,
+          curFG,
           (curIBU) / MAX_IBU * 100,
           (curColor) / MAX_COLOR * 100,
           (curABV) / MAX_ABV * 100,

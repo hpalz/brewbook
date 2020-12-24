@@ -1,6 +1,7 @@
 var auth = require('./auth'),
   users = require('../controllers/users'),
   recipes = require('../controllers/recipes'),
+  inventory = require('../controllers/inventory'),
   stylesAdvanced = require('../../data/stylesAdvanced.json'),
   fermentables = require('../../data/fermentables.json'),
   hops = require('../../data/hops.json'),
@@ -25,6 +26,10 @@ module.exports = function (app) {
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
   app.post('/api/users', users.createUser);
   app.put('/api/users', users.updateUser);
+
+  app.get('/api/inventory', inventory.getInventory);
+  app.post('/api/inventory', inventory.createInventory);
+  //app.put('/api/inventory', inventory.updateInventory);
 
   app.get('/api/recipes/:id', recipes.getRecipeById);
   app.get('/api/recipes', recipes.getRecipes);

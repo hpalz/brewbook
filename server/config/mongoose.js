@@ -1,6 +1,7 @@
 var mongoose = require('mongoose'),
     userModel = require('../models/User'),
     dictionaryModel = require('../models/Dictionary'),
+    inventoryModel = require('../models/Inventory'),
     recipeModel = require('../models/Recipe');
 
 module.exports = function(config) {
@@ -29,6 +30,7 @@ module.exports = function(config) {
 
   userModel.createDefaultUsers();
   recipeModel.createDefaultRecipes();
+  inventoryModel.createDefaultInventory();
   dictionaryModel.createDefaultFermentables();
   dictionaryModel.createDefaultHops();
   dictionaryModel.createDefaultYeasts();
