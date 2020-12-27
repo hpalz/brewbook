@@ -1,4 +1,5 @@
 var passport = require('passport');
+curUsername = undefined;
 
 exports.authenticate = function(req, res, next) {
   req.body.username = req.body.username.toLowerCase();
@@ -7,6 +8,7 @@ exports.authenticate = function(req, res, next) {
     if(!user) { res.send({success:false})}
     req.logIn(user, function(err) {
       if(err) {return next(err);}
+      curUsername = user.username;
       res.send({success:true, user: user});
     })
   })
@@ -21,7 +23,9 @@ exports.requiresApiLogin = function(req, res, next) {
     next();
   }
 };
-
+exports.username = function(){
+  return curUsername;
+}
 exports.requiresRole = function(role) {
   return function(req, res, next) {
     if(!req.isAuthenticated() || req.user.roles.indexOf(role) === -1) {

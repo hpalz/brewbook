@@ -24,12 +24,12 @@ module.exports = function (app) {
   })
 
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
-  app.post('/api/users', users.createUser);
+  app.post('/api/users', users.createUser); 
   app.put('/api/users', users.updateUser);
 
-  app.get('/api/inventory', inventory.getInventory);
-  app.post('/api/inventory', inventory.createInventory);
-  //app.put('/api/inventory', inventory.updateInventory);
+  app.get('/api/inventory', auth.requiresApiLogin, inventory.getInventory);
+  app.post('/api/inventory', auth.requiresApiLogin, inventory.createInventory);
+  app.put('/api/inventory', inventory.updateInventory);
 
   app.get('/api/recipes/:id', recipes.getRecipeById);
   app.get('/api/recipes', recipes.getRecipes);

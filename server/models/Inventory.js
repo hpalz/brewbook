@@ -1,35 +1,26 @@
 var mongoose = require('mongoose');
 
 var inventorySchema = mongoose.Schema({
-  fermentables:  [
-      {
-        name: String,
-        weight: String,
-        unit: String
-      }
-    ],
+  fermentables: [
+    {
+      name: String,
+      weight: String,
+      unit: String
+    }
+  ],
   hops: [
-      {
-        name: String,
-        origin: String,
-        alpha: String,
-        amount: String,
-        display_amount: String,
-        use: String,
-        form: String,
-        time: String,
-        display_time: String
-      }
-    ],
-  yeasts:  [
-      {
-        laboratory: String,
-        name: String,
-        formType: String,
-        form: String,
-        attenuation: String,
-      }
-    ]
+    {
+      name: String,
+      weight: String,
+      unit: String
+    }
+  ],
+  yeasts: [
+    {
+      name: String
+    }
+  ],
+  username: String
 });
 var Inventory = mongoose.model('Inventory', inventorySchema);
 

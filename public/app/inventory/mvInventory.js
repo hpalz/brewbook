@@ -1,6 +1,6 @@
 angular.module('app').factory('mvInventory', function($resource) {
-  var InventoryResource = $resource('/api/inventory/:_id', {_id: "@id"}, {
-    update: {method:'PUT', isArray:false}
+  var InventoryResource = $resource('/api/inventory', {
+    query: {method:'GET',isArray:true}
   });
 
   return InventoryResource;

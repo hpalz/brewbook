@@ -5,6 +5,7 @@
       fieldset
         legend Inventory
         .form-group
+          .col-md-10
             .panel.panel-primary
               .panel-heading.text-center Fermentables
               .panel-body
@@ -30,7 +31,7 @@
                   option(value='') - Add Hop -
                 md-button.md-icon-button(aria-label='Add' ng-click="addHop()")
                     md-icon.material-icons add
-                  div(ng-repeat='newHop in addedHops') {{newHop.name}}
+                  div(ng-repeat='newHop in addedHops') {{newHop.weight}}{{newHop.unit}} {{newHop.name}}
                   md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
                     md-icon.material-icons delete
           .col-md-10
