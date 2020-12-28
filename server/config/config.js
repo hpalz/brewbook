@@ -1,5 +1,6 @@
 var path = require('path');
 var rootPath = path.normalize(__dirname + '/../../');
+const uri = process.env.MONGODB_URI;
 
 module.exports = {
   development: {
@@ -13,7 +14,7 @@ module.exports = {
   },
   production: {
     rootPath: rootPath,
-    db: 'mongodb://jeames:brewbook@ds053178.mongolab.com:53178/brewbook',
+    db:uri,
     port: process.env.PORT || 80,
     corsOptions : {
       origin: '*',
