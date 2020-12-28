@@ -31,11 +31,11 @@ module.exports = function(config) {
   userModel.createDefaultUsers();
   recipeModel.createDefaultRecipes();
   inventoryModel.createDefaultInventory();
-  dictionaryModel.createDefaultFermentables();
+  /*dictionaryModel.createDefaultFermentables();
   dictionaryModel.createDefaultHops();
   dictionaryModel.createDefaultYeasts();
   dictionaryModel.createDefaultExtras();
-  dictionaryModel.createDefaultStyles();
+  dictionaryModel.createDefaultStyles();*/
 
 };
 
