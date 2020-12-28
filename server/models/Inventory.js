@@ -27,7 +27,7 @@ var Inventory = mongoose.model('Inventory', inventorySchema);
 function createDefaultInventory() {
   Inventory.find({}).exec(function (err, collection) {
     if (collection.length === 0) {
-      //Inventory.create({ name: 'test', featured: true, style: 'IPA', created: new Date('10/5/2013') });
+      Inventory.create({ name: 'test', featured: true, style: 'IPA', created: new Date('10/5/2013') });
     }
   })
 }

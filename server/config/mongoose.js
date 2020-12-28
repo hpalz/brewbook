@@ -10,7 +10,7 @@ module.exports = function(config) {
   var db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error...'));
   db.once('open', function callback() {
-    console.log('bruhaus db opened');
+    console.log('brewbook db opened');
     /*UNCOMMENT TO DROP DATABASE
     db.dropDatabase( function (err, result) {
 

@@ -16,7 +16,7 @@ exports.createInventory = function(req, res, next) {
   var inventoryId = req.body._id;
   var inventoryBody = req.body;
   var username = auth.username();
-  if(inventoryId == 0)
+  if(inventoryId == undefined)
     {
     var newInventory = new Inventory ({
       _id: new mongoose.Types.ObjectId(),

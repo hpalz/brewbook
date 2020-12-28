@@ -1,4 +1,4 @@
-# bruhaus
+# brewbook
 rename to brewbook.io?
 To run this application, start your mongo server & do the following from the command line:
 bower install
