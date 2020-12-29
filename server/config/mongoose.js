@@ -26,10 +26,11 @@ module.exports = function(config) {
   });*/
   });
 
-
+/*
+Uncomment to init db
   userModel.createDefaultUsers();
   recipeModel.createDefaultRecipes();
   inventoryModel.createDefaultInventory();
-
+*/
 };
 

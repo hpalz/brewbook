@@ -83,7 +83,7 @@ var recipeSchema = mongoose.Schema({
   grainType: {type:String, default:'Extract'},
   brewer: {
     type:String,
-    required: true,
+    required: false,
     default:'name'
   },
   batch_size: {type:Number, default:0},
@@ -93,7 +93,8 @@ var recipeSchema = mongoose.Schema({
   created: {
     type:Date,
     required: true
-  }
+  },
+  username: String
 });
 var Recipe = mongoose.model('Recipe', recipeSchema);
 

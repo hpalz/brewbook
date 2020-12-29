@@ -31,12 +31,12 @@ module.exports = function (app) {
   app.post('/api/inventory', auth.requiresApiLogin, inventory.createInventory);
   app.put('/api/inventory', inventory.updateInventory);
 
-  app.get('/api/recipes/:id', recipes.getRecipeById);
-  app.get('/api/recipes', recipes.getRecipes);
-  app.post('/api/recipes', recipes.createRecipe);
-  app.delete('/api/recipes', recipes.deleteRecipe);
-  app.post('/api/importRecipes', recipes.importRecipe);
-  app.get('/api/importRecipes', recipes.getRecipes);
+  app.get('/api/recipes/:id', auth.requiresApiLogin, recipes.getRecipeById);
+  app.get('/api/recipes', auth.requiresApiLogin, recipes.getRecipes);
+  app.post('/api/recipes', auth.requiresApiLogin, recipes.createRecipe);
+  app.delete('/api/recipes', auth.requiresApiLogin, recipes.deleteRecipe);
+  app.post('/api/importRecipes', auth.requiresApiLogin, recipes.importRecipe);
+  app.get('/api/importRecipes', auth.requiresApiLogin, recipes.getRecipes);
 
   app.get('/partials/*', function (req, res) {
     res.render('../../public/app/' + req.params[0]);

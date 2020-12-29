@@ -2,9 +2,11 @@ var mongoose = require('mongoose');
 var Recipe = require('mongoose').model('Recipe');
 var parser = require('xml2json');
 var xmlImportUtility = require('../utilities/xmlImport');
+var auth = require('../config/auth');
 
 exports.getRecipes = function(req, res) {
-  Recipe.find({}).exec(function(err, collection) {
+  var username = auth.username();
+  Recipe.find({username:username}).exec(function(err, collection) {
     res.send(collection);
   })
 };
@@ -17,6 +19,7 @@ exports.getRecipeById = function(req, res) {
 
 exports.createRecipe = function(req, res, next) {
   var recipeBody = req.body;
+  var username = auth.username();
   var newRecipe = new Recipe ({
     _id: new mongoose.Types.ObjectId(),
     created: new Date(),
@@ -24,7 +27,8 @@ exports.createRecipe = function(req, res, next) {
       name: recipeBody.style
     },
     name: recipeBody.name,
-    featured: recipeBody.featured
+    featured: recipeBody.featured,
+    username: username
   });
   Recipe.create(newRecipe, function(err, recipe) {
     if(err) {
@@ -48,6 +52,7 @@ exports.deleteRecipe = function(req, res, next) {
 exports.importRecipe = function(req, res, next) {
   var recipeBody = req.body.recipes.recipe;
   var i = 0;
+  var username = auth.username();
   var newRecipe = new Recipe ({
     _id: new mongoose.Types.ObjectId(),
     created: new Date(),
@@ -62,7 +67,8 @@ exports.importRecipe = function(req, res, next) {
     batch_size: recipeBody.batch_size,
     efficiency: recipeBody.efficiency,
     brewer: recipeBody.brewer,
-    featured: true
+    featured: true,
+    username: username
   });
 /*  while(recipeBody.fermentables.fermentable[i])
   {
