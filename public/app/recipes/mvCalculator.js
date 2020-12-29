@@ -28,16 +28,38 @@ angular.module('app').factory('mvCalculator', function ($q) {
       dfd.resolve(returnOG);
       return dfd.promise;
     },
+    calcABV: function (curOG, curFG) {
+      var dfd = $q.defer();
+      var returnABV = 0;
+      if (curOG >0){
+        returnABV = (76.08 * (curOG-curFG) / (1.775-curOG)) * (curFG / 0.794);
+      }
+      dfd.resolve(returnABV);
+      return dfd.promise;
+    },
+    calcSRM: function () {
+      var dfd = $q.defer();
+      var returnSRM = 0;
+      for (var key in currentFermentables) {
+        returnSRM += currentFermentables[key].curSRM;
+      }
+      dfd.resolve(returnSRM);
+      return dfd.promise;
+    },
     addFerm: function (fermentable, weight, numGal, id) {
       var dfd = $q.defer();
       if (weight > 0 && fermentable != undefined) {
         var tempOG = fermentable.ppg * weight / numGal;
+        // first calculate MCU
+        var tempSRM = fermentable.color * weight / numGal;
+        tempSRM = tempSRM * 1.49 * .69;
         currentFermentables.push({
           id: id,
           curOG: tempOG,
           name: fermentable.fermentableName,
           ppg: fermentable.ppg,
           numGal: numGal,
+          curSRM: tempSRM,
           weight: weight
         })
         dfd.resolve();
@@ -59,7 +81,7 @@ angular.module('app').factory('mvCalculator', function ($q) {
     },
     calcFG: function () {
       var dfd = $q.defer();
-      var returnFG = 0;
+      var returnFG = 1.0;
       for (var key in currentYeasts) {
         returnFG = currentYeasts[key].curFG;
         break;
@@ -70,7 +92,7 @@ angular.module('app').factory('mvCalculator', function ($q) {
     addYeast: function (yeast, totalPoints, id) {
       var dfd = $q.defer();
       if (totalPoints > 0 && yeast != undefined) {
-        var tempFG = 1 + ((totalPoints * (100 - yeast.attenuation.replace(/[^\d.-]/g, ''))/100) / 1000);
+        var tempFG = 1 + ((totalPoints * (100 - yeast.attenuation.replace(/[^\d.-]/g, ''))/100) / 10000);
         currentYeasts.push({
           id: id,
           curFG: tempFG,

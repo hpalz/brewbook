@@ -24,7 +24,7 @@ exports.createRecipe = function(req, res, next) {
     _id: new mongoose.Types.ObjectId(),
     created: new Date(),
     style: {
-      name: recipeBody.style
+      name: recipeBody.style.Style
     },
     name: recipeBody.name,
     featured: recipeBody.featured,
