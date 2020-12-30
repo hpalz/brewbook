@@ -3,8 +3,13 @@
     h1 brewbook
     p Welcome to brewbook! Home base for inventive homebrewers.
 
-  .row
-    .col-md-6
-      div(ng-include="'/partials/main/featured-recipes'")
-    .col-md-6
-      div(ng-include="'/partials/main/new-recipes'")
+  form.navbar-form(ng-show="identity.isAuthenticated()")
+    .row
+      .col-md-6
+        div(ng-include="'/partials/main/featured-recipes'")
+      .col-md-6
+        div(ng-include="'/partials/main/new-recipes'")
+  form.navbar-form(ng-hide="identity.isAuthenticated()")
+    .row
+      .col-md-6
+        div(ng-include="'/partials/account/signin'")

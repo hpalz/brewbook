@@ -1,0 +1,17 @@
+.container(ng-controller="mvNavBarLoginCtrl")
+  .well
+    form.form-horizontal(name="signinForm")
+      fieldset
+        legend Sign In
+        .form-group
+          .col-md-10
+            input.form-control(placeholder="Email", ng-model="username")
+        .form-group
+          .col-md-10
+            input.form-control(type="password", placeholder="Password", ng-model="password")
+        .form-group
+          .col-md-10.col-md-offset-2
+            .pull-right
+              a(href="/signup") No Account? Sign up
+              | &nbsp;
+              button.btn.btn-primary(ng-click="signin(username, password)") Sign In
