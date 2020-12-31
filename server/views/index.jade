@@ -1,22 +1,48 @@
-extends ../includes/layout
+//Layout.jade defines the layout of the entire website. It will contain the navbar and
+//extension views will populate pageTitle and pageContent blocks
+doctype html
+html
+  head
+  title brewbook
 
-block main-content
-  .navbar.navbar-inverse.navbar-fixed-top
-    .container
-      .navbar-header
-        a.navbar-brand(href="/") brewbook
-      .navbar-collapse.collapse
-        ul.nav.navbar-nav
-          li
-            a(href="/") Home
-          li
-            a(href="/recipes") Recipes
-          li
-            a(href="/inventory") Inventory
-        div(ng-include="'/partials/account/navbar-login'")
+  //indicate that our site is mobile optimized
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
+  //reference our site-specific css
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  //add bootstrap dependencies from CDNjs. Using a CDN to distribute these files puts less pressure
+  //on our web server and will be delivered faster to the client than our own server.
+  link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css')
+  link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
+  link(rel='stylesheet', href='/vendor/angular-material/angular-material.css')
+  //link(rel="stylesheet", href="/css/bootstrap.css")
+  link(rel="stylesheet", href="/vendor/toastr/toastr.css")
+  //link(rel="stylesheet", href="/css/site.css")
+  link(rel='stylesheet', href='/vendor/angular-animate/angular-animate.css')
+  link(rel='stylesheet', href='/vendor/angular-aria/angular-aria.css')
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+  body(ng-app='app')
+    include scripts
+    include currentUser
+    block navBar
+    nav(class='navbar navbar-default', role='navigation')
+        .container-fluid
+            .navbar-header
+                button(class='navbar-toggle', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                    span.sronly
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a(class='navbar-brand', href='/#') brewbook
+            #bs-example-navbar-collapse-1(class='collapse navbar-collapse')
+                ul(class='nav navbar-nav')
+                    li
+                        a(href='/recipes') Recipes
+                    li
+                        a(href='/inventory') Inventory
+                  div(ng-include="'/partials/account/navbar-login'")
+                
   section.content
     div(ng-view)
-
-  footer.container.text-center
-    p &copy; 2019 brewbook Corp International Ltd.

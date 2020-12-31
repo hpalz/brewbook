@@ -1,8 +1,4 @@
 .container
-  .jumbotron
-    h1 brewbook
-    p Welcome to brewbook! Home base for inventive homebrewers.
-
   form.navbar-form(ng-show="identity.isAuthenticated()")
     .row
       .col-md-6
@@ -10,6 +6,9 @@
       .col-md-6
         div(ng-include="'/partials/main/new-recipes'")
   form.navbar-form(ng-hide="identity.isAuthenticated()")
+    .jumbotron(style = "text-align: center;")
+      h2 Welcome to brewbook
+      h3 The simple way to create and track your homebrew recipes, inventory and brew day logs.
     .row
       .col-md-6
         div(ng-include="'/partials/account/signin'")
