@@ -28,8 +28,7 @@ var recipeSchema = mongoose.Schema({
     abv_min: { type: Number, default: 4.0 },
     abv_max: { type: Number, default: 5.4 }
   },
-  fermentables: {
-    fermentable: [
+  fermentables: [
       {
         name: String,
         // origin: String,
@@ -50,10 +49,8 @@ var recipeSchema = mongoose.Schema({
           ibu_gal_per_lb: String,
           notes: String,*/
       }
-    ]
-  },
-  hops: {
-    hop: [
+    ],
+  hops: [
       {
         name: String,
         origin: String,
@@ -67,10 +64,8 @@ var recipeSchema = mongoose.Schema({
         display_time: String,
         // notes: String,
       }
-    ]
-  },
-  yeasts: {
-    yeast: [
+    ],
+  yeasts: [
       {
         laboratory: String,
         name: String,
@@ -78,8 +73,7 @@ var recipeSchema = mongoose.Schema({
         form: String,
         attenuation: String,
       }
-    ]
-  },
+    ],
   calculated: {
     og: Number,
     fg: Number,

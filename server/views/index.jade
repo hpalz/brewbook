@@ -1,5 +1,6 @@
 //Layout.jade defines the layout of the entire website. It will contain the navbar and
 //extension views will populate pageTitle and pageContent blocks
+//https://github.com/mspcontent/jade-templating/blob/master/EndProject/views/layout.jade
 doctype html
 html
   head
@@ -9,7 +10,7 @@ html
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
   //reference our site-specific css
-  link(rel='stylesheet', href='/stylesheets/style.css')
+  //link(rel='stylesheet', href='/stylesheets/style.css')
 
   //add bootstrap dependencies from CDNjs. Using a CDN to distribute these files puts less pressure
   //on our web server and will be delivered faster to the client than our own server.
@@ -19,7 +20,7 @@ html
   link(rel='stylesheet', href='/vendor/angular-material/angular-material.css')
   //link(rel="stylesheet", href="/css/bootstrap.css")
   link(rel="stylesheet", href="/vendor/toastr/toastr.css")
-  //link(rel="stylesheet", href="/css/site.css")
+  link(rel="stylesheet", href="/css/site.css")
   link(rel='stylesheet', href='/vendor/angular-animate/angular-animate.css')
   link(rel='stylesheet', href='/vendor/angular-aria/angular-aria.css')
   link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")

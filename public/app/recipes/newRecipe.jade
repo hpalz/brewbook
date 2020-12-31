@@ -33,7 +33,7 @@
                   option(value='') - Add Fermentable -
                 md-button.md-icon-button(aria-label='Add' ng-click="addFermentable()")
                     md-icon.material-icons add
-                  div(ng-repeat='newFerm in addedFermentables') {{newFerm.amount}}{{newFerm.unit}}  {{newFerm.name}}
+                  div(ng-repeat='newFerm in addedFermentables') {{newFerm.amount}}{{newFerm.display_amount}}  {{newFerm.name}}
                   md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
                     md-icon.material-icons delete
 
@@ -50,7 +50,7 @@
                   option(value='') - Add Hop -
                 md-button.md-icon-button(aria-label='Add' ng-click="addHop()")
                     md-icon.material-icons add
-                  div(ng-repeat='newHop in addedHops') {{NnwHop.time}} min: {{newHop.amount}}{{newHop.display_amount}} {{newHop.name}}
+                  div(ng-repeat='newHop in addedHops') {{newHop.time}} min: {{newHop.amount}}{{newHop.display_amount}} {{newHop.name}}
                   md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
                     md-icon.material-icons delete
           .col-md-10

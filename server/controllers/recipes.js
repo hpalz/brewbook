@@ -26,6 +26,10 @@ exports.createRecipe = function(req, res, next) {
     style: {
       name: recipeBody.style.Style
     },
+    calculated: recipeBody.calculated,
+    yeasts: recipeBody.yeasts,
+    fermentables: recipeBody.fermentables,
+    hops: recipeBody.hops,
     name: recipeBody.name,
     featured: recipeBody.featured,
     username: username

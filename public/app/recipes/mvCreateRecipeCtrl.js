@@ -180,6 +180,13 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
       efficiency: $scope.efficiency,
       batch_size: numGal,
       boil_time: 60,
+      calculated: {
+        og: curOG,
+        fg: curFG,
+        srm: curSRM,
+        abv: curABV,
+        ibu: curIBU
+      },
       style: chosenStyle
     };
 
@@ -191,13 +198,12 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
     })
   }
 
-
   function updateChart() {
     var recipeMinValues = [chosenStyle.OGMin, chosenStyle.FGMin, chosenStyle.IBUMin, chosenStyle.ColorMin, chosenStyle.ABVMin];
     var recipeMaxValues = [chosenStyle.OGMax, chosenStyle.FGMax, chosenStyle.IBUMax, chosenStyle.ColorMax, chosenStyle.ABVMax];
     mvCalculator.calcABV((1 + (curOG * efficiency / 1000)), curFG).then(function (returnABV) {
       curABV = returnABV;
-      var recipeValues = [(1 + (curOG * efficiency / 1000)).toFixed(3), curFG.toFixed(3), curIBU.toFixed(0), curSRM, curABV.toFixed(1)];
+      var recipeValues = [(1 + (curOG * efficiency / 1000)).toFixed(3), curFG.toFixed(3), curIBU.toFixed(0), curSRM.toFixed(0), curABV.toFixed(1)];
       window.chartColors = {
         red: 'rgb(255, 99, 132)',
         orange: 'rgb(255, 159, 64)',
