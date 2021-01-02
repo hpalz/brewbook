@@ -29,57 +29,64 @@ var recipeSchema = mongoose.Schema({
     abv_max: { type: Number, default: 5.4 }
   },
   fermentables: [
-      {
-        name: String,
-        // origin: String,
-        formType: String,
-        yield: String,
-        amount: String,
-        display_amount: String,
-        potential: String,
-        color: String,
-        display_color: String,
-        /*  add_after_boil: String,
-          coarse_fine_diff: String,
-          moisture: String,
-          diastatic_power: String,
-          protein: String,
-          max_in_batch: String,
-          recommend_mash: String,
-          ibu_gal_per_lb: String,
-          notes: String,*/
-      }
-    ],
+    {
+      name: String,
+      // origin: String,
+      formType: String,
+      yield: String,
+      amount: String,
+      display_amount: String,
+      potential: String,
+      color: String,
+      display_color: String,
+      /*  add_after_boil: String,
+        coarse_fine_diff: String,
+        moisture: String,
+        diastatic_power: String,
+        protein: String,
+        max_in_batch: String,
+        recommend_mash: String,
+        ibu_gal_per_lb: String,
+        notes: String,*/
+    }
+  ],
   hops: [
-      {
-        name: String,
-        origin: String,
-        alpha: String,
-        // beta: String,
-        amount: String,
-        display_amount: String,
-        use: String,
-        form: String,
-        time: String,
-        display_time: String,
-        // notes: String,
-      }
-    ],
+    {
+      name: String,
+      origin: String,
+      alpha: String,
+      // beta: String,
+      amount: String,
+      display_amount: String,
+      use: String,
+      form: String,
+      time: String,
+      display_time: String,
+      // notes: String,
+    }
+  ],
   yeasts: [
-      {
-        laboratory: String,
-        name: String,
-        formType: String,
-        form: String,
-        attenuation: String,
-      }
-    ],
+    {
+      laboratory: String,
+      name: String,
+      formType: String,
+      form: String,
+      attenuation: String,
+    }
+  ],
   calculated: {
     og: Number,
     fg: Number,
     srm: Number,
     abv: Number,
     ibu: Number
+  },
+  actual: {
+    og: Number,
+    fg: Number,
+    efficiency: Number,
+    abv: Number,
+    notes: String
   },
   grainType: { type: String, default: 'Extract' },
   brewer: {

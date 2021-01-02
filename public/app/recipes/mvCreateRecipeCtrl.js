@@ -16,8 +16,10 @@ var curFG = 1.0;
 var curABV = 0;
 var curIBU = 0;
 var efficiency = .75;
+var boilTime = 60;
 
-angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, mvCalculator, $location) {
+angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, mvCalculator, mvIdentity, $location) {
+  $scope.identity = mvIdentity;
   var DURATION = 300;
   var vm = this;
   var chosenStyle = null;
@@ -166,6 +168,14 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
     efficiency = $scope.efficiency / 100;
     updateChart();
   }
+  $scope.updateBatch = function () {
+    numGal = $scope.batch_size;
+    updateChart();
+  }
+  $scope.updateTime = function () {
+    boilTime = $scope.boil_Time;
+    updateChart();
+  }
   $scope.updateStyle = function () {
     // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
     chosenStyle = $scope.style;
@@ -177,9 +187,9 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
       fermentables: $scope.addedFermentables,
       hops: $scope.addedHops,
       yeasts: $scope.addedYeasts,
-      efficiency: $scope.efficiency,
+      efficiency: efficiency,
       batch_size: numGal,
-      boil_time: 60,
+      boil_time: boilTime,
       calculated: {
         og: curOG,
         fg: curFG,

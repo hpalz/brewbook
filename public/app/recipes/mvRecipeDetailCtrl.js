@@ -1,7 +1,15 @@
-angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCachedRecipes, $routeParams) {
+var calcEff = 80;
+var calcABV = 0;
+var calcOG = 0;
+var calcFG = 0;
+var notes = "";
+angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCachedRecipes, mvIdentity,mvNotifier, mvAuthRecipe,$routeParams) {
+  $scope.identity = mvIdentity;
+  var currentRecipe;
   mvCachedRecipes.query().$promise.then(function (collection) {
     collection.forEach(function (recipe) {
       if (recipe._id === $routeParams.id) {
+        currentRecipe = recipe;
         $scope.recipe = recipe;
         var chosenStyle = recipe.style;
         var curOG = recipe.calculated.og;
@@ -9,6 +17,15 @@ angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCache
         var curSRM = recipe.calculated.srm;
         var curABV = recipe.calculated.abv;
         var curIBU = recipe.calculated.ibu;
+        calcOG = recipe.actual.og;
+        calcFG = recipe.actual.fg;
+        calcEff = recipe.actual.efficiency;
+        calcABV = recipe.actual.abv;
+        $scope.recordedOG = calcOG;
+        $scope.recordedFG = calcFG;
+        $scope.calculatedABV = calcABV.toFixed(1);
+        $scope.calculatedEfficiency = calcEff;
+        $scope.notes = recipe.actual.notes;
         var myLineChart = null;
         var ctx = document.getElementById("canvas");
         if (ctx) {
@@ -116,4 +133,41 @@ angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCache
       }
     })
   })
+  $scope.save = function () {
+    currentRecipe.actual = {
+      og: calcOG,
+      fg: calcFG,
+      efficiency: calcEff,
+      abv: calcABV,
+      notes: notes
+    }
+
+    mvAuthRecipe.updateRecipe(currentRecipe).then(function () {
+      mvNotifier.notify('Recipe updated!');
+      //$location.path('/');
+    }, function (reason) {
+      mvNotifier.error(reason);
+    })
+  }
+  $scope.updateOG = function() {
+    calcOG = parseFloat($scope.recordedOG);
+    if (calcFG != 0)
+    {
+      calcABV =  (calcOG - calcFG) * 131.25;
+      $scope.calculatedABV = calcABV.toFixed(1);
+      $scope.calculatedEfficiency = "Feature not supported yet"
+    }
+  }
+  $scope.updateFG = function() {
+    calcFG = parseFloat($scope.recordedFG);
+    if (calcOG != 0)
+    {
+      calcABV =  (calcOG - calcFG) * 131.25;
+      $scope.calculatedABV = calcABV.toFixed(1);
+      $scope.calculatedEfficiency = "Feature not supported yet"
+    }
+  }
+  $scope.updateNotes = function() {
+    notes = $scope.notes;
+  }
 });

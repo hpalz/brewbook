@@ -1,33 +1,62 @@
 
 .container(ng-app='app', fxlayout='column', fxlayoutalign='space-evenly stretch')
-  form.form-horizontal(name="deleteRecipeForm")
+  form.form-horizontal(name="deleteRecipeForm" ng-show="identity.isAuthenticated()")
     .pull-left(ng-controller="mvDeleteRecipeCtrl")
       button.btn.btn-primary(ng-click="delete(recipe._id)") Delete Recipe
+    .pull-left(ng-controller="mvCloneRecipeCtrl")
+      button.btn.btn-primary(ng-click="clone(recipe._id)") Clone Recipe
   .well
     form.form-inline(name="newRecipeForm")
       h1 {{recipe.name}}
       fieldset
-        .form-group
-          label.col-md-2.control-label Style
-          .col-md-10
-            {{recipe.style.name}}
-          label.col-md-3.control-label Efficiency
-          .col-md-8
-            {{recipe.efficiency}}%
-        .form-group
-          .col-md-12
-            canvas#canvas(width='600' height='400')
-        .form-group
-          .panel.panel-primary
-            .panel-heading.text-center Fermentables
-            .panel-body
-              div(ng-repeat='newFerm in recipe.fermentables') {{newFerm.amount}}{{newFerm.display_amount}} {{newFerm.name}}
+        .col-md-8
+          .form-group
+            label.col-md-2.control-label Style
+            .col-md-10
+              {{recipe.style.name}}
+            label.col-md-3.control-label Efficiency
+            .col-md-8
+              {{recipe.efficiency}}%
+            label.col-md-3.control-label Batch Size
+            .col-md-8
+              {{recipe.batch_size}} gal
+            label.col-md-3.control-label Boil Time
+            .col-md-8
+              {{recipe.boil_time}} min
+          .form-group
+              canvas#canvas(width='600' height='400')
+        .col-md-4
+          .form-group
+            .panel.panel-primary
+              .panel-heading.text-center Fermentables
+              .panel-body
+                div(ng-repeat='newFerm in recipe.fermentables') {{newFerm.amount}}{{newFerm.display_amount}} {{newFerm.name}}
 
-          .panel.panel-primary
-            .panel-heading.text-center Hops
-            .panel-body
-              div(ng-repeat='newHop in recipe.hops') {{newHop.time}} min: {{newHop.amount}}{{newHop.display_amount}} {{newHop.name}}
-          .panel.panel-primary
-            .panel-heading.text-center Yeasts
-            .panel-body
-              div(ng-repeat='newYeast in recipe.yeasts') {{newYeast.name}}
+            .panel.panel-primary
+              .panel-heading.text-center Hops
+              .panel-body
+                div(ng-repeat='newHop in recipe.hops') {{newHop.time}} min: {{newHop.amount}}{{newHop.display_amount}} {{newHop.name}}
+            .panel.panel-primary
+              .panel-heading.text-center Yeasts
+              .panel-body
+                div(ng-repeat='newYeast in recipe.yeasts') {{newYeast.name}}
+              
+      .form-group( ng-show="identity.isAuthenticated()")
+        .panel.panel-primary
+          .panel-heading.text-center Brew Day Recordings
+          .col-md-4
+            label.col-md-4.control-label(for="recordedOG") Actual OG: 
+            input.form-control(name="recordedOG", ng-change="updateOG()",type="text",default="1.00",ng-model="recordedOG")
+            label.col-md-4.control-label(for="recordedFG") Actual FG: 
+            input.form-control(name="recordedFG", ng-change="updateFG()",type="text",default="1.00",ng-model="recordedFG")
+            label.col-md-4.control-label(for="calculatedABV") Actual ABV: 
+            input.form-control(name="calculatedABV",type="text",default="1.00",ng-model="calculatedABV",readonly)
+            label.col-md-4.control-label(for="calculatedEfficiency") Actual Efficiency: 
+            input.form-control(name="calculatedEfficiency",type="text",default="1.00",ng-model="calculatedEfficiency",readonly)
+            
+          .col-md-8
+            textarea.form-control(name="notes",type="text",placeholder="Notes",ng-model="notes",ng-change="updateNotes()",style="width:100%")
+            
+          .col-md-12
+            center(ng-controller="mvRecipeDetailCtrl" ng-show="identity.isAuthenticated()")
+              button.btn.btn-primary(ng-click="save()") Save Log

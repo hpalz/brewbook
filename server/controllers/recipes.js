@@ -6,7 +6,7 @@ var auth = require('../config/auth');
 
 exports.getRecipes = function(req, res) {
   var username = auth.username();
-  Recipe.find({username:username}).exec(function(err, collection) {
+  Recipe.find().exec(function(err, collection) {
     res.send(collection);
   })
 };
@@ -19,27 +19,43 @@ exports.getRecipeById = function(req, res) {
 
 exports.createRecipe = function(req, res, next) {
   var recipeBody = req.body;
-  var username = auth.username();
-  var newRecipe = new Recipe ({
-    _id: new mongoose.Types.ObjectId(),
-    created: new Date(),
-    style: {
-      name: recipeBody.style.Style
-    },
-    calculated: recipeBody.calculated,
-    yeasts: recipeBody.yeasts,
-    fermentables: recipeBody.fermentables,
-    hops: recipeBody.hops,
-    name: recipeBody.name,
-    featured: recipeBody.featured,
-    username: username
-  });
-  Recipe.create(newRecipe, function(err, recipe) {
-    if(err) {
-      // todo
-    }
-    res.send(recipe);
-  })
+  if(req.body._id != undefined)
+  {
+    var recipeId = req.body._id;
+    
+    Recipe.findByIdAndUpdate(recipeId, recipeBody, function(err, recipe) {
+      if(err) {
+        // todo
+      }
+      res.send(recipe);
+    })
+  }
+  else{
+    var username = auth.username();
+    var newRecipe = new Recipe ({
+      _id: new mongoose.Types.ObjectId(),
+      created: new Date(),
+      style: {
+        name: recipeBody.style.Style
+      },
+      calculated: recipeBody.calculated,
+      efficiency: recipeBody.efficiency,
+      batch_size: recipeBody.batch_size,
+      boil_time: recipeBody.boil_time,
+      yeasts: recipeBody.yeasts,
+      fermentables: recipeBody.fermentables,
+      hops: recipeBody.hops,
+      name: recipeBody.name,
+      featured: recipeBody.featured,
+      username: username
+    });
+    Recipe.create(newRecipe, function(err, recipe) {
+      if(err) {
+        // todo
+      }
+      res.send(recipe);
+    })
+  }
 };
 
 exports.deleteRecipe = function(req, res, next) {

@@ -1,72 +1,86 @@
 
 .container(ng-app='app', ng-controller="mvCreateRecipeCtrl", fxlayout='column', fxlayoutalign='space-evenly stretch')
-  .well
-    form.form-inline(name="newRecipeForm")
-      fieldset
-        legend Create New Recipe
-        .form-group
-          label.col-md-2.control-label(for="name") Name
-          .col-md-10
-            input.form-control(name="name", type="text", placeholder="Recipe Name", ng-model="name", required)
-        .form-group
-          label.col-md-2.control-label(for="style") Style
-          .col-md-10
-            select(ng-model='style', ng-change="value = ''; updateStyle()", ng-options='style as style.Style for style in styleList')
-              option(value='') - Select Style -
-        .form-group
-          label.col-md-3.control-label(for="efficiency") Efficiency%
-          .col-md-4 
-            input.form-control(name="efficiency", ng-change="updateEff()",type="text",default="75",ng-model="efficiency",required)
-            //input.form-control(name="featured", type="checkbox", placeholder="Featured", ng-model="featured", required)
-        .form-group
-          .col-md-12
-            canvas#canvas(width='600' height='400')
-        .form-group
-          .col-md-10
-            .panel.panel-primary
-              .panel-heading.text-center Fermentables
-              .panel-body
-                input(ng-model='fermWeight', size="4")
-                select(ng-model='fermUnit', ng-options='fermUnit as fermUnit.fermUnitName for fermUnit in fermUnitList')
-                  option(value='') - unit -
-                select(ng-model='fermentable', ng-options='fermentable as fermentable.fermentableName for fermentable in fermentableList')
-                  option(value='') - Add Fermentable -
-                md-button.md-icon-button(aria-label='Add' ng-click="addFermentable()")
-                    md-icon.material-icons add
-                  div(ng-repeat='newFerm in addedFermentables') {{newFerm.amount}}{{newFerm.display_amount}}  {{newFerm.name}}
-                  md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
-                    md-icon.material-icons delete
+  form.navbar-form(ng-hide="identity.isAuthenticated()")
+    .jumbotron(style = "text-align: center;")
+      .col-md-6
+        div(ng-include="'/partials/account/signin'")
+  form.navbar-form(ng-show="identity.isAuthenticated()")
+    .well
+      form.form-inline(name="newRecipeForm")
+        fieldset
+          legend Create New Recipe
+          .col-md-6
+            .form-group
+              label.col-md-2.control-label(for="name") Name
+              .col-md-4
+                input.form-control(name="name", type="text", placeholder="Recipe Name", ng-model="name", required)
+            .form-group
+              label.col-md-2.control-label(for="style") Style
+              .col-md-4
+                select(ng-model='style', ng-change="value = ''; updateStyle()", ng-options='style as style.Style for style in styleList')
+                  option(value='') - Select Style -
+          .col-md-6
+            .form-group
+              label.col-md-4.control-label(for="efficiency") Efficiency%
+              .col-md-2
+                input.form-control(name="efficiency", ng-change="updateEff()",type="text",default="75",ng-model="efficiency",required)
+            .form-group
+              label.col-md-4.control-label(for="batch_size") Target Volume
+              .col-md-2
+                input.form-control(name="batch_size", ng-change="updateBatch()",type="number",default="5",ng-model="batch_size",required)
+            .form-group
+              label.col-md-4.control-label(for="boil_time") Boil time
+              .col-md-2
+                input.form-control(name="boil_time", ng-change="updateTime()",type="number",default="5",ng-model="boil_time",required)
+          .form-group
+            .col-md-12
+              canvas#canvas(width='600' height='400')
+          .form-group
+            .col-md-10
+              .panel.panel-primary
+                .panel-heading.text-center Fermentables
+                .panel-body
+                  input(ng-model='fermWeight', size="4")
+                  select(ng-model='fermUnit', ng-options='fermUnit as fermUnit.fermUnitName for fermUnit in fermUnitList')
+                    option(value='') - unit -
+                  select(ng-model='fermentable', ng-options='fermentable as fermentable.fermentableName for fermentable in fermentableList')
+                    option(value='') - Add Fermentable -
+                  md-button.md-icon-button(aria-label='Add' ng-click="addFermentable()")
+                      md-icon.material-icons add
+                    div(ng-repeat='newFerm in addedFermentables') {{newFerm.amount}}{{newFerm.display_amount}}  {{newFerm.name}}
+                    md-button.md-icon-button(aria-label='Delete' ng-click="fermDelete(this)")
+                      md-icon.material-icons delete
 
-          .col-md-10
-            .panel.panel-primary
-              .panel-heading.text-center Hops
-              .panel-body
-                input(ng-model='hopWeight', size="4")
-                select(ng-model='hopUnit', ng-options='hopUnit as hopUnit.hopUnitName for hopUnit in hopUnitList')
-                  option(value='') - unit -
-                input(ng-model='hopDuration',size="4")
-                | min 
-                select(ng-model='hop', ng-change="value = ''; updateHop()", ng-options='hop as hop.hopName for hop in hopList')
-                  option(value='') - Add Hop -
-                md-button.md-icon-button(aria-label='Add' ng-click="addHop()")
-                    md-icon.material-icons add
-                  div(ng-repeat='newHop in addedHops') {{newHop.time}} min: {{newHop.amount}}{{newHop.display_amount}} {{newHop.name}}
-                  md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
-                    md-icon.material-icons delete
-          .col-md-10
-            .panel.panel-primary
-              .panel-heading.text-center Yeasts
-              .panel-body
-                select(ng-model='yeast', ng-change="value = ''; updateYeast()", ng-options='yeast as yeast.yeastName for yeast in yeastList')
-                  option(value='') - Add Yeast -
-                md-button.md-icon-button(aria-label='Add' ng-click="addYeast()")
-                    md-icon.material-icons add
-                  div(ng-repeat='newYeast in addedYeasts') {{newYeast.name}}
-                  md-button.md-icon-button(aria-label='Delete' ng-click="yeastDelete(this)")
-                    md-icon.material-icons delete
-    .form-group
-      .col-md-10.col-md-offset-2
-        .pull-right
-          button.btn.btn-primary(ng-click="create()", ng-disabled="newRecipeForm.$invalid") Submit
-          | &nbsp;
-          a.btn.btn-default(href="/") Cancel
+            .col-md-10
+              .panel.panel-primary
+                .panel-heading.text-center Hops
+                .panel-body
+                  input(ng-model='hopWeight', size="4")
+                  select(ng-model='hopUnit', ng-options='hopUnit as hopUnit.hopUnitName for hopUnit in hopUnitList')
+                    option(value='') - unit -
+                  input(ng-model='hopDuration',size="4")
+                  | min 
+                  select(ng-model='hop', ng-change="value = ''; updateHop()", ng-options='hop as hop.hopName for hop in hopList')
+                    option(value='') - Add Hop -
+                  md-button.md-icon-button(aria-label='Add' ng-click="addHop()")
+                      md-icon.material-icons add
+                    div(ng-repeat='newHop in addedHops') {{newHop.time}} min: {{newHop.amount}}{{newHop.display_amount}} {{newHop.name}}
+                    md-button.md-icon-button(aria-label='Delete' ng-click="hopDelete(this)")
+                      md-icon.material-icons delete
+            .col-md-10
+              .panel.panel-primary
+                .panel-heading.text-center Yeasts
+                .panel-body
+                  select(ng-model='yeast', ng-change="value = ''; updateYeast()", ng-options='yeast as yeast.yeastName for yeast in yeastList')
+                    option(value='') - Add Yeast -
+                  md-button.md-icon-button(aria-label='Add' ng-click="addYeast()")
+                      md-icon.material-icons add
+                    div(ng-repeat='newYeast in addedYeasts') {{newYeast.name}}
+                    md-button.md-icon-button(aria-label='Delete' ng-click="yeastDelete(this)")
+                      md-icon.material-icons delete
+      .form-group
+        .col-md-10.col-md-offset-2
+          .pull-right
+            button.btn.btn-primary(ng-click="create()", ng-disabled="newRecipeForm.$invalid") Submit
+            | &nbsp;
+            a.btn.btn-default(href="/") Cancel
