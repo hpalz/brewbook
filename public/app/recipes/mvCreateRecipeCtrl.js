@@ -59,6 +59,24 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
     $scope.yeastList = yeastJson.data;
   });
   $scope.fermUnitList = [{ "fermUnitName": "lbs", "id": 0 }, { "fermUnitName": "oz", "id": 1 }];
+  $scope.getFermName = function (string) {
+    if(string == undefined){
+      string = '';
+    }
+    $scope.hideFerm = false;
+    var output = [];
+    angular.forEach($scope.fermentableList, function (fermentable) {
+      if (fermentable.fermentableName.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
+        output.push(fermentable);
+      }
+    });
+    $scope.filterfermentable = output;
+  };
+  $scope.fillFermBox = function (string) {
+    $scope.fermentable = string;
+    $scope.displayFermentable = '';
+    $scope.hideFerm = true;
+  };
   $scope.fermDelete = function (x) {
     console.log("Removed " + x.newFerm.name)
     mvCalculator.delFerm(x.newFerm.count).then(function (returnFermList) {
@@ -91,12 +109,31 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
           curSRM = returnSRM;
           updateChart();
           $scope.fermWeight = ""
+          $scope.fermentable = ''
           fermCount++;
         });
       });
     });
   }
   $scope.hopUnitList = [{ "hopUnitName": "oz", "id": 0 }];
+  $scope.getHopName = function (string) {
+    if(string == undefined){
+      string = '';
+    }
+    $scope.hideHops = false;
+    var output = [];
+    angular.forEach($scope.hopList, function (hop) {
+      if (hop.hopName.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
+        output.push(hop);
+      }
+    });
+    $scope.filterhop = output;
+  };
+  $scope.fillHopBox = function (string) {
+    $scope.hop = string;
+    $scope.displayHop = '';
+    $scope.hideHops = true;
+  };
   $scope.hopDelete = function (x) {
     console.log("Removed " + x.newHop.name)
     mvCalculator.delHop(x.newHop.count).then(function (returnHopList) {
@@ -132,6 +169,24 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
       });
     });
   }
+  $scope.getYeastName = function (string) {
+    if(string == undefined){
+      string = '';
+    }
+    $scope.hideYeast = false;
+    var output = [];
+    angular.forEach($scope.yeastList, function (yeast) {
+      if (yeast.yeastName.toLowerCase().indexOf(string.toLowerCase()) >= 0) {
+        output.push(yeast);
+      }
+    });
+    $scope.filteryeast = output;
+  };
+  $scope.fillYeastBox = function (string) {
+    $scope.yeast = string;
+    $scope.displayYeast = '';
+    $scope.hideYeast = true;
+  };
 
   $scope.yeastDelete = function (x) {
     console.log("Removed " + x.newYeast.name)
@@ -155,6 +210,7 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
     mvCalculator.addYeast($scope.yeast, curOG * numGal, yeastCount).then(function () {
       $scope.addedYeasts.push({
         name: $scope.yeast.yeastName,
+        lab: $scope.yeast.lab,
         count: yeastCount
       });
       mvCalculator.calcFG().then(function (returnFG) {

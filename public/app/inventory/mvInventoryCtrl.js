@@ -117,6 +117,7 @@ angular.module('app').controller('mvInventoryCtrl', function ($scope, $http, mvA
     thisYeastWeight = 0
     $scope.addedYeasts.push({
       name: $scope.yeast.yeastName,
+      lab: $scope.yeast.lab,
       count: yeastCount
     });
   }

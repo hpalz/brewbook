@@ -1,1112 +1,1256 @@
 [
-    {
-      "fermentableName": "2-Row (US)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "6-Row (US)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Bohemian Pilsner (DE)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Floor-Malted Bohemian Dark Pilsner (DE)",
-      "fermentableType": "Base Malt",
-      "color": 6,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Floor-Malted Bohemian Pilsner (DE)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Golden Promise (UK)",
-      "fermentableType": "Base Malt",
-      "color": 3,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Halcyon (UK)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "K�lsch (DE)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Lager (UK)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Maris Otter Pale (UK)",
-      "fermentableType": "Base Malt",
-      "color": 3,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Mild (UK)",
-      "fermentableType": "Base Malt",
-      "color": 3,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Optic (UK)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Pale 2-Row (CA)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Pale 2-Row - Toasted (US)",
-      "fermentableType": "Base Malt",
-      "color": 30,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Pale 2-Row (UK)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Pale 2-Row (US)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Pale 6-Row (US)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Pale Ale (BE)",
-      "fermentableType": "Base Malt",
-      "color": 3,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Pale Ale (CA)",
-      "fermentableType": "Base Malt",
-      "color": 3,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Pale Ale (DE)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 39
-    },
-    {
-      "fermentableName": "Pale Ale (US)",
-      "fermentableType": "Base Malt",
-      "color": 3,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Pale Malt (US)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Pale Wheat (CA)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Pearl (UK)",
-      "fermentableType": "Base Malt",
-      "color": 2,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Pilsen (UK)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Pilsner (BE)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Pilsner (DE)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Pilsner (US)",
-      "fermentableType": "Base Malt",
-      "color": 1,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Cara 20L (BE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 22,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Cara 45L (BE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 42,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraAmber (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 23,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraAroma (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 130,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraBelge (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 13,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "CaraBohemian (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 75,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Carafa I (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 340,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Carafa II (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 425,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Cara Gold (BE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 46,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraHell (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 11,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Cara Malt (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 17,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Caramel/Crystal 10L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 10,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Caramel/Crystal 120L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 120,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Caramel/Crystal 150L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 150,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Caramel/Crystal 15L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 15,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Caramel/Crystal 20L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 20,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Caramel/Crystal 30L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 30,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Caramel/Crystal 40L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 40,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Caramel/Crystal 60L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 60,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Caramel/Crystal 75L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 75,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Caramel/Crystal 80L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 80,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Caramel/Crystal 90L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 90,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Caramel Munich 60L (US)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 60,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Caramel Pils (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 8,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Caramel Vienne 20L",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 20,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Caramel Wheat (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 46,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraMunich I (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 39,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraMunich II (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 46,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraMunich III (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 57,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "CaraRed (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 20,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 120L (CA)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 120,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Crystal 135L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 135,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 140L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 140,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Crystal 15L (CA)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 15,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 15L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 15,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 30L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 30,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 40L (CA)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 40,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 45L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 45,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 50L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 50,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 60L (CA)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 60,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 60L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 60,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 70L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 70,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Crystal 90L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 90,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Crystal Rye (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 90,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Dark Crystal 80L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 80,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "De-Husked Caraf I (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 340,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "De-Husked Caraf II (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 418,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "De-Husked Caraf III (DE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 470,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Extra Dark Crystal 120L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 120,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Extra Dark Crystal 160L (UK)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 160,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Honey Malt (CA)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 25,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Special B (BE)",
-      "fermentableType": "Caramel/Crystal Malt",
-      "color": 115,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Amber",
-      "fermentableType": "Dry Extract",
-      "color": 10,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Dark",
-      "fermentableType": "Dry Extract",
-      "color": 30,
-      "ppg": 44
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Extra Light",
-      "fermentableType": "Dry Extract",
-      "color": 2,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Light",
-      "fermentableType": "Dry Extract",
-      "color": 4,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Maris Otter",
-      "fermentableType": "Dry Extract",
-      "color": 2,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Munich",
-      "fermentableType": "Dry Extract",
-      "color": 8,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Pale",
-      "fermentableType": "Dry Extract",
-      "color": 2,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Pilsen",
-      "fermentableType": "Dry Extract",
-      "color": 2,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Rye",
-      "fermentableType": "Dry Extract",
-      "color": 9,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Dry Malt Extract - Wheat",
-      "fermentableType": "Dry Extract",
-      "color": 3,
-      "ppg": 42
-    },
-    {
-      "fermentableName": "Rice Syrup Solids",
-      "fermentableType": "Dry Extract",
-      "color": 1,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Black Barley (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 530,
-      "ppg": 27
-    },
-    {
-      "fermentableName": "Black Malt (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 500,
-      "ppg": 28
-    },
-    {
-      "fermentableName": "Black Malt (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 500,
-      "ppg": 28
-    },
-    {
-      "fermentableName": "Black Patent (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 525,
-      "ppg": 27
-    },
-    {
-      "fermentableName": "Blackprinz (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 500,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Carafa III (DE)",
-      "fermentableType": "Roasted Malt",
-      "color": 535,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Carafa Special II",
-      "fermentableType": "Roasted Malt",
-      "color": 430,
-      "ppg": 22
-    },
-    {
-      "fermentableName": "Chocolate (BE)",
-      "fermentableType": "Roasted Malt",
-      "color": 340,
-      "ppg": 30
-    },
-    {
-      "fermentableName": "Chocolate Rye (DE)",
-      "fermentableType": "Roasted Malt",
-      "color": 240,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Chocolate (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 425,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Chocolate (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 350,
-      "ppg": 29
-    },
-    {
-      "fermentableName": "Chocolate Wheat (DE)",
-      "fermentableType": "Roasted Malt",
-      "color": 413,
-      "ppg": 31
-    },
-    {
-      "fermentableName": "Coffee Malt (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 150,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Dark Chocolate (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 420,
-      "ppg": 29
-    },
-    {
-      "fermentableName": "De-Bittered Black (BE)",
-      "fermentableType": "Roasted Malt",
-      "color": 566,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Pale Chocolate (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 207,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Roasted Barley (BE)",
-      "fermentableType": "Roasted Malt",
-      "color": 575,
-      "ppg": 30
-    },
-    {
-      "fermentableName": "Roasted Barley (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 550,
-      "ppg": 29
-    },
-    {
-      "fermentableName": "Roasted Barley (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 300,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Special Roast (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 50,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Belgian Candi Syrup - Amber",
-      "fermentableType": "Liquid Extract",
-      "color": 40,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Belgian Candi Syrup - Clear",
-      "fermentableType": "Liquid Extract",
-      "color": 0,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Belgian Candi Syrup - D2",
-      "fermentableType": "Liquid Extract",
-      "color": 160,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Belgian Candi Syrup - Dark",
-      "fermentableType": "Liquid Extract",
-      "color": 80,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Belgian Candi Syrup - Extra Dark",
-      "fermentableType": "Liquid Extract",
-      "color": 180,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Brown Rice Syrup",
-      "fermentableType": "Liquid Extract",
-      "color": 2,
-      "ppg": 44
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Amber",
-      "fermentableType": "Liquid Extract",
-      "color": 10,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Dark",
-      "fermentableType": "Liquid Extract",
-      "color": 30,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Extra Light",
-      "fermentableType": "Liquid Extract",
-      "color": 2,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Light",
-      "fermentableType": "Liquid Extract",
-      "color": 4,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Maris Otter",
-      "fermentableType": "Liquid Extract",
-      "color": 4,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Munich",
-      "fermentableType": "Liquid Extract",
-      "color": 8,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Pale",
-      "fermentableType": "Liquid Extract",
-      "color": 4,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Pilsen",
-      "fermentableType": "Liquid Extract",
-      "color": 2,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Rye",
-      "fermentableType": "Liquid Extract",
-      "color": 9,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Liquid Malt Extract - Wheat",
-      "fermentableType": "Liquid Extract",
-      "color": 3,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Maris Otter Malt Extract",
-      "fermentableType": "Liquid Extract",
-      "color": 4,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Sorghum Extract",
-      "fermentableType": "Liquid Extract",
-      "color": 2,
-      "ppg": 40
-    },
-    {
-      "fermentableName": "Black Barley (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 530,
-      "ppg": 27
-    },
-    {
-      "fermentableName": "Black Malt (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 500,
-      "ppg": 28
-    },
-    {
-      "fermentableName": "Black Malt (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 500,
-      "ppg": 28
-    },
-    {
-      "fermentableName": "Black Patent (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 525,
-      "ppg": 27
-    },
-    {
-      "fermentableName": "Blackprinz (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 500,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Carafa III (DE)",
-      "fermentableType": "Roasted Malt",
-      "color": 535,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Carafa Special II",
-      "fermentableType": "Roasted Malt",
-      "color": 430,
-      "ppg": 22
-    },
-    {
-      "fermentableName": "Chocolate (BE)",
-      "fermentableType": "Roasted Malt",
-      "color": 340,
-      "ppg": 30
-    },
-    {
-      "fermentableName": "Chocolate Rye (DE)",
-      "fermentableType": "Roasted Malt",
-      "color": 240,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Chocolate (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 425,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Chocolate (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 350,
-      "ppg": 29
-    },
-    {
-      "fermentableName": "Chocolate Wheat (DE)",
-      "fermentableType": "Roasted Malt",
-      "color": 413,
-      "ppg": 31
-    },
-    {
-      "fermentableName": "Coffee Malt (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 150,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Dark Chocolate (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 420,
-      "ppg": 29
-    },
-    {
-      "fermentableName": "De-Bittered Black (BE)",
-      "fermentableType": "Roasted Malt",
-      "color": 566,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Pale Chocolate (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 207,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Roasted Barley (BE)",
-      "fermentableType": "Roasted Malt",
-      "color": 575,
-      "ppg": 30
-    },
-    {
-      "fermentableName": "Roasted Barley (UK)",
-      "fermentableType": "Roasted Malt",
-      "color": 550,
-      "ppg": 29
-    },
-    {
-      "fermentableName": "Roasted Barley (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 300,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Special Roast (US)",
-      "fermentableType": "Roasted Malt",
-      "color": 50,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Acidulated Malt (DE)",
-      "fermentableType": "Adjunct",
-      "color": 3,
-      "ppg": 27
-    },
-    {
-      "fermentableName": "CaraFoam (DE)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Caramel Pils (BE)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Carapils (DE)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 35
-    },
-    {
-      "fermentableName": "Carapils (Dextrine Malt) (US)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Dextrine Malt (UK)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Flaked Barley",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 32
-    },
-    {
-      "fermentableName": "Flaked Corn",
-      "fermentableType": "Adjunct",
-      "color": 0,
-      "ppg": 40
-    },
-    {
-      "fermentableName": "Flaked Oats",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Flaked Rice",
-      "fermentableType": "Adjunct",
-      "color": 0,
-      "ppg": 40
-    },
-    {
-      "fermentableName": "Flaked Rye",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Flaked Wheat",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 34
-    },
-    {
-      "fermentableName": "Floor-Malted Bohemian Wheat (DE)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Golden Naked Oats (UK)",
-      "fermentableType": "Adjunct",
-      "color": 10,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Grits",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Malted Naked Oats (UK)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Midnight Wheat Malt (US)",
-      "fermentableType": "Adjunct",
-      "color": 550,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Oat Malt (UK)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 28
-    },
-    {
-      "fermentableName": "Pale Wheat (DE)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Peated Malt (UK)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Red Wheat (US)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Rice Hulls",
-      "fermentableType": "Adjunct",
-      "color": 0,
-      "ppg": 0
-    },
-    {
-      "fermentableName": "Rolled Oats",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 33
-    },
-    {
-      "fermentableName": "Rye (DE)",
-      "fermentableType": "Adjunct",
-      "color": 3,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Rye (US)",
-      "fermentableType": "Adjunct",
-      "color": 3,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Smoked Malt (DE)",
-      "fermentableType": "Adjunct",
-      "color": 3,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Smoked Malt (US)",
-      "fermentableType": "Adjunct",
-      "color": 5,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Spelt Malt (DE)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Torrified Barley",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Torrified Wheat",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Unmalted Wheat (BE)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 36
-    },
-    {
-      "fermentableName": "Wheat (BE)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "Wheat Malt (DE)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Wheat (UK)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 37
-    },
-    {
-      "fermentableName": "Wheat (US)",
-      "fermentableType": "Adjunct",
-      "color": 1,
-      "ppg": 38
-    },
-    {
-      "fermentableName": "White Wheat (US)",
-      "fermentableType": "Adjunct",
-      "color": 2,
-      "ppg": 40
-    }
-  ]
+  {
+    "fermentableName": "2-Row (US)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "6-Row (US)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Bohemian Pilsner (DE)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Floor-Malted Bohemian Dark Pilsner (DE)",
+    "fermentableType": "Base Malt",
+    "color": 6,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Floor-Malted Bohemian Pilsner (DE)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Golden Promise (UK)",
+    "fermentableType": "Base Malt",
+    "color": 3,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Halcyon (UK)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Kolsch (DE)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Lager (UK)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Maris Otter Pale (UK)",
+    "fermentableType": "Base Malt",
+    "color": 3,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Mild (UK)",
+    "fermentableType": "Base Malt",
+    "color": 3,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Optic (UK)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Pale 2-Row (CA)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Pale 2-Row - Toasted (US)",
+    "fermentableType": "Base Malt",
+    "color": 30,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Pale 2-Row (UK)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Pale 2-Row (US)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Pale 6-Row (US)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Pale Ale (BE)",
+    "fermentableType": "Base Malt",
+    "color": 3,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Pale Ale (CA)",
+    "fermentableType": "Base Malt",
+    "color": 3,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Pale Ale (DE)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 39
+  },
+  {
+    "fermentableName": "Pale Ale (US)",
+    "fermentableType": "Base Malt",
+    "color": 3,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Pale Malt (US)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Pale Wheat (CA)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Pearl (UK)",
+    "fermentableType": "Base Malt",
+    "color": 2,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Pilsen (UK)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Pilsner (BE)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Pilsner (DE)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Pilsner (US)",
+    "fermentableType": "Base Malt",
+    "color": 1,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Cara 20L (BE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 22,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Cara 45L (BE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 42,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraAmber (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 23,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraAroma (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 130,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraBelge (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 13,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "CaraBohemian (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 75,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Carafa I (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 340,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Carafa II (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 425,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Cara Gold (BE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 46,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraHell (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 11,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Cara Malt (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 17,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Caramel/Crystal 10L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 10,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Caramel/Crystal 120L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 120,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Caramel/Crystal 150L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 150,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Caramel/Crystal 15L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 15,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Caramel/Crystal 20L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 20,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Caramel/Crystal 30L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 30,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Caramel/Crystal 40L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 40,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Caramel/Crystal 60L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 60,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Caramel/Crystal 75L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 75,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Caramel/Crystal 80L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 80,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Caramel/Crystal 90L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 90,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Caramel Munich 60L (US)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 60,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Caramel Pils (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 8,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Caramel Vienne 20L",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 20,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Caramel Wheat (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 46,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraMunich I (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 39,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraMunich II (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 46,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraMunich III (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 57,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "CaraRed (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 20,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 120L (CA)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 120,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Crystal 135L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 135,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 140L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 140,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Crystal 15L (CA)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 15,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 15L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 15,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 30L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 30,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 40L (CA)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 40,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 45L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 45,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 50L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 50,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 60L (CA)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 60,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 60L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 60,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 70L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 70,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Crystal 90L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 90,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Crystal Rye (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 90,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Dark Crystal 80L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 80,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "De-Husked Caraf I (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 340,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "De-Husked Caraf II (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 418,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "De-Husked Caraf III (DE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 470,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Extra Dark Crystal 120L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 120,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Extra Dark Crystal 160L (UK)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 160,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Honey Malt (CA)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 25,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Special B (BE)",
+    "fermentableType": "Caramel/Crystal Malt",
+    "color": 115,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Amber",
+    "fermentableType": "Dry Extract",
+    "color": 10,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Dark",
+    "fermentableType": "Dry Extract",
+    "color": 30,
+    "ppg": 44
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Extra Light",
+    "fermentableType": "Dry Extract",
+    "color": 2,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Light",
+    "fermentableType": "Dry Extract",
+    "color": 4,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Maris Otter",
+    "fermentableType": "Dry Extract",
+    "color": 2,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Munich",
+    "fermentableType": "Dry Extract",
+    "color": 8,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Pale",
+    "fermentableType": "Dry Extract",
+    "color": 2,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Pilsen",
+    "fermentableType": "Dry Extract",
+    "color": 2,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Rye",
+    "fermentableType": "Dry Extract",
+    "color": 9,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Dry Malt Extract - Wheat",
+    "fermentableType": "Dry Extract",
+    "color": 3,
+    "ppg": 42
+  },
+  {
+    "fermentableName": "Rice Syrup Solids",
+    "fermentableType": "Dry Extract",
+    "color": 1,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Black Barley (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 530,
+    "ppg": 27
+  },
+  {
+    "fermentableName": "Black Malt (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 500,
+    "ppg": 28
+  },
+  {
+    "fermentableName": "Black Malt (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 500,
+    "ppg": 28
+  },
+  {
+    "fermentableName": "Black Patent (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 525,
+    "ppg": 27
+  },
+  {
+    "fermentableName": "Blackprinz (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 500,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Carafa III (DE)",
+    "fermentableType": "Roasted Malt",
+    "color": 535,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Carafa Special II",
+    "fermentableType": "Roasted Malt",
+    "color": 430,
+    "ppg": 22
+  },
+  {
+    "fermentableName": "Chocolate (BE)",
+    "fermentableType": "Roasted Malt",
+    "color": 340,
+    "ppg": 30
+  },
+  {
+    "fermentableName": "Chocolate Rye (DE)",
+    "fermentableType": "Roasted Malt",
+    "color": 240,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Chocolate (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 425,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Chocolate (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 350,
+    "ppg": 29
+  },
+  {
+    "fermentableName": "Chocolate Wheat (DE)",
+    "fermentableType": "Roasted Malt",
+    "color": 413,
+    "ppg": 31
+  },
+  {
+    "fermentableName": "Coffee Malt (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 150,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Dark Chocolate (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 420,
+    "ppg": 29
+  },
+  {
+    "fermentableName": "De-Bittered Black (BE)",
+    "fermentableType": "Roasted Malt",
+    "color": 566,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Pale Chocolate (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 207,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Roasted Barley (BE)",
+    "fermentableType": "Roasted Malt",
+    "color": 575,
+    "ppg": 30
+  },
+  {
+    "fermentableName": "Roasted Barley (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 550,
+    "ppg": 29
+  },
+  {
+    "fermentableName": "Roasted Barley (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 300,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Special Roast (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 50,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Belgian Candi Syrup - Amber",
+    "fermentableType": "Liquid Extract",
+    "color": 40,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Belgian Candi Syrup - Clear",
+    "fermentableType": "Liquid Extract",
+    "color": 0,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Belgian Candi Syrup - D2",
+    "fermentableType": "Liquid Extract",
+    "color": 160,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Belgian Candi Syrup - Dark",
+    "fermentableType": "Liquid Extract",
+    "color": 80,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Belgian Candi Syrup - Extra Dark",
+    "fermentableType": "Liquid Extract",
+    "color": 180,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Brown Rice Syrup",
+    "fermentableType": "Liquid Extract",
+    "color": 2,
+    "ppg": 44
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Amber",
+    "fermentableType": "Liquid Extract",
+    "color": 10,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Dark",
+    "fermentableType": "Liquid Extract",
+    "color": 30,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Extra Light",
+    "fermentableType": "Liquid Extract",
+    "color": 2,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Light",
+    "fermentableType": "Liquid Extract",
+    "color": 4,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Maris Otter",
+    "fermentableType": "Liquid Extract",
+    "color": 4,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Munich",
+    "fermentableType": "Liquid Extract",
+    "color": 8,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Pale",
+    "fermentableType": "Liquid Extract",
+    "color": 4,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Pilsen",
+    "fermentableType": "Liquid Extract",
+    "color": 2,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Rye",
+    "fermentableType": "Liquid Extract",
+    "color": 9,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Liquid Malt Extract - Wheat",
+    "fermentableType": "Liquid Extract",
+    "color": 3,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Maris Otter Malt Extract",
+    "fermentableType": "Liquid Extract",
+    "color": 4,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Sorghum Extract",
+    "fermentableType": "Liquid Extract",
+    "color": 2,
+    "ppg": 40
+  },
+  {
+    "fermentableName": "Black Barley (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 530,
+    "ppg": 27
+  },
+  {
+    "fermentableName": "Black Malt (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 500,
+    "ppg": 28
+  },
+  {
+    "fermentableName": "Black Malt (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 500,
+    "ppg": 28
+  },
+  {
+    "fermentableName": "Black Patent (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 525,
+    "ppg": 27
+  },
+  {
+    "fermentableName": "Blackprinz (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 500,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Carafa III (DE)",
+    "fermentableType": "Roasted Malt",
+    "color": 535,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Carafa Special II",
+    "fermentableType": "Roasted Malt",
+    "color": 430,
+    "ppg": 22
+  },
+  {
+    "fermentableName": "Chocolate (BE)",
+    "fermentableType": "Roasted Malt",
+    "color": 340,
+    "ppg": 30
+  },
+  {
+    "fermentableName": "Chocolate Rye (DE)",
+    "fermentableType": "Roasted Malt",
+    "color": 240,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Chocolate (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 425,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Chocolate (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 350,
+    "ppg": 29
+  },
+  {
+    "fermentableName": "Chocolate Wheat (DE)",
+    "fermentableType": "Roasted Malt",
+    "color": 413,
+    "ppg": 31
+  },
+  {
+    "fermentableName": "Coffee Malt (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 150,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Dark Chocolate (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 420,
+    "ppg": 29
+  },
+  {
+    "fermentableName": "De-Bittered Black (BE)",
+    "fermentableType": "Roasted Malt",
+    "color": 566,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Pale Chocolate (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 207,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Roasted Barley (BE)",
+    "fermentableType": "Roasted Malt",
+    "color": 575,
+    "ppg": 30
+  },
+  {
+    "fermentableName": "Roasted Barley (UK)",
+    "fermentableType": "Roasted Malt",
+    "color": 550,
+    "ppg": 29
+  },
+  {
+    "fermentableName": "Roasted Barley (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 300,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Special Roast (US)",
+    "fermentableType": "Roasted Malt",
+    "color": 50,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Acidulated Malt (DE)",
+    "fermentableType": "Adjunct",
+    "color": 3,
+    "ppg": 27
+  },
+  {
+    "fermentableName": "CaraFoam (DE)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Caramel Pils (BE)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Carapils (DE)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Carapils (Dextrine Malt) (US)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Dextrine Malt (UK)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Flaked Barley",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 32
+  },
+  {
+    "fermentableName": "Flaked Corn",
+    "fermentableType": "Adjunct",
+    "color": 0,
+    "ppg": 40
+  },
+  {
+    "fermentableName": "Flaked Oats",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Flaked Rice",
+    "fermentableType": "Adjunct",
+    "color": 0,
+    "ppg": 40
+  },
+  {
+    "fermentableName": "Flaked Rye",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Flaked Wheat",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Floor-Malted Bohemian Wheat (DE)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Golden Naked Oats (UK)",
+    "fermentableType": "Adjunct",
+    "color": 10,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Grits",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Malted Naked Oats (UK)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Midnight Wheat Malt (US)",
+    "fermentableType": "Adjunct",
+    "color": 550,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Oat Malt (UK)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 28
+  },
+  {
+    "fermentableName": "Pale Wheat (DE)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Peated Malt (UK)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Red Wheat (US)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Rice Hulls",
+    "fermentableType": "Adjunct",
+    "color": 0,
+    "ppg": 0
+  },
+  {
+    "fermentableName": "Rolled Oats",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Rye (DE)",
+    "fermentableType": "Adjunct",
+    "color": 3,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Rye (US)",
+    "fermentableType": "Adjunct",
+    "color": 3,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Smoked Malt (DE)",
+    "fermentableType": "Adjunct",
+    "color": 3,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Smoked Malt (US)",
+    "fermentableType": "Adjunct",
+    "color": 5,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Spelt Malt (DE)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Torrified Barley",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Torrified Wheat",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Unmalted Wheat (BE)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Wheat (BE)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Wheat Malt (DE)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Wheat (UK)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Wheat (US)",
+    "fermentableType": "Adjunct",
+    "color": 1,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "White Wheat (US)",
+    "fermentableType": "Adjunct",
+    "color": 2,
+    "ppg": 40
+  },
+  {
+    "fermentableName": "Aromatic (BE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 33,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Aromatic Malt (UK) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 20,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Aromatic Malt (US) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 20,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Biscuit (BE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 23,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Bonlander Munich (US) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 10,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "CaraMunich (BE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 50,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "CaraVienne (BE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 20,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Dark Munich (DE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 10,
+    "ppg": 36
+  },
+  {
+    "fermentableName": "Dark Wheat (DE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 6,
+    "ppg": 39
+  },
+  {
+    "fermentableName": "Melanoidin (DE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 25,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Munich - 60L (US) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 60,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Munich (BE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 6,
+    "ppg": 38
+  },
+  {
+    "fermentableName": "Munich - Dark 20L (US) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 20,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Munich Dark (CA) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 32,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Munich Dark (DE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 15,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Munich (DE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 9,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Munich - Light 10L (US) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 10,
+    "ppg": 33
+  },
+  {
+    "fermentableName": "Munich Light (CA) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 10,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Munich Light (DE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 6,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Munich (UK) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 6,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Victory (US) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 28,
+    "ppg": 34
+  },
+  {
+    "fermentableName": "Vienna (DE) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 4,
+    "ppg": 37
+  },
+  {
+    "fermentableName": "Vienna (UK) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 4,
+    "ppg": 35
+  },
+  {
+    "fermentableName": "Vienna (US) Kilned Malt",
+    "fermentableType": "Kilned Malt",
+    "color": 4,
+    "ppg": 35
+  }
+]

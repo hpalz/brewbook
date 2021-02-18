@@ -900,16 +900,6 @@
     "notes": ""
   },
   {
-    "yeastName": "American Ale",
-    "lab": "Wyeast",
-    "type": "Ale",
-    "form": "Liquid",
-    "temp": "32&deg;F - 32&deg;F",
-    "attenuation": "75.0%",
-    "flocculation": "",
-    "notes": ""
-  },
-  {
     "yeastName": "1007 German Ale",
     "lab": "Wyeast",
     "type": "Ale",
@@ -1580,76 +1570,6 @@
     "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
   },
   {
-    "yeastName": "US-05 Safale American",
-    "lab": "Fermentis",
-    "type": "Ale",
-    "form": "Dry",
-    "temp": "59&deg;F - 75&deg;F",
-    "attenuation": "76.5%",
-    "flocculation": "Medium",
-    "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
-  },
-  {
-    "yeastName": "US-05 Safale American",
-    "lab": "Fermentis",
-    "type": "Ale",
-    "form": "Dry",
-    "temp": "59&deg;F - 75&deg;F",
-    "attenuation": "76.5%",
-    "flocculation": "Medium",
-    "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
-  },
-  {
-    "yeastName": "US-05 Safale American",
-    "lab": "Fermentis",
-    "type": "Ale",
-    "form": "Dry",
-    "temp": "59&deg;F - 75&deg;F",
-    "attenuation": "76.5%",
-    "flocculation": "Medium",
-    "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
-  },
-  {
-    "yeastName": "US-05 Safale American",
-    "lab": "Fermentis",
-    "type": "Ale",
-    "form": "Dry",
-    "temp": "59&deg;F - 75&deg;F",
-    "attenuation": "76.5%",
-    "flocculation": "Medium",
-    "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
-  },
-  {
-    "yeastName": "US-05 Safale American",
-    "lab": "Fermentis",
-    "type": "Ale",
-    "form": "Dry",
-    "temp": "59&deg;F - 75&deg;F",
-    "attenuation": "76.5%",
-    "flocculation": "Medium",
-    "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
-  },
-  {
-    "yeastName": "US-05 Safale American",
-    "lab": "Fermentis",
-    "type": "Ale",
-    "form": "Dry",
-    "temp": "59&deg;F - 75&deg;F",
-    "attenuation": "76.5%",
-    "flocculation": "Medium",
-    "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
-  },
-  {
-    "yeastName": "US-05 Safale American",
-    "lab": "Fermentis",
-    "type": "Ale",
-    "form": "Dry",
-    "temp": "59&deg;F - 75&deg;F",
-    "attenuation": "76.5%",
-    "flocculation": "Medium",
-    "notes": "American ale yeast that produces well balanced beers with low diacetyl and a very clean, crisp end palate.Best for: American ale, other clean finish ales"
-  },
-  {
     "yeastName": "W-34/70 Saflager Lager",
     "lab": "Fermentis",
     "type": "Lager",
@@ -1778,16 +1698,6 @@
     "attenuation": "78.0%",
     "flocculation": "Medium",
     "notes": "A dry lager yeast with high attenuation. Ferments clean and malty.Best for: Lagers"
-  },
-  {
-    "yeastName": "Belle Saison",
-    "lab": "Danstar",
-    "type": "Ale",
-    "form": "Liquid",
-    "temp": "64&deg;F - 90&deg;F",
-    "attenuation": "82.5%",
-    "flocculation": "Low",
-    "notes": "Best for: Saisons and belgians"
   },
   {
     "yeastName": "Belle Saison",
