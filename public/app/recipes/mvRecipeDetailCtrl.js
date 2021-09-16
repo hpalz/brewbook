@@ -12,20 +12,39 @@ angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCache
         currentRecipe = recipe;
         $scope.recipe = recipe;
         var chosenStyle = recipe.style;
-        var curOG = recipe.calculated.og;
-        var curFG = recipe.calculated.fg;
-        var curSRM = recipe.calculated.srm;
-        var curABV = recipe.calculated.abv;
-        var curIBU = recipe.calculated.ibu;
-        calcOG = recipe.actual.og;
-        calcFG = recipe.actual.fg;
-        calcEff = recipe.actual.efficiency;
-        calcABV = recipe.actual.abv;
+        if(recipe.calculated){
+          var curOG = recipe.calculated.og;
+          var curFG = recipe.calculated.fg;
+          var curSRM = recipe.calculated.srm;
+          var curABV = recipe.calculated.abv;
+          var curIBU = recipe.calculated.ibu;
+        }
+        else{
+          var curOG = 0;
+          var curFG = 0;
+          var curSRM = 0;
+          var curABV = 0;
+          var curIBU = 0;
+        }
+        if(recipe.actual){
+          calcOG = recipe.actual.og;
+          calcFG = recipe.actual.fg;
+          calcEff = recipe.actual.efficiency;
+          calcABV = recipe.actual.abv;
+          $scope.notes = recipe.actual.notes;
+        }
+        else
+        {
+          calcOG = curOG;
+          calcFG = curFG;
+          calcEff = 0;
+          calcABV = curABV;
+          $scope.notes = "";
+        }
         $scope.recordedOG = calcOG;
         $scope.recordedFG = calcFG;
         $scope.calculatedABV = calcABV.toFixed(1);
         $scope.calculatedEfficiency = calcEff;
-        $scope.notes = recipe.actual.notes;
         var myLineChart = null;
         var ctx = document.getElementById("canvas");
         if (ctx) {

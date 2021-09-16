@@ -39,6 +39,7 @@ exports.createRecipe = function(req, res, next) {
         name: recipeBody.style.Style
       },
       calculated: recipeBody.calculated,
+      actual: recipeBody.actual,
       efficiency: recipeBody.efficiency,
       batch_size: recipeBody.batch_size,
       boil_time: recipeBody.boil_time,

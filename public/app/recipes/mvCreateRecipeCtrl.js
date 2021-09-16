@@ -253,12 +253,19 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
         abv: curABV,
         ibu: curIBU
       },
+      actual: {
+        og: curOG,
+        fg: curFG,
+        srm: curSRM,
+        abv: curABV,
+        ibu: curIBU
+      },
       style: chosenStyle
     };
 
-    mvAuthRecipe.createRecipe(newRecipe).then(function () {
+    mvAuthRecipe.createRecipe(newRecipe).then(function (successRecipe) {
       mvNotifier.notify('Recipe created!');
-      $location.path('/');
+      $location.path('/recipes/'+successRecipe._id);
     }, function (reason) {
       mvNotifier.error(reason);
     })
