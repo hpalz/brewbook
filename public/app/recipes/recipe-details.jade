@@ -1,8 +1,9 @@
 
 .container(ng-app='app', fxlayout='column', fxlayoutalign='space-evenly stretch')
-  form.form-horizontal(name="deleteRecipeForm" ng-show="identity.isAuthenticated()")
+  form.form-horizontal(name="deleteRecipeForm" ng-show="identity.isOwner(recipe.username)")
     .pull-left(ng-controller="mvDeleteRecipeCtrl")
       button.btn.btn-primary(ng-click="delete(recipe._id)") Delete Recipe
+  form.form-horizontal(name="cloneRecipeForm" ng-show="identity.isAuthenticated()")
     .pull-left(ng-controller="mvCloneRecipeCtrl")
       button.btn.btn-primary(ng-click="clone(recipe._id)") Clone Recipe
   .well
@@ -58,5 +59,5 @@
             textarea.form-control(name="notes",type="text",placeholder="Notes",ng-model="notes",ng-change="updateNotes()",style="width:100%")
             
           .col-md-12
-            center(ng-controller="mvRecipeDetailCtrl" ng-show="identity.isAuthenticated()")
+            center(ng-controller="mvRecipeDetailCtrl" ng-show="identity.isOwner(recipe.username)")
               button.btn.btn-primary(ng-click="save()") Save Log

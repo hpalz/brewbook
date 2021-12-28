@@ -9,6 +9,9 @@ angular.module('app').factory('mvIdentity', function($window, mvUser) {
     isAuthenticated: function() {
       return !!this.currentUser;
     },
+    isOwner: function(user) {
+      return this.currentUser.username == user;
+    },
     isAuthorized: function(role) {
       return !!this.currentUser && this.currentUser.roles.indexOf(role) > -1;
     }

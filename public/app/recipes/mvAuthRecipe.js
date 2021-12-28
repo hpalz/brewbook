@@ -1,4 +1,4 @@
-angular.module('app').factory('mvAuthRecipe', function($http, $q, mvRecipe, mvCachedRecipes, mvRecipeImport) {
+angular.module('app').factory('mvAuthRecipe', function($http, $q, mvIdentity, mvRecipe, mvCachedRecipes, mvRecipeImport, mvNotifier) {
   return {
     createRecipe: function(newRecipeData) {
       var dfd = $q.defer();
@@ -32,11 +32,16 @@ angular.module('app').factory('mvAuthRecipe', function($http, $q, mvRecipe, mvCa
           if(recipe._id === recipeData.id) {
             //foundRecipe = new mvRecipe(recipe);
 
-            recipe.$delete(recipeData).then(function() {
-              dfd.resolve();
-            }, function(response) {
-              dfd.reject(response.data.reason);
-            });
+            if(mvIdentity.isOwner(recipe.username)) {
+              recipe.$delete(recipeData).then(function() {
+                dfd.resolve();
+              }, function(response) {
+                dfd.reject(response.data.reason);
+              });
+            } else {
+              mvNotifier.notify('You are not authorized');
+              return $q.reject('not authorized');
+            }
           }
         })
       })
