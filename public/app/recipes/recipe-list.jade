@@ -1,7 +1,7 @@
 .container.top-padding-med
   .pull-left(ng-controller="mvCreateRecipeCtrl")
-    a(href="/newRecipe") Create Recipe
-    a(href="/importRecipe") Import XML Recipe
+    button.btn.btn-primary(ng-click="createNew()") Create Recipe
+    button.btn.btn-primary(ng-click="import()") Import XML Recipe
   .pull-right
     form.form-inline
       .form-group

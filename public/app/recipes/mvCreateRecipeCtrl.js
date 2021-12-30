@@ -19,6 +19,12 @@ var efficiency = .75;
 var boilTime = 60;
 
 angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, mvAuthRecipe, mvNotifier, mvCalculator, mvIdentity, $location) {
+  $scope.createNew = function() {
+    $location.path("/newRecipe")
+  }
+  $scope.import = function() {
+    $location.path("/importRecipe")
+  }
   $scope.identity = mvIdentity;
   var DURATION = 300;
   var vm = this;
@@ -260,7 +266,8 @@ angular.module('app').controller('mvCreateRecipeCtrl', function ($scope, $http, 
         abv: curABV,
         ibu: curIBU
       },
-      style: chosenStyle
+      style: chosenStyle,
+      featured: false
     };
 
     mvAuthRecipe.createRecipe(newRecipe).then(function (successRecipe) {

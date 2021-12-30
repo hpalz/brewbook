@@ -12,8 +12,11 @@
       fieldset
         .col-md-8
           .form-group
-            label.col-md-2.control-label Style
-            .col-md-10
+            label.col-md-3.control-label Date
+            .col-md-8
+              {{recipe.created | date}}
+            label.col-md-3.control-label Style
+            .col-md-8
               {{recipe.style.name}}
             label.col-md-3.control-label Efficiency
             .col-md-8
@@ -57,6 +60,10 @@
             
           .col-md-8
             textarea.form-control(name="notes",type="text",placeholder="Notes",ng-model="notes",ng-change="updateNotes()",style="width:100%")
+            .checkbox
+              label
+                input(ng-model='deductIngredients',name='deductIngredients' type='checkbox' value='true')
+                | Remove ingredients from inventory
             
           .col-md-12
             center(ng-controller="mvRecipeDetailCtrl" ng-show="identity.isOwner(recipe.username)")

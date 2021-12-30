@@ -55,7 +55,7 @@ angular.module('app').controller('mvInventoryCtrl', function ($scope, $http, mvA
     yeastList = yeastJson.data;
     $scope.yeastList = yeastJson.data;
   });
-  $scope.fermUnitList = [{ "fermUnitName": "lbs", "id": 0 }, { "fermUnitName": "oz", "id": 1 }];
+  $scope.fermUnitList = [{ "fermUnitName": "lbs", "id": 0 }];
   $scope.fermDelete = function (x) {
     console.log("Removed " + x.newFerm.name)
     for (var i = $scope.addedFermentables.length - 1; i >= 0; i--) {
@@ -78,7 +78,7 @@ angular.module('app').controller('mvInventoryCtrl', function ($scope, $http, mvA
     $scope.fermWeight = ""
     fermCount++;
   }
-  $scope.hopUnitList = [{ "hopUnitName": "oz", "id": 0 }, { "hopUnitName": "lb", "id": 1 }];
+  $scope.hopUnitList = [{ "hopUnitName": "oz", "id": 0 }];
   $scope.hopDelete = function (x) {
     console.log("Removed " + x.newHop.name)
     for (var i = $scope.addedHops.length - 1; i >= 0; i--) {

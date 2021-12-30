@@ -3,7 +3,7 @@ var calcABV = 0;
 var calcOG = 0;
 var calcFG = 0;
 var notes = "";
-angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCachedRecipes, mvIdentity,mvNotifier, mvAuthRecipe,$routeParams) {
+angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCachedRecipes, mvIdentity,mvNotifier, mvAuthInventory, mvAuthRecipe,$routeParams) {
   $scope.identity = mvIdentity;
   var currentRecipe;
   mvCachedRecipes.query().$promise.then(function (collection) {
@@ -160,9 +160,27 @@ angular.module('app').controller('mvRecipeDetailCtrl', function ($scope, mvCache
       abv: calcABV,
       notes: notes
     }
+    //Once ingredients removed from inventory, never do it again
+    let removeFromInventory = false;
+    if($scope.deductIngredients){
+      if(currentRecipe.featured == false)
+        removeFromInventory = true;
+      currentRecipe.featured = $scope.deductIngredients;
+    }
 
     mvAuthRecipe.updateRecipe(currentRecipe).then(function () {
-      mvNotifier.notify('Recipe updated!');
+      if(removeFromInventory)
+      {
+        mvAuthInventory.updateInventory(currentRecipe).then(function () {
+          mvNotifier.notify('Inventory updated!');
+        }, function (reason) {
+          mvNotifier.error(reason);
+        })
+      }
+      else
+      {
+        mvNotifier.notify('Recipe updated!');
+      }
       //$location.path('/');
     }, function (reason) {
       mvNotifier.error(reason);

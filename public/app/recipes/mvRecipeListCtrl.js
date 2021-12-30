@@ -12,4 +12,4 @@ angular.module('app').controller('mvRecipeListCtrl', function ($scope, mvIdentit
       });
     });
   }
-}); 
+});
