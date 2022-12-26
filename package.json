@@ -9,7 +9,7 @@
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'public\\vendor', 'junction') } catch (e) { }\""
   },
   "engines": {
-    "node": ">=10.15.0",
+    "node": "=14.15.1",
     "npm": ">=6.4.x",
     "yarn": ">= 1.0.0"
   },
