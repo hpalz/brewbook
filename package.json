@@ -58,7 +58,7 @@
     "mocha": "^10.2.0"
   },
   "directories": {
-    "test": "brewbook"
+    "brewbook": "brewbook"
   },
   "repository": "git+ssh://git@bitbucket.org/hpalz/brewbook.git",
   "bugs": {
