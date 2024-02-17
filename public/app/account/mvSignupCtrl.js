@@ -12,7 +12,7 @@ angular.module('app').controller('mvSignupCtrl', function($scope, mvUser, mvNoti
       mvNotifier.notify('User account created!');
       $location.path('/');
     }, function(reason) {
-      mvNotifier.error(reason);
+      mvNotifier.notify(reason);
     })
   }
 })

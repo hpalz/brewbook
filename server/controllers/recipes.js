@@ -6,7 +6,7 @@ var auth = require('../config/auth');
 
 exports.getRecipes = function(req, res) {
   var username = auth.username();
-  Recipe.find().exec(function(err, collection) {
+  Recipe.find({username:username}).exec(function(err, collection) {
     res.send(collection);
   })
 };

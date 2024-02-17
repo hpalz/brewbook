@@ -8,7 +8,8 @@ exports.getInventory = function(req, res) {
   var username = auth.username();
   Inventory.findOne({username:username}).exec(function(err, collection) {
     // had to put this shit into an array ._.
-    res.send([collection]);
+    if(collection!=null)
+      res.send([collection]);
   })
 };
 

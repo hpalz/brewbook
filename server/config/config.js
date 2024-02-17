@@ -4,7 +4,7 @@ const uri = process.env.MONGODB_URI;
 
 module.exports = {
   development: {
-    db: 'mongodb://localhost/brewbook',
+    db: 'mongodb://localhost/brewbook',//mongodb+srv://zarfus:IkrENkBqUsKKuqBD@brewbook0.vxtwa.mongodb.net/brewbook
     rootPath: rootPath,
     port: process.env.PORT || 3030,
     corsOptions : {
